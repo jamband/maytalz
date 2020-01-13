@@ -1,5 +1,6 @@
 <template>
   <div>
+    created: {{ $format.date(post.sys.createdAt) }}
     <div v-html="$md.render(post.fields.body)" />
   </div>
 </template>

@@ -22,6 +22,7 @@ export default {
   ],
   plugins: [
     '~/plugins/app.js',
+    '~/plugins/format.js',
     '~/plugins/fontawesome.js'
   ],
   buildModules: [

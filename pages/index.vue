@@ -3,6 +3,7 @@
     <ul>
       <li v-for="post in posts">
         <n-link :to="{ path: post.fields.slug }">
+          {{ $format.date(post.sys.createdAt) }} -
           {{ post.fields.title }}
         </n-link>
       </li>
