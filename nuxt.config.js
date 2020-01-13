@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 export default {
   mode: 'universal',
   head: {
@@ -19,6 +21,7 @@ export default {
     '~/assets/css/app.scss'
   ],
   plugins: [
+    '~/plugins/app.js',
     '~/plugins/fontawesome.js'
   ],
   buildModules: [
@@ -27,10 +30,11 @@ export default {
   ],
   modules: [
     'bootstrap-vue/nuxt',
+    '@nuxtjs/markdownit',
     '@nuxtjs/pwa'
   ],
   build: {
-    analyze: true
+    // analyze: true
   },
   bootstrapVue: {
     componentPlugins: [
@@ -46,5 +50,18 @@ export default {
     directives: false,
     bootstrapCSS: false,
     bootstrapVueCSS: false
+  },
+  env: {
+    CONTENTFUL_SPACE_ID: process.env.CONTENTFUL_SPACE_ID,
+    CONTENTFUL_ACCESS_TOKEN: process.env.CONTENTFUL_ACCESS_TOKEN,
+    CONTENTFUL_TYPE_ID: process.env.CONTENTFUL_TYPE_ID
+
+  },
+  markdownit: {
+    injected: true,
+    breaks: true,
+    html: true,
+    typography: true,
+    use: []
   }
 }

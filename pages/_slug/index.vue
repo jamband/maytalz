@@ -1,12 +1,6 @@
 <template>
   <div>
-    <ul>
-      <li v-for="post in posts">
-        <n-link :to="{ path: post.fields.slug }">
-          {{ post.fields.title }}
-        </n-link>
-      </li>
-    </ul>
+    <div v-html="$md.render(post.fields.body)" />
   </div>
 </template>
 
@@ -14,19 +8,19 @@
 import contentful from '~/plugins/contentful'
 
 export default {
-  asyncData ({ env }) {
+  asyncData ({ env, params }) {
     return contentful.getEntries({
       'content_type': env.CONTENTFUL_TYPE_ID,
-      order: '-sys.createdAt'
+      'fields.slug': params.slug
     }).then((entries) => {
       return {
-        posts: entries.items
+        post: entries.items[0]
       }
     })
   },
   head () {
     return {
-      title: `${this.$app.name}`
+      title: `${this.post.fields.title} - ${this.$app.name}`
     }
   }
 }
