@@ -1,5 +1,7 @@
 require('dotenv').config()
 
+const contentful = require('./plugins/contentful').default
+
 export default {
   mode: 'universal',
   head: {
@@ -56,7 +58,20 @@ export default {
     CONTENTFUL_SPACE_ID: process.env.CONTENTFUL_SPACE_ID,
     CONTENTFUL_ACCESS_TOKEN: process.env.CONTENTFUL_ACCESS_TOKEN,
     CONTENTFUL_TYPE_ID: process.env.CONTENTFUL_TYPE_ID
-
+  },
+  generate: {
+    routes () {
+      return contentful.getEntries({
+        'content_type': process.env.CONTENTFUL_TYPE_ID
+      }).then((entries) => {
+        return entries.items.map((entry) => {
+          return {
+            route: entry.fields.slug,
+            payload: entry
+          }
+        })
+      })
+    }
   },
   markdownit: {
     injected: true,
