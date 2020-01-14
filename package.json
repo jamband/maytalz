@@ -6,7 +6,8 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "test": "jest"
+    "test": "jest",
+    "clean": "rm -rf .nuxt dist node_modules"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
