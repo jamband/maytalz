@@ -60,6 +60,7 @@ export default {
     CONTENTFUL_TYPE_ID: process.env.CONTENTFUL_TYPE_ID
   },
   generate: {
+    fallback: true,
     routes () {
       return contentful.getEntries({
         'content_type': process.env.CONTENTFUL_TYPE_ID
