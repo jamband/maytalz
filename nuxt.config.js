@@ -74,6 +74,14 @@ export default {
       })
     }
   },
+  manifest: {
+    name: 'Foo',
+    short_name: 'Foo',
+    lang: 'en',
+    background_color: '#fff',
+    display: 'standalone',
+    start_url: '/'
+  },
   markdownit: {
     injected: true,
     breaks: true,
