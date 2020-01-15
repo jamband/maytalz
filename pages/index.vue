@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul>
-      <li v-for="post in posts">
+      <li v-for="post in posts" :key="post.fields.slug">
         <n-link :to="{ path: post.fields.slug }">
           {{ $format.date(post.sys.createdAt) }} -
           {{ post.fields.title }}
@@ -17,7 +17,7 @@ import contentful from '~/plugins/contentful'
 export default {
   asyncData ({ env }) {
     return contentful.getEntries({
-      'content_type': env.CONTENTFUL_TYPE_ID,
+      content_type: env.CONTENTFUL_TYPE_ID,
       order: '-sys.createdAt'
     }).then((entries) => {
       return {

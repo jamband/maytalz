@@ -11,7 +11,7 @@ import contentful from '~/plugins/contentful'
 export default {
   asyncData ({ env, params }) {
     return contentful.getEntries({
-      'content_type': env.CONTENTFUL_TYPE_ID,
+      content_type: env.CONTENTFUL_TYPE_ID,
       'fields.slug': params.slug
     }).then((entries) => {
       return {
