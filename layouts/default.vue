@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-navbar toggleable="md" type="dark" variant="dark" class="mb-3">
+    <b-navbar toggleable="md" type="light" variant="light" class="mb-3">
       <div class="container">
         <b-navbar-brand to="/">{{ $app.name }}</b-navbar-brand>
         <b-navbar-toggle target="nav-collapse" />
