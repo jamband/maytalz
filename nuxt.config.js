@@ -28,8 +28,7 @@ export default {
     '~/plugins/fontawesome.js'
   ],
   buildModules: [
-    '@nuxtjs/eslint-module',
-    '@nuxtjs/stylelint-module'
+    '@nuxtjs/eslint-module'
   ],
   modules: [
     'bootstrap-vue/nuxt',
