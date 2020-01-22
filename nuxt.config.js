@@ -16,7 +16,7 @@ export default {
     ]
   },
   loading: {
-    color: '#fff'
+    color: '#f27242'
   },
   css: [
     '@fortawesome/fontawesome-svg-core/styles.css',
