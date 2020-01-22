@@ -1,13 +1,19 @@
 <template>
   <div>
-    <ul>
-      <li v-for="post in posts" :key="post.fields.slug">
+    <div v-for="post in posts" :key="post.fields.slug">
+      <span class="mr-2 text-muted small">
+        {{ $format.date(post.sys.createdAt) }}
+      </span>
+      <n-link v-for="tag in post.fields.tags" :key="tag.sys.id" :to="{ path: tag.fields.slug }" class="mr-2 badge badge-light">
+        {{ tag.fields.name }}
+      </n-link>
+      <h2>
         <n-link :to="{ path: post.fields.slug }">
-          {{ $format.date(post.sys.createdAt) }} -
           {{ post.fields.title }}
         </n-link>
-      </li>
-    </ul>
+      </h2>
+      <hr>
+    </div>
   </div>
 </template>
 
