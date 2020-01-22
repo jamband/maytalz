@@ -14,5 +14,8 @@
     <div class="container">
       <nuxt />
     </div>
+    <footer class="footer text-center">
+      {{ $app.name }}
+    </footer>
   </div>
 </template>
