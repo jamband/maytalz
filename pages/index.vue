@@ -1,9 +1,7 @@
 <template>
   <div>
     <div v-for="post in posts" :key="post.fields.slug">
-      <span class="mr-2 text-muted small">
-        {{ $format.date(post.sys.createdAt) }}
-      </span>
+      <span class="mr-2 text-muted small">{{ $format.date(post.sys.createdAt) }}</span>
       <n-link v-for="tag in post.fields.tags" :key="tag.sys.id" :to="{ path: tag.fields.slug }" class="mr-2 badge badge-light">
         {{ tag.fields.name }}
       </n-link>
