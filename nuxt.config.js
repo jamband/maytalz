@@ -44,9 +44,8 @@ export default {
       'NavbarPlugin'
     ],
     components: [
-      'BNav', 'BNavItem', 'BNavItemDropdown',
+      'BNav', 'BNavItem',
       'BNavbar', 'BNavbarBrand', 'BNavbarNav', 'BNavbarToggle',
-      'BDropdown', 'BDropdownDivider', 'BDropdownItem',
       'BCollapse'
     ],
     directivePlugins: false,
