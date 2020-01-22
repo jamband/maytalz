@@ -33,7 +33,8 @@ export default {
   modules: [
     'bootstrap-vue/nuxt',
     '@nuxtjs/markdownit',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/style-resources'
   ],
   build: {
     // analyze: true
@@ -73,6 +74,7 @@ export default {
       })
     }
   },
+  // top level options for packages
   manifest: {
     name: 'Foo',
     short_name: 'Foo',
@@ -87,5 +89,10 @@ export default {
     html: true,
     typography: true,
     use: []
+  },
+  styleResources: {
+    scss: [
+      '~/assets/css/variables/*.scss'
+    ]
   }
 }
