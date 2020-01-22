@@ -1,4 +1,5 @@
 @import "variables/body";
+@import "variables/components";
 @import "variables/fonts";
 @import "variables/grid-container";
 @import "variables/links";
@@ -7,6 +8,7 @@
 @import "variables/spacing";
 @import "variables/system-color";
 
+@import "components/badge";
 @import "components/layout";
 
 @import "vendor/bootstrap";
