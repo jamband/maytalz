@@ -61,16 +61,15 @@ export default {
   },
   generate: {
     fallback: true,
-    routes () {
-      return contentful.getEntries({
-        'content_type': process.env.CONTENTFUL_TYPE_ID
-      }).then((entries) => {
-        return entries.items.map((entry) => {
-          return {
-            route: entry.fields.slug,
-            payload: entry
-          }
-        })
+    async routes () {
+      const entries = await contentful.getEntries({
+        content_type: process.env.CONTENTFUL_TYPE_ID
+      })
+      return entries.items.map((entry) => {
+        return {
+          route: entry.fields.slug,
+          payload: entry
+        }
       })
     }
   },
