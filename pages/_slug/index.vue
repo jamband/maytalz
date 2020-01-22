@@ -38,7 +38,8 @@ article /deep/ {
     margin-bottom: 2rem;
   }
 
-  img {
+  img,
+  iframe {
     max-width: 100%;
     height: auto;
   }
