@@ -56,20 +56,33 @@ export default {
   env: {
     CONTENTFUL_SPACE_ID: process.env.CONTENTFUL_SPACE_ID,
     CONTENTFUL_ACCESS_TOKEN: process.env.CONTENTFUL_ACCESS_TOKEN,
-    CONTENTFUL_TYPE_ID: process.env.CONTENTFUL_TYPE_ID
+    CONTENTFUL_FOO_TYPE_ID: process.env.CONTENTFUL_FOO_TYPE_ID
   },
   generate: {
     fallback: true,
     async routes () {
-      const entries = await contentful.getEntries({
-        content_type: process.env.CONTENTFUL_TYPE_ID
-      })
-      return entries.items.map((entry) => {
-        return {
-          route: entry.fields.slug,
-          payload: entry
-        }
-      })
+      const [posts, tags] = await Promise.all([
+        contentful.getEntries({
+          content_type: process.env.CONTENTFUL_FOO_TYPE_ID
+        }),
+        contentful.getEntries({
+          content_type: process.env.CONTENTFUL_TAG_TYPE_ID
+        })
+      ])
+      return [
+        ...posts.items.map((post) => {
+          return {
+            route: post.fields.slug,
+            payload: post
+          }
+        }),
+        ...tags.items.map((tag) => {
+          return {
+            route: `tags/${tag.sys.id}`,
+            payload: tag
+          }
+        })
+      ]
     }
   },
   // top level options for packages

@@ -21,7 +21,7 @@ import contentful from '~/plugins/contentful'
 export default {
   asyncData ({ env, params }) {
     return contentful.getEntries({
-      content_type: env.CONTENTFUL_TYPE_ID,
+      content_type: env.CONTENTFUL_FOO_TYPE_ID,
       order: '-sys.createdAt',
       'fields.tags.sys.id': params.id
     }).then((entries) => {
