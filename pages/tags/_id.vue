@@ -19,23 +19,16 @@
 import contentful from '~/plugins/contentful'
 
 export default {
-  asyncData ({ env }) {
+  asyncData ({ env, params }) {
     return contentful.getEntries({
       content_type: env.CONTENTFUL_TYPE_ID,
-      order: '-sys.createdAt'
+      order: '-sys.createdAt',
+      'fields.tags.sys.id': params.id
     }).then((entries) => {
       return {
         posts: entries.items
       }
     })
-  },
-  head () {
-    return {
-      title: `${this.$app.name}`
-    }
   }
 }
 </script>
-
-<style>
-</style>
