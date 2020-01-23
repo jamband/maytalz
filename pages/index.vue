@@ -6,7 +6,7 @@
         {{ tag.fields.name }}
       </n-link>
       <h2>
-        <n-link :to="{ path: post.fields.slug }">
+        <n-link :to="{ name: 'slug', params: { slug: post.fields.slug } }">
           {{ post.fields.title }}
         </n-link>
       </h2>
