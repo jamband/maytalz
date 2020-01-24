@@ -3,8 +3,8 @@
 $container-max-widths: (
   sm: 540px,
   md: 720px,
-  lg: 960px,
-  xl: 962px
+  lg: 730px,
+  xl: 740px
 );
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");
