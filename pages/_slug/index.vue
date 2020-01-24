@@ -4,6 +4,7 @@
     <n-link v-for="tag in post.fields.tags" :key="tag.sys.id" :to="{ name: 'tags-id', params: { id: tag.sys.id } }" class="mr-2 badge badge-light">
       {{ tag.fields.name }}
     </n-link>
+    <!-- eslint-disable-next-line -->
     <article v-html="$md.render(post.fields.body)" />
   </div>
 </template>
