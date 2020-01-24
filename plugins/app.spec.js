@@ -8,7 +8,7 @@ localVue.use(pluginApp)
 describe('plugins: app', () => {
   const $app = localVue.prototype.$app
 
-  test('date', () => {
+  test('name', () => {
     expect('Foo').toBe($app.name)
   })
 })
