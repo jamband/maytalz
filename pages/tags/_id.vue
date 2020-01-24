@@ -38,6 +38,11 @@ export default {
         posts: entries.items
       }
     })
+  },
+  head () {
+    return {
+      title: `${this.$app.name}`
+    }
   }
 }
 </script>
