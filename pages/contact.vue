@@ -1,12 +1,15 @@
 <template>
-  <div>
+  <article>
     <h1>Contact</h1>
-    Please to the message via
-    <a href="https://twitter.com/livejam_db" rel="noopener" target="_blank">Twitter</a> or
-    <a :href="`${$app.repository}/issues`" rel="noopener" target="_blank">GitHub</a> Issues.
-    <br>
-    Thank you.
-  </div>
+    <section>
+      Please to the message via
+      <a href="https://twitter.com/livejam_db" rel="noopener" target="_blank">Twitter</a> or
+      <a :href="`${$app.repository}/issues`" rel="noopener" target="_blank">GitHub</a> Issues.
+    </section>
+    <section>
+      Thank you.
+    </section>
+  </article>
 </template>
 
 <script>

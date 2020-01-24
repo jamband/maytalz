@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <article>
     <CreatedDate :date="$format.date(post.sys.createdAt)" />
     <TagItem :items="post.fields.tags" />
     <!-- eslint-disable-next-line -->
-    <article v-html="$md.render(post.fields.body)" />
-  </div>
+    <section v-html="$md.render(post.fields.body)" />
+  </article>
 </template>
 
 <script>

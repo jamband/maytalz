@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div v-for="post in posts" :key="post.sys.id">
+  <article>
+    <section v-for="post in posts" :key="post.sys.id" class="mb-3">
       <CreatedDate :date="$format.date(post.sys.createdAt)" />
       <TagItem :items="post.fields.tags" />
       <h2>
@@ -8,9 +8,8 @@
           {{ post.fields.title }}
         </n-link>
       </h2>
-      <hr>
-    </div>
-  </div>
+    </section>
+  </article>
 </template>
 
 <script>
