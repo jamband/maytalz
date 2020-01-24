@@ -19,12 +19,16 @@
 import contentful from '~/plugins/contentful'
 
 export default {
-  asyncData ({ env, params }) {
+  asyncData ({ env, params, error }) {
     return contentful.getEntries({
       content_type: env.CONTENTFUL_FOO_TYPE_ID,
       order: '-sys.createdAt',
       'fields.tags.sys.id': params.id
     }).then((entries) => {
+      if (entries.total === 0) {
+        error({ statusCode: 404 })
+        return
+      }
       return {
         posts: entries.items
       }
