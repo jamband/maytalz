@@ -13,11 +13,15 @@
 import contentful from '~/plugins/contentful'
 
 export default {
-  asyncData ({ env, params }) {
+  asyncData ({ env, params, error }) {
     return contentful.getEntries({
       content_type: env.CONTENTFUL_FOO_TYPE_ID,
       'fields.slug': params.slug
     }).then((entries) => {
+      if (entries.total !== 1) {
+        error({ statusCode: 404, message: 'Page not found.' })
+        return
+      }
       return {
         post: entries.items[0]
       }
