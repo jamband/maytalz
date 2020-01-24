@@ -19,7 +19,7 @@ export default {
       'fields.slug': params.slug
     }).then((entries) => {
       if (entries.total !== 1) {
-        error({ statusCode: 404, message: 'Page not found.' })
+        error({ statusCode: 404 })
         return
       }
       return {
