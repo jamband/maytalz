@@ -9,6 +9,6 @@ describe('plugins: app', () => {
   const $app = localVue.prototype.$app
 
   test('name', () => {
-    expect('Foo').toBe($app.name)
+    expect('Maytalz').toBe($app.name)
   })
 })

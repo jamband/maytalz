@@ -8,7 +8,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'foo' }
+      { hid: 'description', name: 'description', content: 'Maytalz is a simple blog' }
     ],
     link: [
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' },
@@ -56,14 +56,14 @@ export default {
   env: {
     CONTENTFUL_SPACE_ID: process.env.CONTENTFUL_SPACE_ID,
     CONTENTFUL_ACCESS_TOKEN: process.env.CONTENTFUL_ACCESS_TOKEN,
-    CONTENTFUL_FOO_TYPE_ID: process.env.CONTENTFUL_FOO_TYPE_ID
+    CONTENTFUL_MAIN_TYPE_ID: process.env.CONTENTFUL_MAIN_TYPE_ID
   },
   generate: {
     fallback: true,
     async routes () {
       const [posts, tags] = await Promise.all([
         contentful.getEntries({
-          content_type: process.env.CONTENTFUL_FOO_TYPE_ID
+          content_type: process.env.CONTENTFUL_MAIN_TYPE_ID
         }),
         contentful.getEntries({
           content_type: process.env.CONTENTFUL_TAG_TYPE_ID
@@ -87,8 +87,8 @@ export default {
   },
   // top level options for packages
   manifest: {
-    name: 'Foo',
-    short_name: 'Foo',
+    name: 'Maytalz',
+    short_name: 'Maytalz',
     lang: 'en',
     background_color: '#fff',
     display: 'standalone',

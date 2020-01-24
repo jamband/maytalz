@@ -16,7 +16,7 @@
       <nuxt />
     </div>
     <footer class="footer text-center">
-      {{ $app.name }}
+      &copy; 2020 {{ $app.name }}
     </footer>
   </div>
 </template>

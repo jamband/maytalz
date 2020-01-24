@@ -5,8 +5,8 @@
     This was built for demonstration purpose.<br>
     <br>
     For more information:
-    <a href="https://github.com/jamband/nuxt-contentful-netlify-demo" rel="noopener" target="_blank">
-      GitHub: jamband/nuxt-contentful-netlify-demo
+    <a :href="$app.repository" rel="noopener" target="_blank">
+      GitHub - jamband/{{ $app.name.toLowerCase() }}
     </a>
   </div>
 </template>

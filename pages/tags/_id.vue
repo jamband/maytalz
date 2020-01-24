@@ -26,7 +26,7 @@ export default {
   },
   asyncData ({ env, params, error }) {
     return contentful.getEntries({
-      content_type: env.CONTENTFUL_FOO_TYPE_ID,
+      content_type: env.CONTENTFUL_MAIN_TYPE_ID,
       order: '-sys.createdAt',
       'fields.tags.sys.id': params.id
     }).then((entries) => {
