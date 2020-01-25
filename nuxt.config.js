@@ -42,7 +42,8 @@ export default {
   env: {
     CONTENTFUL_SPACE_ID: process.env.CONTENTFUL_SPACE_ID,
     CONTENTFUL_ACCESS_TOKEN: process.env.CONTENTFUL_ACCESS_TOKEN,
-    CONTENTFUL_MAIN_TYPE_ID: process.env.CONTENTFUL_MAIN_TYPE_ID
+    CONTENTFUL_MAIN_TYPE_ID: process.env.CONTENTFUL_MAIN_TYPE_ID,
+    CONTENTFUL_TAG_TYPE_ID: process.env.CONTENTFUL_TAG_TYPE_ID
   },
   generate: {
     fallback: true,
@@ -69,7 +70,7 @@ export default {
         }),
         ...tags.items.map((tag) => {
           return {
-            route: `tags/${tag.sys.id}`,
+            route: `posts/tags/${tag.fields.slug}`,
             payload: tag
           }
         })

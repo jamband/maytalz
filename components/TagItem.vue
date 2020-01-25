@@ -1,6 +1,6 @@
 <template>
   <div class="d-inline-block">
-    <n-link v-for="tag in items" :key="tag.sys.id" :to="{ name: 'tags-id', params: { id: tag.sys.id }}" class="mr-2">
+    <n-link v-for="tag in items" :key="tag.sys.id" :to="{ name: 'posts-tags-slug', params: { slug: tag.fields.slug }}" class="mr-2">
       {{ tag.fields.name }}
     </n-link>
   </div>
