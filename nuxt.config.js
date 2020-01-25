@@ -72,7 +72,7 @@ export default {
       return [
         ...posts.items.map((post) => {
           return {
-            route: post.fields.slug,
+            route: `posts/${post.fields.slug}`,
             payload: post
           }
         }),

@@ -4,7 +4,7 @@
       <CreatedDate :date="$format.date(post.sys.createdAt)" />
       <TagItem :items="post.fields.tags" />
       <h2>
-        <n-link :to="{ name: 'slug', params: { slug: post.fields.slug } }">
+        <n-link :to="{ name: 'posts-slug', params: { slug: post.fields.slug } }">
           {{ post.fields.title }}
         </n-link>
       </h2>
