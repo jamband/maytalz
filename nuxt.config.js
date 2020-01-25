@@ -39,20 +39,6 @@ export default {
   build: {
     // analyze: true
   },
-  bootstrapVue: {
-    componentPlugins: [
-      'NavbarPlugin'
-    ],
-    components: [
-      'BNav', 'BNavItem',
-      'BNavbar', 'BNavbarBrand', 'BNavbarNav', 'BNavbarToggle',
-      'BCollapse'
-    ],
-    directivePlugins: false,
-    directives: false,
-    bootstrapCSS: false,
-    bootstrapVueCSS: false
-  },
   env: {
     CONTENTFUL_SPACE_ID: process.env.CONTENTFUL_SPACE_ID,
     CONTENTFUL_ACCESS_TOKEN: process.env.CONTENTFUL_ACCESS_TOKEN,
@@ -91,6 +77,20 @@ export default {
     }
   },
   // top level options for packages
+  bootstrapVue: {
+    componentPlugins: [
+      'NavbarPlugin'
+    ],
+    components: [
+      'BNav', 'BNavItem',
+      'BNavbar', 'BNavbarBrand', 'BNavbarNav', 'BNavbarToggle',
+      'BCollapse'
+    ],
+    directivePlugins: false,
+    directives: false,
+    bootstrapCSS: false,
+    bootstrapVueCSS: false
+  },
   manifest: {
     name: 'Maytalz',
     short_name: 'Maytalz',
