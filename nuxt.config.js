@@ -76,6 +76,11 @@ export default {
             payload: post
           }
         }),
+        ...[...Array(Math.ceil(posts.total / 2)).keys()].map((page) => {
+          return {
+            route: `posts/page/${++page}`
+          }
+        }),
         ...tags.items.map((tag) => {
           return {
             route: `tags/${tag.sys.id}`,
@@ -103,7 +108,8 @@ export default {
   },
   styleResources: {
     scss: [
-      '~/assets/css/variables/*.scss'
+      '~/assets/css/variables/*.scss',
+      '~/node_modules/bootstrap/scss/mixins/_breakpoints.scss'
     ]
   }
 }

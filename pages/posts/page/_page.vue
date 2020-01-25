@@ -28,10 +28,16 @@ export default {
     PaginationMinimal,
     TagItem
   },
-  asyncData ({ env }) {
+  asyncData ({ env, params, error }) {
+    const page = Number(params.page)
+    if (isNaN(page) || page < 1) {
+      error({ statusCode: 404 })
+      return
+    }
     return contentful.getEntries({
       content_type: env.CONTENTFUL_MAIN_TYPE_ID,
       order: '-sys.createdAt',
+      skip: (page - 1) * 2,
       limit: 2
     }).then((entries) => {
       return {
