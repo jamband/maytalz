@@ -59,23 +59,26 @@ export default {
       return [
         ...posts.items.map((post) => {
           return {
-            route: `posts/${post.fields.slug}`,
+            route: `posts/${post.fields.slug}/`,
             payload: post
           }
         }),
         ...[...Array(Math.ceil(posts.total / 2)).keys()].map((page) => {
           return {
-            route: `posts/page/${++page}`
+            route: `posts/page/${++page}/`
           }
         }),
         ...tags.items.map((tag) => {
           return {
-            route: `posts/tags/${tag.fields.slug}`,
+            route: `posts/tags/${tag.fields.slug}/`,
             payload: tag
           }
         })
       ]
     }
+  },
+  router: {
+    trailingSlash: true
   },
   // top level options for packages
   bootstrapVue: {
