@@ -1,5 +1,5 @@
 <template>
-  <nav aria-label="Page navigation">
+  <nav v-if="hasPage()" aria-label="Page navigation">
     <ul class="pagination">
       <li class="page-item w-25" :class="disabled('first')">
         <n-link :to="to('first')" class="page-link text-center" ontouchstart="">
@@ -45,24 +45,37 @@ export default {
     }
   },
   methods: {
+    hasPage () {
+      return this.pageCount > 1
+    },
     to (part) {
+      if (part === 'first') {
+        return { name: 'index' }
+      }
+      const route = (page) => {
+        return {
+          name: 'posts-page-page',
+          params: { page }
+        }
+      }
       if (part === 'prev') {
-        return { name: 'posts-page-page', params: { page: this.currentPage - 1 } }
+        return route(this.currentPage - 1)
       }
       if (part === 'next') {
-        return { name: 'posts-page-page', params: { page: this.currentPage + 1 } }
+        return route(this.currentPage + 1)
       }
       if (part === 'last') {
-        return { name: 'posts-page-page', params: { page: this.pageCount } }
+        return route(this.pageCount)
       }
-      return { name: 'index' }
     },
     disabled (part) {
+      const disabled = 'disabled'
+
       if (part === 'first' || part === 'prev') {
-        return this.currentPage < 2 ? 'disabled' : ''
+        return this.currentPage < 2 ? disabled : ''
       }
       if (part === 'next' || part === 'last') {
-        return this.currentPage > 2 ? 'disabled' : ''
+        return this.currentPage > 2 ? disabled : ''
       }
     }
   }
