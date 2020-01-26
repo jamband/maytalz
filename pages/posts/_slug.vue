@@ -3,7 +3,7 @@
     <CreatedDate :date="$format.date(post.sys.createdAt)" />
     <TagLinks :items="post.fields.tags" />
     <!-- eslint-disable-next-line -->
-    <section v-html="$md.render(post.fields.body)" />
+    <section v-html="$md.render(content())" />
   </article>
 </template>
 
@@ -32,6 +32,11 @@ export default {
       }
     })
   },
+  methods: {
+    content () {
+      return this.$format.embedResponsive(this.post.fields.body)
+    }
+  },
   head () {
     return {
       title: `${this.post.fields.title} - ${this.$app.name}`
@@ -48,10 +53,14 @@ article /deep/ {
     margin-bottom: 2rem;
   }
 
-  img,
-  iframe {
+  img {
     max-width: 100%;
     height: auto;
+  }
+
+  iframe,
+  .embed-responsive {
+    margin-bottom: 3rem;
   }
 }
 </style>
