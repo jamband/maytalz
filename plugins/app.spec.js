@@ -9,6 +9,10 @@ describe('plugins: app', () => {
   const $app = localVue.prototype.$app
 
   test('name', () => {
-    expect('Maytalz').toBe($app.name)
+    expect($app.name).toBe('Maytalz')
+  })
+
+  test('repository', () => {
+    expect($app.repository).toBe('https://github.com/jamband/maytalz')
   })
 })
