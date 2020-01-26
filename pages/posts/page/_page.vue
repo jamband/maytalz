@@ -3,7 +3,7 @@
     <article>
       <section v-for="post in posts" :key="post.sys.id" class="mb-3">
         <CreatedDate :date="$format.date(post.sys.createdAt)" />
-        <TagItem :items="post.fields.tags" />
+        <TagLinks :items="post.fields.tags" />
         <PostLink :post="post" />
       </section>
     </article>
@@ -15,7 +15,7 @@
 import CreatedDate from '~/components/CreatedDate'
 import PaginationMinimal from '~/components/PaginationMinimal'
 import PostLink from '~/components/PostLink'
-import TagItem from '~/components/TagItem'
+import TagLinks from '~/components/TagLinks'
 
 import contentful from '~/plugins/contentful'
 
@@ -24,7 +24,7 @@ export default {
     CreatedDate,
     PostLink,
     PaginationMinimal,
-    TagItem
+    TagLinks
   },
   asyncData ({ env, params, error }) {
     const page = Number(params.page)

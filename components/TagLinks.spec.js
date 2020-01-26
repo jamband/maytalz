@@ -1,10 +1,10 @@
 import { mount, createLocalVue, RouterLinkStub } from '@vue/test-utils'
-import TagItem from '~/components/TagItem'
+import TagLinks from '~/components/TagLinks'
 
 const localVue = createLocalVue()
 
 const factory = (props = {}) => {
-  return mount(TagItem, {
+  return mount(TagLinks, {
     localVue,
     propsData: props,
     stubs: {
@@ -13,7 +13,7 @@ const factory = (props = {}) => {
   })
 }
 
-describe('components: TagItem', () => {
+describe('components: TagLinks', () => {
   test('items', () => {
     const items = [
       {

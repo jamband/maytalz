@@ -1,7 +1,7 @@
 <template>
   <article>
     <CreatedDate :date="$format.date(post.sys.createdAt)" />
-    <TagItem :items="post.fields.tags" />
+    <TagLinks :items="post.fields.tags" />
     <!-- eslint-disable-next-line -->
     <section v-html="$md.render(post.fields.body)" />
   </article>
@@ -9,14 +9,14 @@
 
 <script>
 import CreatedDate from '~/components/CreatedDate'
-import TagItem from '~/components/TagItem'
+import TagLinks from '~/components/TagLinks'
 
 import contentful from '~/plugins/contentful'
 
 export default {
   components: {
     CreatedDate,
-    TagItem
+    TagLinks
   },
   asyncData ({ env, params, error }) {
     return contentful.getEntries({
