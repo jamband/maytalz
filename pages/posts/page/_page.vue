@@ -18,6 +18,7 @@ import PostLink from '~/components/PostLink'
 import TagLinks from '~/components/TagLinks'
 
 import contentful from '~/plugins/contentful'
+import { POSTS_PER_PAGE } from '~/constants'
 
 export default {
   components: {
@@ -35,8 +36,8 @@ export default {
     return contentful.getEntries({
       content_type: env.CONTENTFUL_MAIN_TYPE_ID,
       order: '-sys.createdAt',
-      skip: (page - 1) * 2,
-      limit: 2
+      skip: (page - 1) * POSTS_PER_PAGE,
+      limit: POSTS_PER_PAGE
     }).then((entries) => {
       return {
         posts: entries.items,

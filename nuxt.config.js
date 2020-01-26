@@ -1,5 +1,6 @@
-require('dotenv').config()
+import { POSTS_PER_PAGE } from './constants'
 
+require('dotenv').config()
 const contentful = require('./plugins/contentful').default
 
 export default {
@@ -63,7 +64,7 @@ export default {
             payload: post
           }
         }),
-        ...[...Array(Math.ceil(posts.total / 2)).keys()].map((page) => {
+        ...[...Array(Math.ceil(posts.total / POSTS_PER_PAGE)).keys()].map((page) => {
           return {
             route: `posts/page/${++page}/`
           }

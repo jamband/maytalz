@@ -29,6 +29,8 @@
 </template>
 
 <script>
+import { POSTS_PER_PAGE } from '~/constants'
+
 export default {
   props: {
     total: {
@@ -41,7 +43,7 @@ export default {
       return Number(this.$route.params.page) || 1
     },
     pageCount () {
-      return Math.ceil(this.total / 2)
+      return Math.ceil(this.total / POSTS_PER_PAGE)
     }
   },
   methods: {
