@@ -20,3 +20,29 @@
     </footer>
   </div>
 </template>
+
+<script>
+export default {
+}
+</script>
+
+<style lang="scss">
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  font-size: 90%;
+  background-color: $light;
+}
+</style>
