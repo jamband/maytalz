@@ -8,7 +8,7 @@ localVue.use(pluginFormat)
 const $format = localVue.prototype.$format
 
 describe('plugins: format.date()', () => {
-  test('2020-12-31 and 2021.1-1', () => {
+  test('2020-12-31 and 2021-1-1', () => {
     expect($format.date(new Date('2020-12-31'))).toBe('2020.12.31')
     expect($format.date(new Date('2020-1-1'))).toBe('2020.01.01')
   })
