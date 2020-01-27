@@ -91,19 +91,23 @@ export default {
       font-size: 80%;
     }
   }
+
   &-info {
     position: relative;
     z-index: -1;
     color: $gray-500;
+
     @include media-breakpoint-only(xs) {
       font-size: 75%;
       bottom: 3.4em;
     }
+
     @include media-breakpoint-up(sm) {
       font-size: 85%;
       bottom: 3.1em;
     }
   }
+
   .page-link {
     &:hover {
       @include media-breakpoint-down(sm) {
@@ -111,9 +115,11 @@ export default {
         background-color: transparent;
       }
     }
+
     &:active {
       outline: 0;
       box-shadow: 0 0 0 .2rem rgba($primary, .25);
+
       @include media-breakpoint-down(sm) {
         color: $link-hover-color;
         background-color: $pagination-hover-bg;
