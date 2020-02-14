@@ -22,7 +22,7 @@
         </n-link>
       </li>
     </ul>
-    <div class="pagination-info text-center">
+    <div class="pagination-minimal-info text-center">
       {{ currentPage }}/{{ pageCount }}
     </div>
   </nav>
@@ -85,13 +85,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.pagination {
-  > li {
-    @include media-breakpoint-down(sm) {
-      font-size: 80%;
-    }
-  }
-
+.pagination-minimal {
   &-info {
     position: relative;
     z-index: -1;
@@ -105,25 +99,6 @@ export default {
     @include media-breakpoint-up(sm) {
       font-size: 85%;
       bottom: 3.1em;
-    }
-  }
-
-  .page-link {
-    &:hover {
-      @include media-breakpoint-down(sm) {
-        color: $primary;
-        background-color: transparent;
-      }
-    }
-
-    &:active {
-      outline: 0;
-      box-shadow: 0 0 0 .2rem rgba($primary, .25);
-
-      @include media-breakpoint-down(sm) {
-        color: $link-hover-color;
-        background-color: $pagination-hover-bg;
-      }
     }
   }
 }
