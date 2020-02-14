@@ -46,6 +46,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~assets/css/variables";
+
 article /deep/ {
   h1 {
     border-bottom: 1px solid $gray-300;

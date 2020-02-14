@@ -41,6 +41,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~assets/css/variables";
+
 h1 {
   border-bottom: 1px solid $gray-300;
   padding: .6rem 0;

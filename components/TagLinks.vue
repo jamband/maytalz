@@ -18,6 +18,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~assets/css/variables";
+
 a {
   padding: .15em .4em;
   font-size: .8em;

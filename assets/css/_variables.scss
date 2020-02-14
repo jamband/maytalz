@@ -1,0 +1,85 @@
+@import "~bootstrap/scss/functions";
+
+// Color system
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #919191;
+$gray-600: #5e5e5e;
+$gray-700: #474747;
+$gray-800: #2e2e2e;
+$gray-900: #222222;
+$black:    #000;
+
+$red:      #dc3545;
+
+$primary:  #f27242;
+$light:    $gray-100;
+$danger:   $red;
+
+$yiq-text-dark:             $gray-600;
+
+// Options
+$enable-caret:              false;
+$enable-shadows:            true;
+
+// Spacing
+$spacer: 1rem;
+
+// Body
+$body-color: $gray-600;
+
+// Links
+$link-hover-color:                        darken($primary, 15%);
+$link-hover-decoration:                   none;
+
+// Grid breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px
+);
+
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
+
+// Grid containers
+$container-max-widths: (
+  sm: 540px,
+  md: 720px
+);
+
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+// Components
+$border-radius:               .25rem;
+
+// Typography
+$font-family-sans-serif:      "Source Sans Pro", "游ゴシック体", "Yu Gothic", YuGothic sans-serif;
+$font-family-base:            $font-family-sans-serif;
+
+$font-size-base:              1rem;
+$font-size-lg:                ($font-size-base * 1.25);
+$font-size-sm:                ($font-size-base * .875);
+
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-bold:            700;
+$font-weight-base:            $font-weight-normal;
+
+$text-muted:                  $gray-500;
+
+$hr-border-color:             rgba($white, .08);
+$hr-margin-y:                 $spacer / 2;
+
+// Navbar
+$navbar-light-toggler-border-color: none;
+
+// Pagination
+$pagination-bg:             transparent;
+$pagination-border-color:   none;
+$pagination-hover-bg:       rgba(235,235,235,0.4);
+$pagination-disabled-color: $gray-300;
+$pagination-disabled-bg:    transparent;

@@ -1,8 +1,0 @@
-@import "~bootstrap/scss/functions";
-
-$container-max-widths: (
-  sm: 540px,
-  md: 720px
-);
-
-@include _assert-ascending($container-max-widths, "$container-max-widths");

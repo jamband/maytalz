@@ -34,8 +34,7 @@ export default {
   modules: [
     'bootstrap-vue/nuxt',
     '@nuxtjs/markdownit',
-    '@nuxtjs/pwa',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/pwa'
   ],
   build: {
     // analyze: true
@@ -111,11 +110,5 @@ export default {
     html: true,
     typography: true,
     use: []
-  },
-  styleResources: {
-    scss: [
-      '~/assets/css/variables/*.scss',
-      '~/node_modules/bootstrap/scss/mixins/_breakpoints.scss'
-    ]
   }
 }

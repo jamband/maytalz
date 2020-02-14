@@ -22,14 +22,7 @@
 </template>
 
 <style lang="scss">
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  margin-bottom: 60px;
-}
+@import "~assets/css/variables";
 
 .footer {
   position: absolute;
