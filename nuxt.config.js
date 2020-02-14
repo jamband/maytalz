@@ -99,6 +99,7 @@ export default {
   manifest: {
     name: 'Maytalz',
     short_name: 'Maytalz',
+    description: 'Maytalz built on Nuxt.js + Contentful + Netlify',
     lang: 'en',
     background_color: '#fff',
     display: 'standalone',
