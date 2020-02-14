@@ -71,14 +71,10 @@ export default {
       }
     },
     disabled (part) {
-      const disabled = 'disabled'
-
-      if (part === 'first' || part === 'prev') {
-        return this.currentPage < 2 ? disabled : ''
+      if (/^(first|prev)$/.test(part)) {
+        return this.currentPage < 2 ? 'disabled' : ''
       }
-      if (part === 'next' || part === 'last') {
-        return this.currentPage > 2 ? disabled : ''
-      }
+      return this.currentPage > 2 ? 'disabled' : ''
     }
   }
 }

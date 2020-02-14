@@ -39,7 +39,7 @@ describe('components: PaginationMinimal', () => {
     expect(li.at(2).find(RouterLinkStub).props().to).toEqual({ name: 'posts-page-page', params: { page: 2 } })
     expect(li.at(3).find(RouterLinkStub).props().to).toEqual({ name: 'posts-page-page', params: { page: 3 } })
 
-    expect(wrapper.find('.pagination-info').text()).toBe('1/3')
+    expect(wrapper.find('.pagination-minimal-info').text()).toBe('1/3')
   })
 
   test('total: 5, current page: 2', () => {
@@ -56,7 +56,7 @@ describe('components: PaginationMinimal', () => {
     expect(li.at(2).find(RouterLinkStub).props().to).toEqual({ name: 'posts-page-page', params: { page: 3 } })
     expect(li.at(3).find(RouterLinkStub).props().to).toEqual({ name: 'posts-page-page', params: { page: 3 } })
 
-    expect(wrapper.find('.pagination-info').text()).toBe('2/3')
+    expect(wrapper.find('.pagination-minimal-info').text()).toBe('2/3')
   })
 
   test('total: 5, current page: 3', () => {
@@ -73,6 +73,6 @@ describe('components: PaginationMinimal', () => {
     expect(li.at(2).find(RouterLinkStub).props().to).toEqual({ name: 'posts-page-page', params: { page: 4 } })
     expect(li.at(3).find(RouterLinkStub).props().to).toEqual({ name: 'posts-page-page', params: { page: 3 } })
 
-    expect(wrapper.find('.pagination-info').text()).toBe('3/3')
+    expect(wrapper.find('.pagination-minimal-info').text()).toBe('3/3')
   })
 })

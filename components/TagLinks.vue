@@ -1,9 +1,9 @@
 <template>
-  <div class="d-inline-block">
+  <span>
     <n-link v-for="tag in items" :key="tag.sys.id" :to="{ name: 'posts-tags-slug', params: { slug: tag.fields.slug }}" class="mr-2">
       {{ tag.fields.name }}
     </n-link>
-  </div>
+  </span>
 </template>
 
 <script>
