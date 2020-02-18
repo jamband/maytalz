@@ -1,3 +1,5 @@
+import Fiber from 'fibers'
+import Sass from 'sass'
 import { POSTS_PER_PAGE } from './constants'
 
 require('dotenv').config()
@@ -38,6 +40,14 @@ export default {
   ],
   build: {
     // analyze: true
+    loaders: {
+      scss: {
+        implementation: Sass,
+        sassOptions: {
+          fiber: Fiber
+        }
+      }
+    }
   },
   env: {
     CONTENTFUL_SPACE_ID: process.env.CONTENTFUL_SPACE_ID,
