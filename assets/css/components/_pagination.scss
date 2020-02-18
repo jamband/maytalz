@@ -14,9 +14,7 @@
     }
 
     &:active {
-      outline: 0;
-      box-shadow: 0 0 0 .2rem rgba($primary, .25);
-
+      box-shadow: $pagination-focus-box-shadow;
       @include media-breakpoint-down(sm) {
         color: $link-hover-color;
         background-color: $pagination-hover-bg;

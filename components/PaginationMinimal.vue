@@ -2,22 +2,22 @@
   <nav v-if="hasPage()" aria-label="Page navigation">
     <ul class="pagination">
       <li class="page-item w-25" :class="disabled('first')">
-        <n-link :to="to('first')" class="page-link text-center" ontouchstart="">
+        <n-link :to="to('first')" class="page-link text-center">
           <fa icon="angle-double-left" />
         </n-link>
       </li>
       <li class="page-item w-25" :class="disabled('prev')">
-        <n-link :to="to('prev')" class="page-link text-center" ontouchstart="">
+        <n-link :to="to('prev')" class="page-link text-center">
           <fa icon="angle-left" />
         </n-link>
       </li>
       <li class="page-item w-25" :class="disabled('next')">
-        <n-link :to="to('next')" class="page-link text-center" ontouchstart="">
+        <n-link :to="to('next')" class="page-link text-center">
           <fa icon="angle-right" />
         </n-link>
       </li>
       <li class="page-item w-25" :class="disabled('last')">
-        <n-link :to="to('last')" class="page-link text-center" ontouchstart="">
+        <n-link :to="to('last')" class="page-link text-center">
           <fa icon="angle-double-right" />
         </n-link>
       </li>
