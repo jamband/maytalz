@@ -10,9 +10,7 @@ const factory = (props = {}) => {
   })
 }
 
-describe('components: CreatedDate', () => {
-  test('date: 2020.01.01', () => {
-    const wrapper = factory({ date: '2020.01.01' })
-    expect(wrapper.text()).toBe('2020.01.01')
-  })
+test('date: 2020.01.01', () => {
+  const wrapper = factory({ date: '2020.01.01' })
+  expect(wrapper.text()).toBe('2020.01.01')
 })

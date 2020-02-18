@@ -5,14 +5,12 @@ const localVue = createLocalVue()
 
 localVue.use(pluginApp)
 
-describe('plugins: app', () => {
-  const $app = localVue.prototype.$app
+const $app = localVue.prototype.$app
 
-  test('name', () => {
-    expect($app.name).toBe('Maytalz')
-  })
+test('name', () => {
+  expect($app.name).toBe('Maytalz')
+})
 
-  test('repository', () => {
-    expect($app.repository).toBe('https://github.com/jamband/maytalz')
-  })
+test('repository', () => {
+  expect($app.repository).toBe('https://github.com/jamband/maytalz')
 })
