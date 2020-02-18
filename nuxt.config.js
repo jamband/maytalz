@@ -1,8 +1,10 @@
+import Dotenv from 'dotenv'
 import Fiber from 'fibers'
 import Sass from 'sass'
-import { POSTS_PER_PAGE } from './constants'
+import { APP_NAME, POSTS_PER_PAGE } from './constants'
 
-require('dotenv').config()
+Dotenv.config()
+
 const contentful = require('./plugins/contentful').default
 
 export default {
@@ -11,7 +13,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Maytalz is a simple blog' }
+      { hid: 'description', name: 'description', content: `${APP_NAME} is a simple blog` }
     ],
     link: [
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' },
@@ -106,9 +108,9 @@ export default {
     bootstrapVueCSS: false
   },
   manifest: {
-    name: 'Maytalz',
-    short_name: 'Maytalz',
-    description: 'Maytalz built on Nuxt.js + Contentful + Netlify',
+    name: APP_NAME,
+    short_name: APP_NAME,
+    description: `${APP_NAME} built on Nuxt.js + Contentful + Netlify`,
     lang: 'en',
     background_color: '#fff',
     display: 'standalone',
