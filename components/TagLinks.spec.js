@@ -30,13 +30,13 @@ test('items', () => {
   ]
 
   const wrapper = factory({ items })
-  const a = wrapper.findAll('a')
 
+  const a = wrapper.findAll('a')
   expect(a.at(0).text()).toBe('Foo1')
   expect(a.at(1).text()).toBe('Bar1')
   expect(a.at(2).text()).toBe('Baz1')
 
-  expect(a.at(0).find(RouterLinkStub).props().to).toEqual({ name: 'posts-tags-slug', params: { slug: 'foo-1' } })
-  expect(a.at(1).find(RouterLinkStub).props().to).toEqual({ name: 'posts-tags-slug', params: { slug: 'bar-1' } })
-  expect(a.at(2).find(RouterLinkStub).props().to).toEqual({ name: 'posts-tags-slug', params: { slug: 'baz-1' } })
+  expect(a.at(0).props().to).toEqual({ name: 'posts-tags-slug', params: { slug: 'foo-1' } })
+  expect(a.at(1).props().to).toEqual({ name: 'posts-tags-slug', params: { slug: 'bar-1' } })
+  expect(a.at(2).props().to).toEqual({ name: 'posts-tags-slug', params: { slug: 'baz-1' } })
 })

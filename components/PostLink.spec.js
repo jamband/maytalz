@@ -25,5 +25,5 @@ test('post', () => {
   const a = wrapper.find('a')
 
   expect(a.text()).toBe('Test Title 1')
-  expect(a.find(RouterLinkStub).props().to).toEqual({ name: 'posts-slug', params: { slug: 'test-title-1' } })
+  expect(a.props().to).toEqual({ name: 'posts-slug', params: { slug: 'test-title-1' } })
 })
