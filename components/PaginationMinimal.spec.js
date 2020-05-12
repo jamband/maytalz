@@ -47,10 +47,10 @@ test('total: 5, current page: 2', () => {
   const wrapper = factory({ total: 5 }, { params: { page: 2 } })
   const li = wrapper.findAll('ul > li')
 
-  expect(li.at(0).classes()).not.toContain('disabled')
-  expect(li.at(1).classes()).not.toContain('disabled')
-  expect(li.at(2).classes()).not.toContain('disabled')
-  expect(li.at(3).classes()).not.toContain('disabled')
+  expect(li.at(FIRST).classes()).not.toContain('disabled')
+  expect(li.at(PREV).classes()).not.toContain('disabled')
+  expect(li.at(NEXT).classes()).not.toContain('disabled')
+  expect(li.at(LAST).classes()).not.toContain('disabled')
 
   expect(li.at(FIRST).find('a').props().to).toEqual({ name: 'index' })
   expect(li.at(PREV).find('a').props().to).toEqual({ name: 'posts-page-page', params: { page: 1 } })
@@ -64,10 +64,10 @@ test('total: 5, current page: 3', () => {
   const wrapper = factory({ total: 5 }, { params: { page: 3 } })
   const li = wrapper.findAll('ul > li')
 
-  expect(li.at(0).classes()).not.toContain('disabled')
-  expect(li.at(1).classes()).not.toContain('disabled')
-  expect(li.at(2).classes()).toContain('disabled')
-  expect(li.at(3).classes()).toContain('disabled')
+  expect(li.at(FIRST).classes()).not.toContain('disabled')
+  expect(li.at(PREV).classes()).not.toContain('disabled')
+  expect(li.at(NEXT).classes()).toContain('disabled')
+  expect(li.at(LAST).classes()).toContain('disabled')
 
   expect(li.at(FIRST).find('a').props().to).toEqual({ name: 'index' })
   expect(li.at(PREV).find('a').props().to).toEqual({ name: 'posts-page-page', params: { page: 2 } })
