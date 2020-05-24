@@ -3,7 +3,6 @@
   "scripts": {
     "dev": "nuxt",
     "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "test": "jest",
     "clean": "rm -rf .nuxt dist node_modules"
   },
