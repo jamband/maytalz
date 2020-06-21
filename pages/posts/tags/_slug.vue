@@ -1,7 +1,7 @@
 <template>
   <article>
     <section v-for="post in posts" :key="post.sys.id" class="mb-3">
-      <CreatedDate :date="$format.date(post.sys.createdAt)" />
+      <CreatedDate>{{ $format.date(post.sys.createdAt) }}</CreatedDate>
       <TagLinks :items="post.fields.tags" />
       <PostLink :post="post" />
     </section>

@@ -1,16 +1,15 @@
-import { mount, createLocalVue } from '@vue/test-utils'
+import { mount } from '@vue/test-utils'
 import CreatedDate from '~/components/CreatedDate'
 
-const localVue = createLocalVue()
-
-const factory = (props = {}) => {
+const factory = (slot) => {
   return mount(CreatedDate, {
-    localVue,
-    propsData: props
+    slots: {
+      default: slot
+    }
   })
 }
 
 test('date: 2020.01.01', () => {
-  const wrapper = factory({ date: '2020.01.01' })
+  const wrapper = factory('2020.01.01')
   expect(wrapper.text()).toBe('2020.01.01')
 })

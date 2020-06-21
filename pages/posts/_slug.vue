@@ -1,6 +1,6 @@
 <template>
   <article>
-    <CreatedDate :date="$format.date(post.sys.createdAt)" />
+    <CreatedDate>{{ $format.date(post.sys.createdAt) }}</CreatedDate>
     <TagLinks :items="post.fields.tags" />
     <!-- eslint-disable-next-line -->
     <section v-html="$md.render(content())" />
