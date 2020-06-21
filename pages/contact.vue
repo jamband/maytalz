@@ -3,8 +3,8 @@
     <h1>Contact</h1>
     <section>
       Please to the message via
-      <a href="https://twitter.com/livejam_db" rel="noopener" target="_blank">Twitter</a> or
-      <a :href="`${$app.repository}/issues`" rel="noopener" target="_blank">GitHub</a> Issues.
+      <LinkExternal href="https://twitter.com/livejam_db">Twitter</LinkExternal> or
+      <LinkExternal :href="`${$app.repository}/issues`">GitHub</LinkExternal> Issues.
     </section>
     <section>
       Thank you.

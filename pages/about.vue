@@ -3,15 +3,13 @@
     <h1>About</h1>
     <section>
       This is a application built on
-      <a href="https://nuxtjs.org/" rel="noopener" target="_blank">Nuxt.js</a> +
-      <a href="https://www.contentful.com/" rel="noopener" target="_blank">Contentful</a> +
-      <a href="https://www.netlify.com/" rel="noopener" target="_blank">Netlify</a>.
+      <LinkExternal href="https://nuxtjs.org/">Nuxt.js</LinkExternal> +
+      <LinkExternal href="https://www.contentful.com/">Contentful</LinkExternal> +
+      <LinkExternal href="https://www.netlify.com/">Netlify</LinkExternal>.
     </section>
     <section>
       For more information:
-      <a :href="$app.repository" rel="noopener" target="_blank">
-        GitHub - jamband/{{ $app.name.toLowerCase() }}
-      </a>
+      <LinkExternal :href="$app.repository">GitHub - jamband/{{ $app.name.toLowerCase() }}</LinkExternal>
     </section>
   </article>
 </template>
