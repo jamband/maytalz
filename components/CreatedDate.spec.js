@@ -1,8 +1,8 @@
-import { mount } from '@vue/test-utils'
+import { shallowMount } from '@vue/test-utils'
 import CreatedDate from '~/components/CreatedDate'
 
 const factory = (slot) => {
-  return mount(CreatedDate, {
+  return shallowMount(CreatedDate, {
     slots: {
       default: slot
     }

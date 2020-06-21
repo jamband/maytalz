@@ -1,11 +1,8 @@
-import { mount, createLocalVue, RouterLinkStub } from '@vue/test-utils'
+import { shallowMount, RouterLinkStub } from '@vue/test-utils'
 import TagLinks from '~/components/TagLinks'
 
-const localVue = createLocalVue()
-
 const factory = (props = {}) => {
-  return mount(TagLinks, {
-    localVue,
+  return shallowMount(TagLinks, {
     propsData: props,
     stubs: {
       NLink: RouterLinkStub

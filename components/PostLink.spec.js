@@ -1,11 +1,8 @@
-import { mount, createLocalVue, RouterLinkStub } from '@vue/test-utils'
+import { shallowMount, RouterLinkStub } from '@vue/test-utils'
 import PostLink from '~/components/PostLink'
 
-const localVue = createLocalVue()
-
 const factory = (props = {}) => {
-  return mount(PostLink, {
-    localVue,
+  return shallowMount(PostLink, {
     propsData: props,
     stubs: {
       NLink: RouterLinkStub

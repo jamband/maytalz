@@ -1,17 +1,12 @@
-import { mount, createLocalVue, RouterLinkStub } from '@vue/test-utils'
+import { shallowMount, RouterLinkStub } from '@vue/test-utils'
 import PaginationMinimal from '~/components/PaginationMinimal'
-import pluginFontAwesome from '~/plugins/fontawesome'
-
-const localVue = createLocalVue()
-
-localVue.use(pluginFontAwesome)
 
 const factory = (props = {}, route = {}) => {
-  return mount(PaginationMinimal, {
-    localVue,
+  return shallowMount(PaginationMinimal, {
     propsData: props,
     stubs: {
-      NLink: RouterLinkStub
+      NLink: RouterLinkStub,
+      fa: true
     },
     mocks: {
       $route: route
