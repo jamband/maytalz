@@ -22,8 +22,6 @@
 </template>
 
 <style lang="scss">
-@import "~assets/css/variables";
-
 .footer {
   position: absolute;
   bottom: 0;

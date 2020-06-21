@@ -34,7 +34,8 @@ export default {
     '~/plugins/fontawesome.js'
   ],
   buildModules: [
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/style-resources'
   ],
   modules: [
     'bootstrap-vue/nuxt',
@@ -123,5 +124,12 @@ export default {
     html: true,
     typography: true,
     use: []
+  },
+  styleResources: {
+    scss: [
+      './assets/css/_variables.scss',
+      './node_modules/bootstrap/scss/mixins/_breakpoints.scss'
+    ]
   }
+
 }
