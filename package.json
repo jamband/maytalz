@@ -7,29 +7,30 @@
     "clean": "rm -rf .nuxt dist node_modules"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.28",
-    "@fortawesome/free-solid-svg-icons": "^5.13.0",
-    "@fortawesome/vue-fontawesome": "^0.1.9",
+    "@fortawesome/fontawesome-svg-core": "^1.2.29",
+    "@fortawesome/free-solid-svg-icons": "^5.13.1",
+    "@fortawesome/vue-fontawesome": "^0.1.10",
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/markdownit": "^1.2.9",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
     "bootstrap": "^4.5.0",
     "bootstrap-vue": "^2.15.0",
     "contentful": "^7.14.4",
-    "nuxt": "^2.12.2"
+    "nuxt": "^2.13.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.0.0",
     "@nuxtjs/eslint-module": "^2.0.0",
     "@vue/test-utils": "^1.0.3",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.0.1",
-    "eslint": "^7.1.0",
+    "eslint": "^7.3.0",
     "eslint-plugin-nuxt": "^1.0.0",
     "fibers": "^5.0.0",
     "jest": "^26.0.1",
-    "sass": "^1.26.5",
+    "sass": "^1.26.8",
     "sass-loader": "^8.0.2",
-    "vue-jest": "^4.0.0-0"
+    "vue-jest": "^3.0.5"
   }
 }
