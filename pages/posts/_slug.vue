@@ -8,16 +8,9 @@
 </template>
 
 <script>
-import CreatedDate from '~/components/CreatedDate'
-import TagLinks from '~/components/TagLinks'
-
 import contentful from '~/plugins/contentful'
 
 export default {
-  components: {
-    CreatedDate,
-    TagLinks
-  },
   asyncData ({ env, params, error }) {
     return contentful.getEntries({
       content_type: env.CONTENTFUL_MAIN_TYPE_ID,

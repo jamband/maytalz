@@ -12,21 +12,10 @@
 </template>
 
 <script>
-import CreatedDate from '~/components/CreatedDate'
-import PaginationMinimal from '~/components/PaginationMinimal'
-import PostLink from '~/components/PostLink'
-import TagLinks from '~/components/TagLinks'
-
 import contentful from '~/plugins/contentful'
 import { POSTS_PER_PAGE } from '~/constants'
 
 export default {
-  components: {
-    CreatedDate,
-    PostLink,
-    PaginationMinimal,
-    TagLinks
-  },
   asyncData ({ env, params, error }) {
     const page = Number(params.page)
     if (isNaN(page) || page < 1) {

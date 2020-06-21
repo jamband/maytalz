@@ -9,18 +9,9 @@
 </template>
 
 <script>
-import CreatedDate from '~/components/CreatedDate'
-import PostLink from '~/components/PostLink'
-import TagLinks from '~/components/TagLinks'
-
 import contentful from '~/plugins/contentful'
 
 export default {
-  components: {
-    CreatedDate,
-    PostLink,
-    TagLinks
-  },
   asyncData ({ env, params, error }) {
     return contentful.getEntries({
       content_type: env.CONTENTFUL_TAG_TYPE_ID,

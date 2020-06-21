@@ -9,6 +9,7 @@ const contentful = require('./plugins/contentful').default
 
 export default {
   mode: 'universal',
+  components: true,
   head: {
     meta: [
       { charset: 'utf-8' },

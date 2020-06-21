@@ -12,21 +12,10 @@
 </template>
 
 <script>
-import CreatedDate from '~/components/CreatedDate'
-import PaginationMinimal from '~/components/PaginationMinimal'
-import PostLink from '~/components/PostLink'
-import TagLinks from '~/components/TagLinks'
-
 import contentful from '~/plugins/contentful'
 import { POSTS_PER_PAGE } from '~/constants'
 
 export default {
-  components: {
-    CreatedDate,
-    PaginationMinimal,
-    PostLink,
-    TagLinks
-  },
   asyncData ({ env }) {
     return contentful.getEntries({
       content_type: env.CONTENTFUL_MAIN_TYPE_ID,
