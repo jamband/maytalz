@@ -39,7 +39,7 @@ export default {
   },
   head () {
     return {
-      title: `${this.$app.name}`
+      title: `Tag: ${this.$route.params.slug}`
     }
   }
 }

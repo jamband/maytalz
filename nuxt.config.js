@@ -11,6 +11,7 @@ export default {
   mode: 'universal',
   components: true,
   head: {
+    titleTemplate: `%s - ${APP_NAME}`,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

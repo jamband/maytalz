@@ -32,7 +32,7 @@ export default {
   },
   head () {
     return {
-      title: `${this.post.fields.title} - ${this.$app.name}`
+      title: this.post.fields.title
     }
   }
 }
