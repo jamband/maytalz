@@ -1,6 +1,4 @@
-import Vue from 'vue'
-
-Vue.prototype.$format = {
+export const format = {
   date: (value) => {
     const date = new Date(value)
     const year = date.getFullYear()
@@ -25,4 +23,8 @@ Vue.prototype.$format = {
     }
     return value
   }
+}
+
+export default (_, inject) => {
+  inject('format', format)
 }
