@@ -4,7 +4,6 @@ import { APP_NAME } from './plugins/constants'
 
 export default {
   target: 'static',
-  mode: 'universal',
   components: true,
   head: {
     titleTemplate: `%s - ${APP_NAME}`,
@@ -17,9 +16,6 @@ export default {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
-  },
-  loading: {
-    color: '#f27242'
   },
   css: [
     '@fortawesome/fontawesome-svg-core/styles.css',
