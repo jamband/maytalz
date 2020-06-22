@@ -8,3 +8,7 @@ test('name', () => {
 test('repository', () => {
   expect(app.repository).toBe('https://github.com/jamband/maytalz')
 })
+
+test('posts', () => {
+  expect(app.posts.perPage).toBe(2)
+})

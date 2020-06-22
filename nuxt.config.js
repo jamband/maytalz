@@ -1,13 +1,9 @@
-import Dotenv from 'dotenv'
 import Fiber from 'fibers'
 import Sass from 'sass'
-import { APP_NAME, POSTS_PER_PAGE } from './constants'
-
-Dotenv.config()
-
-const contentful = require('./plugins/contentful').default
+import { APP_NAME } from './constants'
 
 export default {
+  target: 'static',
   mode: 'universal',
   components: true,
   head: {
@@ -31,6 +27,7 @@ export default {
   ],
   plugins: [
     '~/plugins/app.js',
+    '~/plugins/contentful.js',
     '~/plugins/format.js',
     '~/plugins/fontawesome.js'
   ],
@@ -54,46 +51,15 @@ export default {
       }
     }
   },
-  env: {
-    CONTENTFUL_SPACE_ID: process.env.CONTENTFUL_SPACE_ID,
-    CONTENTFUL_ACCESS_TOKEN: process.env.CONTENTFUL_ACCESS_TOKEN,
-    CONTENTFUL_MAIN_TYPE_ID: process.env.CONTENTFUL_MAIN_TYPE_ID,
-    CONTENTFUL_TAG_TYPE_ID: process.env.CONTENTFUL_TAG_TYPE_ID
+  publicRuntimeConfig: {
+    contentfulSpaceId: process.env.CONTENTFUL_SPACE_ID,
+    contentfulAccessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+    contentfulMainTypeId: process.env.CONTENTFUL_MAIN_TYPE_ID,
+    contentfulTagTypeId: process.env.CONTENTFUL_TAG_TYPE_ID
   },
   generate: {
-    fallback: true,
-    async routes () {
-      const [posts, tags] = await Promise.all([
-        contentful.getEntries({
-          content_type: process.env.CONTENTFUL_MAIN_TYPE_ID
-        }),
-        contentful.getEntries({
-          content_type: process.env.CONTENTFUL_TAG_TYPE_ID
-        })
-      ])
-      return [
-        ...posts.items.map((post) => {
-          return {
-            route: `posts/${post.fields.slug}/`,
-            payload: post
-          }
-        }),
-        ...[...Array(Math.ceil(posts.total / POSTS_PER_PAGE)).keys()].map((page) => {
-          return {
-            route: `posts/page/${++page}/`
-          }
-        }),
-        ...tags.items.map((tag) => {
-          return {
-            route: `posts/tags/${tag.fields.slug}/`,
-            payload: tag
-          }
-        })
-      ]
-    }
-  },
-  router: {
-    trailingSlash: true
+    fallback: '404.html',
+    routes: ['/']
   },
   // top level options for packages
   bootstrapVue: {

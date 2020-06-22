@@ -12,18 +12,17 @@
 </template>
 
 <script>
-import contentful from '~/plugins/contentful'
 import { POSTS_PER_PAGE } from '~/constants'
 
 export default {
-  asyncData ({ env, params, error }) {
+  asyncData ({ $contentful, $config, params, error }) {
     const page = Number(params.page)
     if (isNaN(page) || page < 1) {
       error({ statusCode: 404 })
       return
     }
-    return contentful.getEntries({
-      content_type: env.CONTENTFUL_MAIN_TYPE_ID,
+    return $contentful.getEntries({
+      content_type: $config.contentfulMainTypeId,
       order: '-sys.createdAt',
       skip: (page - 1) * POSTS_PER_PAGE,
       limit: POSTS_PER_PAGE

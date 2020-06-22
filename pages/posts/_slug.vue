@@ -8,12 +8,10 @@
 </template>
 
 <script>
-import contentful from '~/plugins/contentful'
-
 export default {
-  asyncData ({ env, params, error }) {
-    return contentful.getEntries({
-      content_type: env.CONTENTFUL_MAIN_TYPE_ID,
+  asyncData ({ $contentful, $config, params, error }) {
+    return $contentful.getEntries({
+      content_type: $config.contentfulMainTypeId,
       'fields.slug': params.slug
     }).then((entries) => {
       if (entries.total !== 1) {

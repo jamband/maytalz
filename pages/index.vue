@@ -12,13 +12,12 @@
 </template>
 
 <script>
-import contentful from '~/plugins/contentful'
 import { POSTS_PER_PAGE } from '~/constants'
 
 export default {
-  asyncData ({ env }) {
-    return contentful.getEntries({
-      content_type: env.CONTENTFUL_MAIN_TYPE_ID,
+  asyncData ({ $config, $contentful, $app }) {
+    return $contentful.getEntries({
+      content_type: $config.contentfulMainTypeId,
       order: '-sys.createdAt',
       limit: POSTS_PER_PAGE
     }).then((entries) => {
