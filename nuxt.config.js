@@ -1,6 +1,6 @@
 import Fiber from 'fibers'
 import Sass from 'sass'
-import { APP_NAME } from './constants'
+import { APP_NAME } from './plugins/constants'
 
 export default {
   target: 'static',

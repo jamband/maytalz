@@ -7,19 +7,17 @@
         <PostLink :post="post" />
       </section>
     </article>
-    <PaginationMinimal :total="total" />
+    <PaginationMinimal :total="total" :per-page="$app.posts.perPage" />
   </div>
 </template>
 
 <script>
-import { POSTS_PER_PAGE } from '~/constants'
-
 export default {
   asyncData ({ $config, $contentful, $app }) {
     return $contentful.getEntries({
       content_type: $config.contentfulMainTypeId,
       order: '-sys.createdAt',
-      limit: POSTS_PER_PAGE
+      limit: $app.posts.perPage
     }).then((entries) => {
       return {
         posts: entries.items,

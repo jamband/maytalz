@@ -7,15 +7,13 @@
         <PostLink :post="post" />
       </section>
     </article>
-    <PaginationMinimal :total="total" />
+    <PaginationMinimal :total="total" :per-page="$app.posts.perPage" />
   </div>
 </template>
 
 <script>
-import { POSTS_PER_PAGE } from '~/constants'
-
 export default {
-  asyncData ({ $contentful, $config, params, error }) {
+  asyncData ({ $contentful, $config, $app, params, error }) {
     const page = Number(params.page)
     if (isNaN(page) || page < 1) {
       error({ statusCode: 404 })
@@ -24,8 +22,8 @@ export default {
     return $contentful.getEntries({
       content_type: $config.contentfulMainTypeId,
       order: '-sys.createdAt',
-      skip: (page - 1) * POSTS_PER_PAGE,
-      limit: POSTS_PER_PAGE
+      skip: (page - 1) * $app.posts.perPage,
+      limit: $app.posts.perPage
     }).then((entries) => {
       return {
         posts: entries.items,

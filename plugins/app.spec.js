@@ -1,4 +1,4 @@
-import { APP_NAME } from '../constants'
+import { APP_NAME } from '~/plugins/constants'
 import { app } from '~/plugins/app'
 
 test('name', () => {
