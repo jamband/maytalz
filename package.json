@@ -16,8 +16,8 @@
     "@nuxtjs/pwa": "^3.0.0-beta.20",
     "bootstrap": "^4.5.0",
     "bootstrap-vue": "^2.15.0",
-    "contentful": "^7.14.4",
-    "nuxt": "^2.13.0"
+    "contentful": "^7.14.5",
+    "nuxt": "^2.13.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.0.0",
@@ -26,12 +26,12 @@
     "@vue/test-utils": "^1.0.3",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
-    "babel-jest": "^26.0.1",
-    "eslint": "^7.3.0",
+    "babel-jest": "^26.1.0",
+    "eslint": "^7.3.1",
     "eslint-plugin-nuxt": "^1.0.0",
     "fibers": "^5.0.0",
-    "jest": "^26.0.1",
-    "sass": "^1.26.8",
+    "jest": "^26.1.0",
+    "sass": "^1.26.9",
     "sass-loader": "^8.0.2",
     "vue-jest": "^3.0.5"
   }
