@@ -4,7 +4,7 @@ import LinkExternal from '~/components/LinkExternal'
 const slot = '<span>foo</span>'
 const url = 'https://example.com/'
 
-const factory = (props = {}) => {
+const factory = ({ props }) => {
   return shallowMount(LinkExternal, {
     propsData: props,
     slots: {
@@ -15,7 +15,9 @@ const factory = (props = {}) => {
 
 test(`{ href: ${url} }`, () => {
   const wrapper = factory({
-    href: url
+    props: {
+      href: url
+    }
   })
   const a = wrapper.find('a').element
   expect(a.href).toBe(url)
@@ -26,8 +28,10 @@ test(`{ href: ${url} }`, () => {
 
 test(`{ href: ${url}, norefferer: false }`, () => {
   const wrapper = factory({
-    href: url,
-    norefferer: false
+    props: {
+      href: url,
+      norefferer: false
+    }
   })
   const a = wrapper.find('a').element
   expect(a.href).toBe(url)
@@ -38,8 +42,10 @@ test(`{ href: ${url}, norefferer: false }`, () => {
 
 test(`{ href: ${url}, rel: "author" }`, () => {
   const wrapper = factory({
-    href: url,
-    rel: 'author'
+    props: {
+      href: url,
+      rel: 'author'
+    }
   })
   const a = wrapper.find('a').element
   expect(a.href).toBe(url)

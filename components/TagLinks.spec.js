@@ -1,7 +1,7 @@
 import { shallowMount, RouterLinkStub } from '@vue/test-utils'
 import TagLinks from '~/components/TagLinks'
 
-const factory = (props = {}) => {
+const factory = ({ props }) => {
   return shallowMount(TagLinks, {
     propsData: props,
     stubs: {
@@ -26,8 +26,11 @@ test('items', () => {
     }
   ]
 
-  const wrapper = factory({ items })
-
+  const wrapper = factory({
+    props: {
+      items
+    }
+  })
   const a = wrapper.findAll('a')
   expect(a.at(0).text()).toBe('Foo1')
   expect(a.at(1).text()).toBe('Bar1')

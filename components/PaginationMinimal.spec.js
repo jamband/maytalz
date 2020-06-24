@@ -1,7 +1,7 @@
 import { shallowMount, RouterLinkStub } from '@vue/test-utils'
 import PaginationMinimal from '~/components/PaginationMinimal'
 
-const factory = (props = {}, route = {}) => {
+const factory = ({ props, route }) => {
   return shallowMount(PaginationMinimal, {
     propsData: props,
     stubs: {
@@ -17,12 +17,27 @@ const factory = (props = {}, route = {}) => {
 const [FIRST, PREV, NEXT, LAST] = [0, 1, 2, 3]
 
 test('total: 0', () => {
-  const wrapper = factory({ total: 0 })
+  const wrapper = factory({
+    props: {
+      total: 0,
+      perPage: 2
+    }
+  })
   expect(wrapper.html()).toBe('')
 })
 
 test('total: 5, currentPage: 1', () => {
-  const wrapper = factory({ total: 5 }, { params: { page: 1 } })
+  const wrapper = factory({
+    props: {
+      total: 5,
+      perPage: 2
+    },
+    route: {
+      params: {
+        page: 1
+      }
+    }
+  })
   const li = wrapper.findAll('ul > li')
 
   expect(li.at(FIRST).classes()).toContain('disabled')
@@ -39,7 +54,17 @@ test('total: 5, currentPage: 1', () => {
 })
 
 test('total: 5, current page: 2', () => {
-  const wrapper = factory({ total: 5 }, { params: { page: 2 } })
+  const wrapper = factory({
+    props: {
+      total: 5,
+      perPage: 2
+    },
+    route: {
+      params: {
+        page: 2
+      }
+    }
+  })
   const li = wrapper.findAll('ul > li')
 
   expect(li.at(FIRST).classes()).not.toContain('disabled')
@@ -56,7 +81,17 @@ test('total: 5, current page: 2', () => {
 })
 
 test('total: 5, current page: 3', () => {
-  const wrapper = factory({ total: 5 }, { params: { page: 3 } })
+  const wrapper = factory({
+    props: {
+      total: 5,
+      perPage: 2
+    },
+    route: {
+      params: {
+        page: 3
+      }
+    }
+  })
   const li = wrapper.findAll('ul > li')
 
   expect(li.at(FIRST).classes()).not.toContain('disabled')

@@ -1,7 +1,7 @@
 import { shallowMount, RouterLinkStub } from '@vue/test-utils'
 import PostLink from '~/components/PostLink'
 
-const factory = (props = {}) => {
+const factory = ({ props }) => {
   return shallowMount(PostLink, {
     propsData: props,
     stubs: {
@@ -11,14 +11,16 @@ const factory = (props = {}) => {
 }
 
 test('post', () => {
-  const post = {
-    fields: {
-      title: 'Test Title 1',
-      slug: 'test-title-1'
+  const wrapper = factory({
+    props: {
+      post: {
+        fields: {
+          title: 'Test Title 1',
+          slug: 'test-title-1'
+        }
+      }
     }
-  }
-
-  const wrapper = factory({ post })
+  })
   const a = wrapper.find('a')
 
   expect(a.text()).toBe('Test Title 1')
