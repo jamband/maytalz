@@ -1,6 +1,6 @@
 <template>
   <span>
-    <n-link v-for="tag in items" :key="tag.sys.id" :to="{ name: 'posts-tags-slug', params: { slug: tag.fields.slug }}" class="mr-2">
+    <n-link v-for="tag in items" :key="tag.sys.id" :to="{ name: 'posts-tags-slug', params: { slug: tag.fields.slug }}" class="tag-links mr-2">
       {{ tag.fields.name }}
     </n-link>
   </span>
@@ -18,13 +18,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-a {
+.tag-links {
   padding: .15em .4em;
   font-size: .8em;
-  line-height: 1;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: baseline;
   border-radius: $border-radius;
   color: $gray-500;
   background-color: $gray-100;

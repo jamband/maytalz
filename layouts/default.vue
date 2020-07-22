@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="layout d-flex flex-column">
     <b-navbar toggleable="md" type="light" variant="light" class="mb-3">
       <div class="container">
         <b-navbar-brand to="/">{{ $app.name }}</b-navbar-brand>
@@ -12,7 +12,7 @@
         </b-collapse>
       </div>
     </b-navbar>
-    <div class="container">
+    <div class="container flex-grow-1">
       <nuxt />
     </div>
     <footer class="footer text-center">
@@ -22,12 +22,12 @@
 </template>
 
 <style lang="scss">
+.layout {
+  min-height: 100vh;
+}
+
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-  line-height: 60px;
+  padding: 1rem 0;
   font-size: 90%;
   background-color: $light;
 }

@@ -1,3 +1,5 @@
+@use "sass:color";
+
 @import "~bootstrap/scss/functions";
 
 // Color system
@@ -13,17 +15,14 @@ $gray-800: #2e2e2e;
 $gray-900: #222222;
 $black:    #000;
 
-$red:      #dc3545;
-
 $primary:  #f27242;
 $light:    $gray-100;
-$danger:   $red;
 
 $yiq-text-dark:             $gray-600;
 
 // Options
 $enable-caret:              false;
-$enable-shadows:            true;
+$enable-validation-icons:   false;
 
 // Spacing
 $spacer: 1rem;
@@ -32,7 +31,7 @@ $spacer: 1rem;
 $body-color: $gray-600;
 
 // Links
-$link-hover-color:                        darken($primary, 15%);
+$link-hover-color:                        color.scale($primary, $lightness: -25%);
 $link-hover-decoration:                   none;
 
 // Grid breakpoints
@@ -55,6 +54,7 @@ $container-max-widths: (
 
 // Components
 $border-radius:               .25rem;
+$component-active-bg:         $primary;
 
 // Typography
 $font-family-sans-serif:      "Source Sans Pro", "游ゴシック体", "Yu Gothic", YuGothic sans-serif;
@@ -68,18 +68,27 @@ $font-weight-light:           300;
 $font-weight-normal:          400;
 $font-weight-bold:            700;
 $font-weight-base:            $font-weight-normal;
+$line-height-base:            1.625;
 
 $text-muted:                  $gray-500;
 
 $hr-border-color:             rgba($white, .08);
 $hr-margin-y:                 $spacer / 2;
 
+// Buttons + Forms
+$input-btn-focus-width:         .2rem;
+$input-btn-focus-color-opacity: .25;
+$input-btn-focus-color:         rgba($component-active-bg, $input-btn-focus-color-opacity);
+$input-btn-focus-box-shadow:    0 0 0 $input-btn-focus-width $input-btn-focus-color;
+
 // Navbar
 $navbar-light-toggler-border-color: none;
 
 // Pagination
-$pagination-bg:             transparent;
-$pagination-border-color:   none;
-$pagination-hover-bg:       rgba(235,235,235,0.4);
-$pagination-disabled-color: $gray-300;
-$pagination-disabled-bg:    transparent;
+$pagination-bg:                     transparent;
+$pagination-border-color:           none;
+$pagination-hover-bg:               rgba(235,235,235,0.4);
+$pagination-focus-box-shadow:       $input-btn-focus-box-shadow;
+
+$pagination-disabled-color:         $gray-300;
+$pagination-disabled-bg:            transparent;

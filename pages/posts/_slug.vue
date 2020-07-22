@@ -15,7 +15,7 @@ export default {
       'fields.slug': params.slug
     }).then((entries) => {
       if (entries.total !== 1) {
-        error({ statusCode: 404 })
+        error({ statusCode: 404, message: 'Page not found' })
         return
       }
       return {
@@ -39,9 +39,14 @@ export default {
 <style lang="scss" scoped>
 article ::v-deep {
   h1 {
-    border-bottom: 1px solid $gray-300;
     padding: .6rem 0;
-    margin-bottom: 2rem;
+    margin: 1rem 0;
+  }
+
+  h2 {
+    margin: 1rem 0;
+    padding: .6rem 0;
+    border-bottom: 1px solid $gray-300;
   }
 
   img {

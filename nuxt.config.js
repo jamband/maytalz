@@ -1,5 +1,3 @@
-import Fiber from 'fibers'
-import Sass from 'sass'
 import { APP_NAME } from './plugins/constants'
 
 export default {
@@ -38,14 +36,6 @@ export default {
   ],
   build: {
     // analyze: true
-    loaders: {
-      scss: {
-        implementation: Sass,
-        sassOptions: {
-          fiber: Fiber
-        }
-      }
-    }
   },
   publicRuntimeConfig: {
     contentfulSpaceId: process.env.CONTENTFUL_SPACE_ID,

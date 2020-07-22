@@ -83,20 +83,46 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.pagination-minimal {
-  &-info {
-    position: relative;
-    z-index: -1;
-    color: $gray-500;
+.pagination {
+  > li {
+    @include media-breakpoint-down(sm) {
+      font-size: 80%;
+    }
+  }
 
-    @include media-breakpoint-only(xs) {
-      font-size: 75%;
-      bottom: 3.4em;
+  .page-link {
+    &:hover {
+      @include media-breakpoint-down(sm) {
+        color: $primary;
+        background-color: transparent;
+      }
     }
 
-    @include media-breakpoint-up(sm) {
-      font-size: 85%;
-      bottom: 3.1em;
+    &:active {
+      box-shadow: $pagination-focus-box-shadow;
+
+      @include media-breakpoint-down(sm) {
+        color: $link-hover-color;
+        background-color: $pagination-hover-bg;
+      }
+    }
+  }
+
+  &-minimal {
+    &-info {
+      position: relative;
+      z-index: -1;
+      color: $gray-500;
+
+      @include media-breakpoint-only(xs) {
+        font-size: 75%;
+        bottom: 3.4em;
+      }
+
+      @include media-breakpoint-up(sm) {
+        font-size: 85%;
+        bottom: 3.1em;
+      }
     }
   }
 }
