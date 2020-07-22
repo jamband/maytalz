@@ -1,7 +1,6 @@
 <template>
   <div>
     <h1>#{{ error.statusCode }}</h1>
-    <fa icon="info-circle" />
     {{ error.message }}
     <p class="text-center mt-5">
       <nuxt-link :to="{ name: 'index' }">Back to Home</nuxt-link>

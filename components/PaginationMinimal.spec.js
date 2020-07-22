@@ -6,7 +6,8 @@ const factory = ({ props, route }) => {
     propsData: props,
     stubs: {
       NLink: RouterLinkStub,
-      fa: true
+      IconChevronLeft: true,
+      IconChevronRight: true
     },
     mocks: {
       $route: route

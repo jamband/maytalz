@@ -3,22 +3,22 @@
     <ul class="pagination">
       <li class="page-item w-25" :class="disabled('first')">
         <n-link :to="to('first')" class="page-link text-center">
-          <fa icon="angle-double-left" />
+          <IconChevronLeft />
         </n-link>
       </li>
       <li class="page-item w-25" :class="disabled('prev')">
         <n-link :to="to('prev')" class="page-link text-center">
-          <fa icon="angle-left" />
+          <IconChevronLeft />
         </n-link>
       </li>
       <li class="page-item w-25" :class="disabled('next')">
         <n-link :to="to('next')" class="page-link text-center">
-          <fa icon="angle-right" />
+          <IconChevronRight />
         </n-link>
       </li>
       <li class="page-item w-25" :class="disabled('last')">
         <n-link :to="to('last')" class="page-link text-center">
-          <fa icon="angle-double-right" />
+          <IconChevronRight />
         </n-link>
       </li>
     </ul>
