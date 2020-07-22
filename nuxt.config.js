@@ -16,14 +16,12 @@ export default {
     ]
   },
   css: [
-    '@fortawesome/fontawesome-svg-core/styles.css',
     '~/assets/css/app.scss'
   ],
   plugins: [
     '~/plugins/app.js',
     '~/plugins/contentful.js',
-    '~/plugins/format.js',
-    '~/plugins/fontawesome.js'
+    '~/plugins/format.js'
   ],
   buildModules: [
     '@nuxtjs/eslint-module',
