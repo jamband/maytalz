@@ -1,7 +1,5 @@
 @use "sass:color";
 
-@import "~bootstrap/scss/functions";
-
 // Color system
 $white:    #fff;
 $gray-100: #f8f9fa;
@@ -41,16 +39,11 @@ $grid-breakpoints: (
   md: 768px
 );
 
-@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
-@include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
-
 // Grid containers
 $container-max-widths: (
   sm: 540px,
   md: 720px
 );
-
-@include _assert-ascending($container-max-widths, "$container-max-widths");
 
 // Components
 $border-radius:               .25rem;
@@ -82,6 +75,8 @@ $input-btn-focus-color:         rgba($component-active-bg, $input-btn-focus-colo
 $input-btn-focus-box-shadow:    0 0 0 $input-btn-focus-width $input-btn-focus-color;
 
 // Navbar
+$navbar-toggler-font-size:          $font-size-base;
+
 $navbar-light-toggler-border-color: none;
 
 // Pagination
