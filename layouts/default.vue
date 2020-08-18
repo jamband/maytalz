@@ -1,6 +1,6 @@
 <template>
-  <div class="layout d-flex flex-column">
-    <b-navbar toggleable="md" type="light" variant="light" class="mb-3">
+  <div class="d-flex flex-column min-vh-100">
+    <b-navbar toggleable="md" type="light" variant="light" fixed="top" class="mb-3">
       <div class="container">
         <b-navbar-brand to="/">{{ $app.name }}</b-navbar-brand>
         <b-navbar-toggle target="nav-collapse" />
@@ -12,23 +12,13 @@
         </b-collapse>
       </div>
     </b-navbar>
-    <div class="container flex-grow-1">
+    <div class="container flex-grow-1 pb-5" style="padding-top: 6rem;">
       <nuxt />
     </div>
-    <footer class="footer text-center">
-      &copy; 2020 {{ $app.name }}
+    <footer class="py-3 text-center bg-light">
+      <div class="container">
+        &copy; {{ new Date().getFullYear() }} {{ $app.name }}
+      </div>
     </footer>
   </div>
 </template>
-
-<style lang="scss">
-.layout {
-  min-height: 100vh;
-}
-
-.footer {
-  padding: 1rem 0;
-  font-size: 90%;
-  background-color: $light;
-}
-</style>

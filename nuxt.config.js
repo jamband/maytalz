@@ -2,6 +2,7 @@ import { APP_NAME } from './plugins/constants'
 
 export default {
   target: 'static',
+  ssr: true,
   components: true,
   head: {
     titleTemplate: `%s - ${APP_NAME}`,
@@ -55,8 +56,6 @@ export default {
       'BNavbar', 'BNavbarBrand', 'BNavbarNav', 'BNavbarToggle',
       'BCollapse'
     ],
-    directivePlugins: false,
-    directives: false,
     bootstrapCSS: false,
     bootstrapVueCSS: false
   },

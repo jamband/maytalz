@@ -1,23 +1,47 @@
 <template>
   <nav v-if="hasPage()" aria-label="Page navigation">
-    <ul class="pagination">
-      <li class="page-item w-25" :class="disabled('first')">
-        <n-link :to="to('first')" class="page-link text-center">
+    <ul class="pagination d-flex text-center">
+      <li class="page-item flex-fill" :class="disabledSelector('first')">
+        <n-link
+          :to="to('first')"
+          :aria-disabled="disabled('first')"
+          :tabindex="disabled('first') ? -1 : 0"
+          class="page-link"
+          aria-label="First"
+        >
           <IconChevronLeft />
         </n-link>
       </li>
-      <li class="page-item w-25" :class="disabled('prev')">
-        <n-link :to="to('prev')" class="page-link text-center">
+      <li class="page-item flex-fill" :class="disabledSelector('prev')">
+        <n-link
+          :to="to('prev')"
+          :aria-disabled="disabled('prev')"
+          :tabindex="disabled('prev') ? -1 : 0"
+          class="page-link"
+          aria-label="Previuos"
+        >
           <IconChevronLeft />
         </n-link>
       </li>
-      <li class="page-item w-25" :class="disabled('next')">
-        <n-link :to="to('next')" class="page-link text-center">
+      <li class="page-item flex-fill" :class="disabledSelector('next')">
+        <n-link
+          :to="to('next')"
+          :aria-disabled="disabled('next')"
+          :tabindex="disabled('next') ? -1 : 0"
+          class="page-link"
+          aria-label="Next"
+        >
           <IconChevronRight />
         </n-link>
       </li>
-      <li class="page-item w-25" :class="disabled('last')">
-        <n-link :to="to('last')" class="page-link text-center">
+      <li class="page-item flex-fill" :class="disabledSelector('last')">
+        <n-link
+          :to="to('last')"
+          :aria-disabled="disabled('last')"
+          :tabindex="disabled('last') ? -1 : 0"
+          class="page-link"
+          aria-label="Last"
+        >
           <IconChevronRight />
         </n-link>
       </li>
@@ -73,10 +97,12 @@ export default {
       }
     },
     disabled (part) {
-      if (/^(first|prev)$/.test(part)) {
-        return this.currentPage < 2 ? 'disabled' : ''
-      }
-      return this.currentPage > 2 ? 'disabled' : ''
+      return /^(first|prev)$/.test(part)
+        ? this.currentPage < 2
+        : this.currentPage >= this.pageCount
+    },
+    disabledSelector (part) {
+      return this.disabled(part) ? 'disabled' : ''
     }
   }
 }
