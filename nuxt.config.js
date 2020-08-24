@@ -34,7 +34,10 @@ export default {
     '@nuxtjs/pwa'
   ],
   build: {
-    // analyze: true
+    // analyze: true,
+    babel: {
+      compact: true
+    }
   },
   publicRuntimeConfig: {
     contentfulSpaceId: process.env.CONTENTFUL_SPACE_ID,
@@ -81,5 +84,4 @@ export default {
       './node_modules/bootstrap/scss/mixins/_breakpoints.scss'
     ]
   }
-
 }

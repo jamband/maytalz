@@ -14,11 +14,8 @@
 <script>
 export default {
   asyncData ({ $contentful, $config, $app, params, error }) {
-    const page = Number(params.page)
-    if (isNaN(page) || page < 1) {
-      error({ statusCode: 404, message: 'Page not found' })
-      return
-    }
+    const page = Number(params.page) || 1
+
     return $contentful.getEntries({
       content_type: $config.contentfulMainTypeId,
       order: '-sys.createdAt',
