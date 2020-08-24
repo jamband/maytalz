@@ -1,8 +1,8 @@
 <template>
   <h2>
-    <n-link :to="{ name: 'posts-slug', params: { slug: post.fields.slug } }">
+    <NLink :to="{ name: 'posts-slug', params: { slug: post.fields.slug } }">
       {{ post.fields.title }}
-    </n-link>
+    </NLink>
   </h2>
 </template>
 

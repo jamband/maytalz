@@ -30,6 +30,10 @@
     "jest": "^26.4.2",
     "sass": "^1.26.10",
     "sass-loader": "^9.0.3",
+    "stylelint": "^13.6.1",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.18.0",
     "vue-jest": "^3.0.6"
   }
 }

@@ -39,19 +39,19 @@ export default {
 <style lang="scss" scoped>
 article ::v-deep {
   h1 {
-    padding: .6rem 0;
     margin: 1rem 0;
+    padding: 0.6rem 0;
   }
 
   h2 {
-    margin: 1rem 0;
-    padding: .6rem 0;
     border-bottom: 1px solid $gray-300;
+    margin: 1rem 0;
+    padding: 0.6rem 0;
   }
 
   img {
-    max-width: 100%;
     height: auto;
+    max-width: 100%;
   }
 
   iframe,

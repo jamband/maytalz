@@ -1,13 +1,13 @@
 <template>
   <span>
-    <n-link
+    <NLink
       v-for="tag in items"
       :key="tag.sys.id"
       :to="{ name: 'posts-tags-slug', params: { slug: tag.fields.slug }}"
       class="tag-links mr-2"
     >
       {{ tag.fields.name }}
-    </n-link>
+    </NLink>
   </span>
 </template>
 
@@ -24,15 +24,15 @@ export default {
 
 <style lang="scss" scoped>
 .tag-links {
-  padding: .15em .4em;
-  font-size: .8em;
+  background-color: $gray-100;
   border-radius: $border-radius;
   color: $gray-500;
-  background-color: $gray-100;
+  font-size: 0.8em;
+  padding: 0.15em 0.4em;
 
   &:hover {
-    color: $gray-700;
     background-color: $gray-200;
+    color: $gray-700;
   }
 }
 </style>
