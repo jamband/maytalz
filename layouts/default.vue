@@ -1,24 +1,9 @@
 <template>
   <div class="d-flex flex-column min-vh-100">
-    <b-navbar toggleable="md" type="light" variant="light" fixed="top" class="mb-3">
-      <div class="container">
-        <b-navbar-brand to="/">{{ $app.name }}</b-navbar-brand>
-        <b-navbar-toggle target="nav-collapse" />
-        <b-collapse id="nav-collapse" is-nav>
-          <b-navbar-nav class="ml-auto">
-            <b-nav-item :to="{ name: 'contact' }">Contact</b-nav-item>
-            <b-nav-item :to="{ name: 'about' }">About</b-nav-item>
-          </b-navbar-nav>
-        </b-collapse>
-      </div>
-    </b-navbar>
+    <TheHeader />
     <div class="container flex-grow-1 pb-5" style="padding-top: 6rem;">
-      <nuxt />
+      <Nuxt />
     </div>
-    <footer class="py-3 text-center bg-light">
-      <div class="container">
-        &copy; {{ new Date().getFullYear() }} {{ $app.name }}
-      </div>
-    </footer>
+    <TheFooter />
   </div>
 </template>

@@ -53,7 +53,7 @@ export default {
     ],
     components: [
       'BNav', 'BNavItem',
-      'BNavbar', 'BNavbarBrand', 'BNavbarNav', 'BNavbarToggle',
+      'BNavbar', 'BNavbarNav', 'BNavbarToggle',
       'BCollapse'
     ],
     bootstrapCSS: false,
