@@ -2,25 +2,28 @@
   <div>
     <article>
       <section v-for="post in posts" :key="post.sys.id" class="mb-3">
-        <CreatedDate>{{ $format.date(post.sys.createdAt) }}</CreatedDate>
+        <CreatedDate>{{ createdAt(post.sys.createdAt) }}</CreatedDate>
         <TagLinks :items="post.fields.tags" />
         <PostLink :post="post" />
       </section>
     </article>
-    <PaginationMinimal :total="total" :per-page="$app.posts.perPage" />
+    <PaginationMinimal :total="total" :per-page="postsPerPage" />
   </div>
 </template>
 
 <script>
+import { POSTS_PER_PAGE, APP_NAME } from '~/plugins/constants'
+import { dateFormat } from '~/plugins/format'
+
 export default {
-  asyncData ({ $contentful, $config, $app, params, error }) {
+  asyncData ({ $contentful, $config, params, error }) {
     const page = Number(params.page) || 1
 
     return $contentful.getEntries({
       content_type: $config.contentfulMainTypeId,
       order: '-sys.createdAt',
-      skip: (page - 1) * $app.posts.perPage,
-      limit: $app.posts.perPage
+      skip: (page - 1) * POSTS_PER_PAGE,
+      limit: POSTS_PER_PAGE
     }).then((entries) => {
       return {
         posts: entries.items,
@@ -28,10 +31,20 @@ export default {
       }
     })
   },
+  data () {
+    return {
+      postsPerPage: POSTS_PER_PAGE
+    }
+  },
+  methods: {
+    createdAt (value) {
+      return dateFormat(value)
+    }
+  },
   head () {
     return {
-      title: '',
-      titleTemplate: this.$app.name
+      title: APP_NAME,
+      titleTemplate: ''
     }
   }
 }

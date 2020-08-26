@@ -1,4 +1,4 @@
-import { APP_NAME } from './plugins/constants'
+import { APP_NAME, APP_DESCRIPTION, APP_URL } from './plugins/constants'
 
 export default {
   target: 'static',
@@ -9,7 +9,11 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: `${APP_NAME} is a simple blog` }
+      { hid: 'description', name: 'description', content: APP_DESCRIPTION },
+
+      { hid: 'og:site_name', property: 'og:site_name', content: APP_NAME },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:url', property: 'og:url', content: APP_URL }
     ],
     link: [
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap' },
@@ -20,9 +24,7 @@ export default {
     '~/assets/css/app.scss'
   ],
   plugins: [
-    '~/plugins/app.js',
-    '~/plugins/contentful.js',
-    '~/plugins/format.js'
+    '~/plugins/contentful.js'
   ],
   buildModules: [
     '@nuxtjs/eslint-module',
@@ -65,7 +67,7 @@ export default {
   manifest: {
     name: APP_NAME,
     short_name: APP_NAME,
-    description: `${APP_NAME} built on Nuxt.js + Contentful + Netlify`,
+    description: APP_DESCRIPTION,
     lang: 'en',
     background_color: '#fff',
     display: 'standalone',

@@ -1,6 +1,6 @@
 <template>
   <article>
-    <CreatedDate>{{ $format.date(post.sys.createdAt) }}</CreatedDate>
+    <CreatedDate>{{ createdAt(post.sys.createdAt) }}</CreatedDate>
     <TagLinks :items="post.fields.tags" />
     <!-- eslint-disable-next-line -->
     <section v-html="$md.render(content())" />
@@ -8,6 +8,8 @@
 </template>
 
 <script>
+import { dateFormat, embedResponsiveFormat } from '~/plugins/format'
+
 export default {
   asyncData ({ $contentful, $config, params, error }) {
     return $contentful.getEntries({
@@ -24,8 +26,11 @@ export default {
     })
   },
   methods: {
+    createdAt (value) {
+      return dateFormat(value)
+    },
     content () {
-      return this.$format.embedResponsive(this.post.fields.body)
+      return embedResponsiveFormat(this.post.fields.body)
     }
   },
   head () {

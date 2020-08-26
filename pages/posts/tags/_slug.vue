@@ -1,7 +1,7 @@
 <template>
   <article>
     <section v-for="post in posts" :key="post.sys.id" class="mb-3">
-      <CreatedDate>{{ $format.date(post.sys.createdAt) }}</CreatedDate>
+      <CreatedDate>{{ createdAt(post.sys.createdAt) }}</CreatedDate>
       <TagLinks :items="post.fields.tags" />
       <PostLink :post="post" />
     </section>
@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import { dateFormat } from '~/plugins/format'
+
 export default {
   asyncData ({ $contentful, $config, params, error }) {
     return $contentful.getEntries({
@@ -34,6 +36,11 @@ export default {
         }
       })
     })
+  },
+  methods: {
+    createdAt (value) {
+      return dateFormat(value)
+    }
   },
   head () {
     return {
