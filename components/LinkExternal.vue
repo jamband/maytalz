@@ -16,7 +16,7 @@ export default {
       required: false,
       default: ''
     },
-    norefferer: {
+    noreferrer: {
       type: Boolean,
       required: false,
       default: true
@@ -25,8 +25,8 @@ export default {
   computed: {
     relValue () {
       let rel = 'noopener'
-      if (this.norefferer) {
-        rel += ' norefferer'
+      if (this.noreferrer) {
+        rel += ' noreferrer'
       }
       if (this.rel !== '') {
         rel += ` ${this.rel}`

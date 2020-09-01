@@ -21,16 +21,16 @@ test(`{ href: ${url} }`, () => {
   })
   const a = wrapper.find('a').element
   expect(a.href).toBe(url)
-  expect(a.rel).toBe('noopener norefferer')
+  expect(a.rel).toBe('noopener noreferrer')
   expect(a.target).toBe('_blank')
   expect(a.innerHTML).toBe(slot)
 })
 
-test(`{ href: ${url}, norefferer: false }`, () => {
+test(`{ href: ${url}, noreferrer: false }`, () => {
   const wrapper = factory({
     props: {
       href: url,
-      norefferer: false
+      noreferrer: false
     }
   })
   const a = wrapper.find('a').element
@@ -49,7 +49,7 @@ test(`{ href: ${url}, rel: "author" }`, () => {
   })
   const a = wrapper.find('a').element
   expect(a.href).toBe(url)
-  expect(a.rel).toBe('noopener norefferer author')
+  expect(a.rel).toBe('noopener noreferrer author')
   expect(a.target).toBe('_blank')
   expect(a.innerHTML).toBe(slot)
 })
