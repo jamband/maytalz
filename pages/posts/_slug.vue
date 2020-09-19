@@ -42,6 +42,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../../assets/css/variables";
+
 article ::v-deep {
   h1 {
     margin: 1rem 0;

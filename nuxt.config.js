@@ -27,8 +27,7 @@ export default {
     '~/plugins/contentful.js'
   ],
   buildModules: [
-    '@nuxtjs/eslint-module',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/eslint-module'
   ],
   modules: [
     'bootstrap-vue/nuxt',
@@ -79,11 +78,5 @@ export default {
     html: true,
     typography: true,
     use: []
-  },
-  styleResources: {
-    scss: [
-      './assets/css/_variables.scss',
-      './node_modules/bootstrap/scss/mixins/_breakpoints.scss'
-    ]
   }
 }

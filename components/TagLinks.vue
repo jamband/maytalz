@@ -23,6 +23,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/css/variables";
+
 .tag-links {
   background-color: $gray-100;
   border-radius: $border-radius;
