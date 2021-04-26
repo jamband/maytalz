@@ -3,7 +3,10 @@ import { APP_NAME, APP_DESCRIPTION, APP_URL } from './plugins/constants'
 export default {
   target: 'static',
   ssr: true,
-  components: true,
+  components: [
+    { path: '~/components', pathPrefix: false },
+    { path: '~/icons', pathPrefix: false }
+  ],
   head: {
     titleTemplate: `%s - ${APP_NAME}`,
     meta: [
