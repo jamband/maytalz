@@ -16,6 +16,16 @@ $black:    #000;
 $primary:  #f27242;
 $light:    $gray-100;
 
+$colors: (
+  "white": $white,
+  "black": $black,
+);
+
+$theme-colors: (
+  "primary": $primary,
+  "light": $light,
+);
+
 $yiq-text-dark:             $gray-600;
 
 // Options
