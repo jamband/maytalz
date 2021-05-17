@@ -1,5 +1,5 @@
 import { shallowMount, RouterLinkStub } from '@vue/test-utils'
-import PaginationMinimal from '~/components/PaginationMinimal'
+import PaginationMinimal from './PaginationMinimal'
 
 const factory = ({ props, route }) => {
   return shallowMount(PaginationMinimal, {

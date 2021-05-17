@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
-import CreatedDate from '~/components/CreatedDate'
+import CreatedDate from './CreatedDate'
 
 const factory = ({ slot }) => {
   return shallowMount(CreatedDate, {

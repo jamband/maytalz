@@ -1,4 +1,4 @@
-import { dateFormat, embedResponsiveFormat } from '~/plugins/format'
+import { dateFormat, embedResponsiveFormat } from './format'
 
 test('dateFormat', () => {
   expect(dateFormat(new Date('2020-12-31'))).toBe('2020.12.31')

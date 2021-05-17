@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
-import TheFooter from '~/components/TheFooter'
+import TheFooter from './TheFooter'
 import { APP_NAME } from '~/constants/app'
 
 const factory = () => {
