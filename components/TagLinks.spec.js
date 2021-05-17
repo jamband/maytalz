@@ -14,15 +14,15 @@ test('items', () => {
   const items = [
     {
       sys: { id: '1' },
-      fields: { name: 'Foo1', slug: 'foo-1' }
+      fields: { name: 'foo1', slug: 'foo-1' }
     },
     {
       sys: { id: '2' },
-      fields: { name: 'Bar1', slug: 'bar-1' }
+      fields: { name: 'bar1', slug: 'bar-1' }
     },
     {
       sys: { id: '3' },
-      fields: { name: 'Baz1', slug: 'baz-1' }
+      fields: { name: 'baz1', slug: 'baz-1' }
     }
   ]
 
@@ -32,9 +32,9 @@ test('items', () => {
     }
   })
   const a = wrapper.findAll('a')
-  expect(a.at(0).text()).toBe('Foo1')
-  expect(a.at(1).text()).toBe('Bar1')
-  expect(a.at(2).text()).toBe('Baz1')
+  expect(a.at(0).text()).toBe('#foo1')
+  expect(a.at(1).text()).toBe('#bar1')
+  expect(a.at(2).text()).toBe('#baz1')
 
   expect(a.at(0).props().to).toEqual({ name: 'posts-tags-slug', params: { slug: 'foo-1' } })
   expect(a.at(1).props().to).toEqual({ name: 'posts-tags-slug', params: { slug: 'bar-1' } })
