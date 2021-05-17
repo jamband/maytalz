@@ -6,7 +6,7 @@
 
 <style scoped>
 .icon-chevron-left {
-  width: 1rem;
   height: 1rem;
+  width: 1rem;
 }
 </style>
