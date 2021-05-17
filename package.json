@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "@nuxtjs/markdownit": "^2.0.0",
-    "@nuxtjs/pwa": "^3.3.5",
     "bootstrap": "^4.6.0",
     "bootstrap-vue": "^2.21.2",
     "contentful": "^8.3.5",

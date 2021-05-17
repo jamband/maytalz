@@ -69,15 +69,6 @@ export default {
     bootstrapCSS: false,
     bootstrapVueCSS: false
   },
-  manifest: {
-    name: APP_NAME,
-    short_name: APP_NAME,
-    description: APP_DESCRIPTION,
-    lang: 'en',
-    background_color: '#fff',
-    display: 'standalone',
-    start_url: '/'
-  },
   markdownit: {
     injected: true,
     breaks: true,
