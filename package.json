@@ -12,8 +12,8 @@
   },
   "dependencies": {
     "@nuxtjs/markdownit": "^2.0.0",
-    "bootstrap": "^4.6.0",
-    "bootstrap-vue": "^2.21.2",
+    "@popperjs/core": "^2.9.2",
+    "bootstrap": "^5.0.1",
     "contentful": "^8.3.5",
     "core-js": "^3.12.1",
     "nuxt": "^2.15.6"
@@ -21,6 +21,7 @@
   "devDependencies": {
     "@nuxtjs/eslint-config": "^6.0.0",
     "@nuxtjs/eslint-module": "^3.0.2",
+    "@types/bootstrap": "^5.0.15",
     "@vue/test-utils": "^1.2.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",

@@ -22,12 +22,11 @@ export default {
       { hid: 'og:url', property: 'og:url', content: APP_URL }
     ],
     link: [
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
   css: [
-    '~/assets/css/app.scss'
+    './assets/css/app.scss'
   ],
   plugins: [
     '~/plugins/contentful.js'
@@ -36,15 +35,10 @@ export default {
     '@nuxtjs/eslint-module'
   ],
   modules: [
-    'bootstrap-vue/nuxt',
-    '@nuxtjs/markdownit',
-    '@nuxtjs/pwa'
+    '@nuxtjs/markdownit'
   ],
   build: {
     // analyze: true,
-    babel: {
-      compact: true
-    }
   },
   publicRuntimeConfig: {
     contentfulSpaceId: process.env.CONTENTFUL_SPACE_ID,
@@ -57,18 +51,6 @@ export default {
     routes: ['/']
   },
   // top level options for packages
-  bootstrapVue: {
-    componentPlugins: [
-      'NavbarPlugin'
-    ],
-    components: [
-      'BNav', 'BNavItem',
-      'BNavbar', 'BNavbarNav', 'BNavbarToggle',
-      'BCollapse'
-    ],
-    bootstrapCSS: false,
-    bootstrapVueCSS: false
-  },
   markdownit: {
     injected: true,
     breaks: true,

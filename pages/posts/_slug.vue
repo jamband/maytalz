@@ -51,8 +51,8 @@ article ::v-deep {
   }
 
   h2 {
-    border-bottom: 1px solid $gray-300;
-    margin: 1rem 0;
+    border-bottom: 1px solid lightgray;
+    margin: 1.5rem 0;
     padding: 0.6rem 0;
   }
 

@@ -1,5 +1,5 @@
-<template functional>
-  <span class="mr-2 text-muted small">
+<template>
+  <span class="text-muted">
     <slot />
   </span>
 </template>

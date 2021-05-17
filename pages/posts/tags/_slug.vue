@@ -1,6 +1,6 @@
 <template>
   <article>
-    <section v-for="post in posts" :key="post.sys.id" class="mb-3">
+    <section v-for="post in posts" :key="post.sys.id" class="mb-4">
       <CreatedDate>{{ createdAt(post.sys.createdAt) }}</CreatedDate>
       <TagLinks :items="post.fields.tags" />
       <PostLink :post="post" />

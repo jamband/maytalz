@@ -1,0 +1,7 @@
+// Navbar
+// ----------------------------------------------
+.nav-link.active {
+  @include media-breakpoint-up(sm) {
+    background: linear-gradient(transparent 96%, gray 96%);
+  }
+}

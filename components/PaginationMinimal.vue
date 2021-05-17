@@ -110,7 +110,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/css/variables";
-@import "~bootstrap/scss/mixins/breakpoints";
+@import "../node_modules/bootstrap/scss/mixins/breakpoints";
 
 .pagination {
   > li {
@@ -121,7 +121,7 @@ export default {
 
   &-minimal {
     &-info {
-      color: $gray-500;
+      color: gray;
       position: relative;
       z-index: -1;
 
