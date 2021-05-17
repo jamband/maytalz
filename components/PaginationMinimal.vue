@@ -126,12 +126,12 @@ export default {
       z-index: -1;
 
       @include media-breakpoint-only(xs) {
-        bottom: 3.2em;
+        bottom: 3.3em;
         font-size: 75%;
       }
 
       @include media-breakpoint-up(sm) {
-        bottom: 3.1em;
+        bottom: 3.2em;
         font-size: 85%;
       }
     }
