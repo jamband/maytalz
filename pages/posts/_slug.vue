@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { dateFormat, embedResponsiveFormat } from '~/plugins/format'
+import { dateFormat, embedResponsiveFormat } from '~/utils/format'
 
 export default {
   asyncData ({ $contentful, $config, params, error }) {
@@ -25,17 +25,17 @@ export default {
       }
     })
   },
+  head () {
+    return {
+      title: this.post.fields.title
+    }
+  },
   methods: {
     createdAt (value) {
       return dateFormat(value)
     },
     content () {
       return embedResponsiveFormat(this.post.fields.body)
-    }
-  },
-  head () {
-    return {
-      title: this.post.fields.title
     }
   }
 }

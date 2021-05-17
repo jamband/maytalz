@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { dateFormat } from '~/plugins/format'
+import { dateFormat } from '~/utils/format'
 
 export default {
   asyncData ({ $contentful, $config, params, error }) {
@@ -37,14 +37,14 @@ export default {
       })
     })
   },
-  methods: {
-    createdAt (value) {
-      return dateFormat(value)
-    }
-  },
   head () {
     return {
       title: `Tag: ${this.$route.params.slug}`
+    }
+  },
+  methods: {
+    createdAt (value) {
+      return dateFormat(value)
     }
   }
 }

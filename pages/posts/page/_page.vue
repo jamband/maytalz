@@ -12,8 +12,9 @@
 </template>
 
 <script>
-import { POSTS_PER_PAGE, APP_NAME } from '~/plugins/constants'
-import { dateFormat } from '~/plugins/format'
+import { APP_NAME } from '~/constants/app'
+import { POSTS_PER_PAGE } from '~/constants/post'
+import { dateFormat } from '~/utils/format'
 
 export default {
   asyncData ({ $contentful, $config, params, error }) {
@@ -36,15 +37,15 @@ export default {
       postsPerPage: POSTS_PER_PAGE
     }
   },
-  methods: {
-    createdAt (value) {
-      return dateFormat(value)
-    }
-  },
   head () {
     return {
       title: APP_NAME,
       titleTemplate: ''
+    }
+  },
+  methods: {
+    createdAt (value) {
+      return dateFormat(value)
     }
   }
 }

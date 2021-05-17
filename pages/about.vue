@@ -9,21 +9,19 @@
     </section>
     <section>
       For more information:
-      <LinkExternal :href="app.repositoryUrl">GitHub - {{ app.repositoryName }}</LinkExternal>
+      <LinkExternal :href="appRepositoryUrl">GitHub - {{ appRepositoryName }}</LinkExternal>
     </section>
   </article>
 </template>
 
 <script>
-import { APP_REPOSITORY_URL, APP_REPOSITORY_NAME } from '~/plugins/constants'
+import { APP_REPOSITORY_URL, APP_REPOSITORY_NAME } from '~/constants/app'
 
 export default {
   data () {
     return {
-      app: {
-        repositoryUrl: APP_REPOSITORY_URL,
-        repositoryName: APP_REPOSITORY_NAME
-      }
+      appRepositoryUrl: APP_REPOSITORY_URL,
+      appRepositoryName: APP_REPOSITORY_NAME
     }
   },
   head () {

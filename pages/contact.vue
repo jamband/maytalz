@@ -4,7 +4,7 @@
     <section>
       Please to the message via
       <LinkExternal href="https://twitter.com/livejam_db">Twitter</LinkExternal> or
-      <LinkExternal :href="`${app.repositoryUrl}/issues`">GitHub</LinkExternal> Issues.
+      <LinkExternal :href="`${appRepositoryUrl}/issues`">GitHub</LinkExternal> Issues.
     </section>
     <section>
       Thank you.
@@ -13,14 +13,12 @@
 </template>
 
 <script>
-import { APP_REPOSITORY_URL } from '~/plugins/constants'
+import { APP_REPOSITORY_URL } from '~/constants/app'
 
 export default {
   data () {
     return {
-      app: {
-        repositoryUrl: APP_REPOSITORY_URL
-      }
+      appRepositoryUrl: APP_REPOSITORY_URL
     }
   },
   head () {
