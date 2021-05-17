@@ -32,7 +32,8 @@ export default {
     '~/plugins/contentful.js'
   ],
   buildModules: [
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    'nuxt-purgecss'
   ],
   modules: [
     '@nuxtjs/markdownit'
@@ -57,5 +58,13 @@ export default {
     html: true,
     typography: true,
     use: []
+  },
+  purgeCSS: {
+    // enabled: true,
+    paths: [
+      './icons/**/*.vue',
+      './node_modules/bootstrap/js/dist/collapse.js'
+    ],
+    extractors: () => []
   }
 }
