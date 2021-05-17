@@ -7,8 +7,8 @@
     "test": "jest",
     "eslint": "eslint .",
     "stylelint": "stylelint **/*.{css,scss}",
-    "clear": "rm -rf .nuxt dist",
-    "clean": "rm -rf .nuxt dist node_modules"
+    "clear": "rm -rf .eslintcache .nuxt dist",
+    "clean": "rm -rf .eslintcache .nuxt dist node_modules"
   },
   "dependencies": {
     "@nuxtjs/markdownit": "^2.0.0",
