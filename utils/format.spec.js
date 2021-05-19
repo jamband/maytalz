@@ -1,4 +1,4 @@
-import { dateFormat, embedResponsiveFormat } from './format'
+import { dateFormat, embedFormat } from './format'
 
 test('dateFormat', () => {
   expect(dateFormat(new Date('2020-12-31'))).toBe('2020.12.31')
@@ -11,23 +11,23 @@ const src = {
 }
 
 test('embedResponsiveFormat: when including YouTube embed', () => {
-  expect(embedResponsiveFormat(`<iframe src="${src.YouTube}"></iframe>`))
-    .toBe(`<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="${src.YouTube}"></iframe></div>`)
+  expect(embedFormat(`<iframe src="${src.YouTube}"></iframe>`))
+    .toBe(`<div class="ratio ratio-16x9"><iframe src="${src.YouTube}"></iframe></div>`)
 })
 
 test('embedResponsiveFormat: when including SoundCloud embed', () => {
-  expect(embedResponsiveFormat(`<iframe src="${src.SoundCloud}"></iframe>`))
+  expect(embedFormat(`<iframe src="${src.SoundCloud}"></iframe>`))
     .toBe(`<iframe style="width: 100%; height: 120px;" src="${src.SoundCloud}"></iframe>`)
 })
 
 test('embedResponsiveFormat: when including multiple YouTube embed', () => {
-  expect(embedResponsiveFormat(`<iframe src="${src.YouTube}"></iframe>\n`.repeat(2)))
-    .toBe(`<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="${src.YouTube}"></iframe></div>\n` +
-      `<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="${src.YouTube}"></iframe></div>\n`)
+  expect(embedFormat(`<iframe src="${src.YouTube}"></iframe>\n`.repeat(2)))
+    .toBe(`<div class="ratio ratio-16x9"><iframe src="${src.YouTube}"></iframe></div>\n` +
+      `<div class="ratio ratio-16x9"><iframe src="${src.YouTube}"></iframe></div>\n`)
 })
 
 test('embedResponsiveFormat: when including YouTube and SoundCloud embed', () => {
-  expect(embedResponsiveFormat(`<iframe src="${src.YouTube}"></iframe>\n<iframe src="${src.SoundCloud}"></iframe>`))
-    .toBe(`<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="${src.YouTube}"></iframe></div>\n` +
+  expect(embedFormat(`<iframe src="${src.YouTube}"></iframe>\n<iframe src="${src.SoundCloud}"></iframe>`))
+    .toBe(`<div class="ratio ratio-16x9"><iframe src="${src.YouTube}"></iframe></div>\n` +
       `<iframe style="width: 100%; height: 120px;" src="${src.SoundCloud}"></iframe>`)
 })
