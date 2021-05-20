@@ -62,7 +62,7 @@ article ::v-deep {
   }
 
   iframe,
-  .embed-responsive {
+  .ratio {
     margin-bottom: 3rem;
   }
 }

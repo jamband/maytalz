@@ -63,7 +63,16 @@ export default {
     // enabled: true,
     paths: [
       './icons/**/*.vue',
-      './node_modules/bootstrap/js/dist/collapse.js'
+      './node_modules/bootstrap/js/dist/collapse.js',
+      './utils/*.js'
+    ],
+    whitelist: () => [
+      'h1',
+      'h2',
+      'h3',
+      'h4',
+      'h5',
+      'h6'
     ],
     extractors: () => []
   }
