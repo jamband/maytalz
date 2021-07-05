@@ -61,7 +61,9 @@ $border-radius:               0.25rem;
 $text-muted:                  #bdbdbd;
 
 // Navbar
+$navbar-toggler-padding-x:          0.5rem;
 $navbar-toggler-font-size:          1rem;
+$navbar-toggler-focus-width:        0.15rem;
 $navbar-light-hover-color:          $body-color;
 $navbar-light-active-color:         $body-color;
 $navbar-light-toggler-border-color: none;
@@ -75,3 +77,10 @@ $pagination-focus-box-shadow:       0 0 0 0.25rem color.scale($primary, $lightne
 $pagination-hover-bg:               transparent;
 $pagination-disabled-color:         $text-muted;
 $pagination-disabled-bg:            transparent;
+
+// Close
+$btn-close-focus-shadow:     0 0 0 0.15rem color.scale(black, $lightness: 0%, $alpha: -75%);
+
+// Offcanvas
+$offcanvas-padding-y:               0.8rem;
+$offcanvas-padding-x:               0.8rem;
