@@ -1,14 +1,16 @@
 @use "sass:color";
 
 // Color system
-$primary:  #f27242;
-$light:    #f8f9fa;
+$primary:   #f27242;
+$secondary: #919191;
+$light:     #f8f9fa;
 
 $colors: (
 );
 
 $theme-colors: (
   "primary":    $primary,
+  "secondary":  $secondary,
   "light":      $light,
 );
 
@@ -56,19 +58,20 @@ $container-max-widths: (
 $border-radius:               0.25rem;
 
 // Typography
-$text-muted:                  #919191;
+$text-muted:                  #bdbdbd;
 
 // Navbar
 $navbar-toggler-font-size:          1rem;
-
 $navbar-light-hover-color:          $body-color;
 $navbar-light-active-color:         $body-color;
 $navbar-light-toggler-border-color: none;
 
 // Pagination
+$pagination-padding-y:              0.5rem;
 $pagination-bg:                     transparent;
-$pagination-border-color:           none;
-$pagination-hover-bg:               color.scale($light, $lightness: -20%, $alpha: -90%);
-
-$pagination-disabled-color:         #dee2e6;
+$pagination-border-width:           0;
+$pagination-focus-bg:               color.scale(black, $lightness: 0%, $alpha: -95%);
+$pagination-focus-box-shadow:       0 0 0 0.25rem color.scale($primary, $lightness: 0%, $alpha: -75%);
+$pagination-hover-bg:               transparent;
+$pagination-disabled-color:         $text-muted;
 $pagination-disabled-bg:            transparent;

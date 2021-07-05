@@ -27,8 +27,8 @@ export default {
 
 .tag-links {
   border-radius: $border-radius;
-  color: $text-muted;
-  padding: 0.15em 0.2em;
+  color: var(--bs-secondary);
+  padding: 0.15rem 0.2rem;
 
   &:hover {
     color: $body-color;

@@ -1,58 +1,60 @@
 <template>
-  <nav v-if="hasPage()" aria-label="Page navigation">
-    <ul class="pagination d-flex text-center">
-      <li class="page-item flex-fill" :class="disabledSelector('first')">
+  <nav v-if="hasPage()" class="text-center" aria-label="Page navigation">
+    <ul class="pagination">
+      <li :class="itemClass('first')">
         <NLink
-          :to="to('first')"
+          :to="link('first')"
+          :class="linkClass()"
+          aria-label="First"
           :aria-disabled="disabled('first')"
           :tabindex="disabled('first') ? -1 : 0"
-          class="page-link"
-          aria-label="First"
         >
-          <IconChevronLeft />
+          <IconChevronLeft size="0.8em" />
         </NLink>
       </li>
-      <li class="page-item flex-fill" :class="disabledSelector('prev')">
+      <li :class="itemClass('previous')">
         <NLink
-          :to="to('prev')"
-          :aria-disabled="disabled('prev')"
-          :tabindex="disabled('prev') ? -1 : 0"
-          class="page-link"
+          :to="link('previous')"
+          :class="linkClass()"
           aria-label="Previous"
+          :aria-disabled="disabled('previous')"
+          :tabindex="disabled('previous') ? -1 : 0"
         >
-          <IconChevronLeft />
+          <IconChevronLeft size="0.8em" />
         </NLink>
       </li>
-      <li class="page-item flex-fill" :class="disabledSelector('next')">
+      <li :class="itemClass('next')">
         <NLink
-          :to="to('next')"
+          :to="link('next')"
+          :class="linkClass()"
+          aria-label="Next"
           :aria-disabled="disabled('next')"
           :tabindex="disabled('next') ? -1 : 0"
-          class="page-link"
-          aria-label="Next"
         >
-          <IconChevronRight />
+          <IconChevronRight size="0.8em" />
         </NLink>
       </li>
-      <li class="page-item flex-fill" :class="disabledSelector('last')">
+      <li :class="itemClass('last')">
         <NLink
-          :to="to('last')"
+          :to="link('last')"
+          :class="linkClass()"
+          aria-label="Last"
           :aria-disabled="disabled('last')"
           :tabindex="disabled('last') ? -1 : 0"
-          class="page-link"
-          aria-label="Last"
         >
-          <IconChevronRight />
+          <IconChevronRight size="0.8em" />
         </NLink>
       </li>
     </ul>
-    <div class="pagination-minimal-info text-center">
+    <div :class="$style.information">
       {{ currentPage }}/{{ pageCount }}
     </div>
   </nav>
 </template>
 
 <script>
+import { hasTouchScreen } from '~/utils/screen'
+
 export default {
   props: {
     total: {
@@ -64,6 +66,11 @@ export default {
       required: true
     }
   },
+  data () {
+    return {
+      hasTouchScreen: false
+    }
+  },
   computed: {
     currentPage () {
       return Number(this.$route.params.page) || 1
@@ -72,11 +79,21 @@ export default {
       return Math.ceil(this.total / this.perPage)
     }
   },
+  mounted () {
+    this.hasTouchScreen = hasTouchScreen()
+  },
   methods: {
     hasPage () {
       return this.pageCount > 1
     },
-    to (part) {
+    itemClass (part) {
+      let selector = 'page-item flex-fill'
+      if (this.disabled(part)) {
+        selector += ' disabled'
+      }
+      return selector
+    },
+    link (part) {
       if (part === 'first') {
         return { name: 'index' }
       }
@@ -86,55 +103,53 @@ export default {
           params: { page }
         }
       }
-      if (part === 'prev') {
+      if (part === 'previous') {
         return route(this.currentPage - 1)
-      }
-      if (part === 'next') {
+      } else if (part === 'next') {
         return route(this.currentPage + 1)
-      }
-      if (part === 'last') {
+      } else {
         return route(this.pageCount)
       }
     },
+    linkClass () {
+      let selector = 'page-link'
+      if (!this.hasTouchScreen) {
+        selector += ` ${this.$style.clickable}`
+      }
+      return selector
+    },
     disabled (part) {
-      return /^(first|prev)$/.test(part)
+      return ['first', 'previous'].includes(part)
         ? this.currentPage < 2
         : this.currentPage >= this.pageCount
-    },
-    disabledSelector (part) {
-      return this.disabled(part) ? 'disabled' : ''
     }
   }
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" module>
 @import "../assets/css/variables";
 @import "../node_modules/bootstrap/scss/mixins/breakpoints";
 
-.pagination {
-  > li {
-    @include media-breakpoint-down(sm) {
-      font-size: 80%;
-    }
+.clickable {
+  &:hover {
+    background-color: $pagination-focus-bg;
+  }
+}
+
+.information {
+  color: $body-color;
+  position: relative;
+  z-index: -1;
+
+  @include media-breakpoint-down(sm) {
+    bottom: 3.7em;
+    font-size: 75%;
   }
 
-  &-minimal {
-    &-info {
-      color: gray;
-      position: relative;
-      z-index: -1;
-
-      @include media-breakpoint-only(xs) {
-        bottom: 3.3em;
-        font-size: 75%;
-      }
-
-      @include media-breakpoint-up(sm) {
-        bottom: 3.2em;
-        font-size: 85%;
-      }
-    }
+  @include media-breakpoint-up(sm) {
+    bottom: 3.4em;
+    font-size: 85%;
   }
 }
 </style>

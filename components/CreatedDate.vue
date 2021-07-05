@@ -1,5 +1,5 @@
 <template>
-  <span class="text-muted">
+  <span class="text-secondary">
     <slot />
   </span>
 </template>
