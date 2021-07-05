@@ -1,6 +1,10 @@
 import { shallowMount, RouterLinkStub } from '@vue/test-utils'
 import PaginationMinimal from './PaginationMinimal'
 
+window.matchMedia = () => {
+  return { matches: false }
+}
+
 const factory = ({ props, route }) => {
   return shallowMount(PaginationMinimal, {
     propsData: props,
@@ -51,7 +55,7 @@ test('total: 5, currentPage: 1', () => {
   expect(li.at(NEXT).find('a').props().to).toEqual({ name: 'posts-page-page', params: { page: 2 } })
   expect(li.at(LAST).find('a').props().to).toEqual({ name: 'posts-page-page', params: { page: 3 } })
 
-  expect(wrapper.find('.pagination-minimal-info').text()).toBe('1/3')
+  expect(wrapper.find('.information').text()).toBe('1/3')
 })
 
 test('total: 5, current page: 2', () => {
@@ -78,7 +82,7 @@ test('total: 5, current page: 2', () => {
   expect(li.at(NEXT).find('a').props().to).toEqual({ name: 'posts-page-page', params: { page: 3 } })
   expect(li.at(LAST).find('a').props().to).toEqual({ name: 'posts-page-page', params: { page: 3 } })
 
-  expect(wrapper.find('.pagination-minimal-info').text()).toBe('2/3')
+  expect(wrapper.find('.information').text()).toBe('2/3')
 })
 
 test('total: 5, current page: 3', () => {
@@ -105,5 +109,5 @@ test('total: 5, current page: 3', () => {
   expect(li.at(NEXT).find('a').props().to).toEqual({ name: 'posts-page-page', params: { page: 4 } })
   expect(li.at(LAST).find('a').props().to).toEqual({ name: 'posts-page-page', params: { page: 3 } })
 
-  expect(wrapper.find('.pagination-minimal-info').text()).toBe('3/3')
+  expect(wrapper.find('.information').text()).toBe('3/3')
 })
