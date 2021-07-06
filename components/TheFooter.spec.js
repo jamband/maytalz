@@ -1,13 +1,22 @@
-import { shallowMount } from '@vue/test-utils'
+import { RouterLinkStub, shallowMount } from '@vue/test-utils'
 import TheFooter from './TheFooter'
-import { APP_NAME } from '~/constants/app'
 
 const factory = () => {
   return shallowMount(TheFooter, {
+    stubs: {
+      NLink: RouterLinkStub,
+      LinkExternal: true
+    }
   })
 }
 
-test('text', () => {
+test('elements', () => {
   const wrapper = factory()
-  expect(wrapper.text()).toContain(`© ${new Date().getFullYear()} ${APP_NAME}`)
+  const links = wrapper.findAll('a')
+  expect(links.length).toBe(2)
+
+  expect(links.at(0).props().to).toEqual({ name: 'about' })
+  expect(links.at(0).text()).toBe('About')
+  expect(links.at(1).props().to).toEqual({ name: 'contact' })
+  expect(links.at(1).text()).toBe('Contact')
 })

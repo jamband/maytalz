@@ -63,7 +63,6 @@ export default {
     // enabled: true,
     paths: [
       './icons/**/*.vue',
-      './node_modules/bootstrap/js/dist/offcanvas.js',
       './utils/*.js'
     ],
     whitelist: () => [
