@@ -32,7 +32,6 @@ export default {
     '~/plugins/contentful.js'
   ],
   buildModules: [
-    '@nuxtjs/eslint-module',
     'nuxt-purgecss'
   ],
   modules: [
