@@ -4,10 +4,8 @@
 $primary:   #f27242;
 $secondary: #919191;
 $light:     #f8f9fa;
-
 $colors: (
 );
-
 $theme-colors: (
   "primary":    $primary,
   "secondary":  $secondary,
@@ -22,7 +20,6 @@ $enable-validation-icons:     false;
 
 // Spacing
 $spacer: 1rem;
-
 $spacers: (
   0: 0,
   1: $spacer * 0.25,

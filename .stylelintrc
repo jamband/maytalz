@@ -1,14 +1,12 @@
 {
   "extends": [
-    "stylelint-config-standard"
+    "stylelint-config-standard-scss",
+    "stylelint-config-recommended-vue"
   ],
-  "plugins": [
-    "stylelint-order",
-    "stylelint-scss"
-  ],
+  "plugins": ["stylelint-order"],
   "rules": {
-    "at-rule-no-unknown": null,
+    "alpha-value-notation": "number",
     "order/properties-alphabetical-order": true,
-    "selector-pseudo-element-no-unknown": [true, { ignorePseudoElements: ['v-deep'] }]
+    "scss/dollar-variable-colon-space-after": "at-least-one-space"
   }
 }
