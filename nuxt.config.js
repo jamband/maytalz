@@ -32,6 +32,7 @@ export default {
     '~/plugins/contentful.js'
   ],
   buildModules: [
+    '@nuxt/postcss8',
     'nuxt-purgecss'
   ],
   modules: [
