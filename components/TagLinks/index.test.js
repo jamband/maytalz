@@ -1,5 +1,5 @@
 import { shallowMount, RouterLinkStub } from '@vue/test-utils'
-import TagLinks from './TagLinks'
+import TagLinks from '.'
 
 const factory = ({ props }) => {
   return shallowMount(TagLinks, {

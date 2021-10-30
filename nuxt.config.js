@@ -3,10 +3,7 @@ import { APP_NAME, APP_DESCRIPTION, APP_URL } from './constants/app'
 export default {
   target: 'static',
   ssr: true,
-  components: [
-    { path: '~/components', pathPrefix: false },
-    { path: '~/icons', pathPrefix: false }
-  ],
+  components: true,
   head: {
     titleTemplate: `%s - ${APP_NAME}`,
     htmlAttrs: {
@@ -62,7 +59,6 @@ export default {
   purgeCSS: {
     // enabled: true,
     paths: [
-      './icons/**/*.vue',
       './utils/*.js'
     ],
     whitelist: () => [

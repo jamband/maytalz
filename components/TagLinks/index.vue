@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/css/variables";
+@import "../../assets/css/variables";
 
 .tag-links {
   border-radius: $border-radius;

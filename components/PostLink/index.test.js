@@ -1,5 +1,5 @@
 import { shallowMount, RouterLinkStub } from '@vue/test-utils'
-import PostLink from './PostLink'
+import PostLink from '.'
 
 const factory = ({ props }) => {
   return shallowMount(PostLink, {

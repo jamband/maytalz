@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
-import LinkExternal from './LinkExternal'
+import LinkExternal from '.'
 
 const slot = '<span>foo</span>'
 const url = 'https://example.com/'
