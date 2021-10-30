@@ -1,6 +1,7 @@
-import { APP_NAME, APP_DESCRIPTION, APP_URL } from './constants/app'
+import { APP_NAME, APP_DESCRIPTION, APP_URL } from './src/constants/app'
 
 export default {
+  srcDir: 'src/',
   target: 'static',
   ssr: true,
   components: true,

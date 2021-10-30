@@ -129,7 +129,7 @@ export default {
 
 <style lang="scss" module>
 @import "../../assets/css/variables";
-@import "../../node_modules/bootstrap/scss/mixins/breakpoints";
+@import "../../../node_modules/bootstrap/scss/mixins/breakpoints";
 
 .clickable {
   &:hover {
