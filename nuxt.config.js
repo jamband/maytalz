@@ -29,13 +29,8 @@ export default {
   plugins: [
     '~/plugins/contentful.js'
   ],
-  buildModules: [
-    '@nuxt/postcss8',
-    'nuxt-purgecss'
-  ],
-  modules: [
-    '@nuxtjs/markdownit'
-  ],
+  buildModules: ['@nuxt/postcss8'],
+  modules: ['@nuxtjs/markdownit'],
   build: {
     // analyze: true,
   },
@@ -56,20 +51,5 @@ export default {
     html: true,
     typography: true,
     use: []
-  },
-  purgeCSS: {
-    // enabled: true,
-    paths: [
-      './utils/*.js'
-    ],
-    whitelist: () => [
-      'h1',
-      'h2',
-      'h3',
-      'h4',
-      'h5',
-      'h6'
-    ],
-    extractors: () => []
   }
 }
