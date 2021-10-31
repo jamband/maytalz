@@ -1,3 +1,4 @@
+import purgecssConfig from './purgecss.config'
 import { APP_NAME, APP_DESCRIPTION, APP_URL } from './src/constants/app'
 
 export default {
@@ -33,6 +34,11 @@ export default {
   modules: ['@nuxtjs/markdownit'],
   build: {
     // analyze: true,
+    postcss: {
+      plugins: {
+        '@fullhuman/postcss-purgecss': purgecssConfig
+      }
+    }
   },
   publicRuntimeConfig: {
     contentfulSpaceId: process.env.CONTENTFUL_SPACE_ID,
