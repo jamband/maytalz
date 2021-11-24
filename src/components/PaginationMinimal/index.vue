@@ -127,29 +127,5 @@ export default {
 }
 </script>
 
-<style lang="scss" module>
-@import "../../assets/css/variables";
-@import "../../../node_modules/bootstrap/scss/mixins/breakpoints";
-
-.clickable {
-  &:hover {
-    background-color: $pagination-focus-bg;
-  }
-}
-
-.information {
-  color: $body-color;
-  position: relative;
-  z-index: -1;
-
-  @include media-breakpoint-down(sm) {
-    bottom: 3.7em;
-    font-size: 75%;
-  }
-
-  @include media-breakpoint-up(sm) {
-    bottom: 3.4em;
-    font-size: 85%;
-  }
-}
+<style lang="scss" module src="./style.scss">
 </style>
