@@ -42,8 +42,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../assets/css/variables";
-
+/* ignore purgecss */
 article ::v-deep {
   h1 {
     margin: 1rem 0;

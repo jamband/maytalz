@@ -2,6 +2,7 @@ module.exports =
   process.env.NODE_ENV === 'production'
     ? {
         content: [
+          './dist/**/*.html',
           './src/**/*.vue',
           './src/utils/*.js'
         ],
@@ -18,8 +19,7 @@ module.exports =
           /^(?!(|.*?:)cursor-move).+-move$/,
           /^nuxt-link(|-exact)-active$/,
           /^nuxt-progress(|-failed)$/,
-          /data-v-.*/,
-          /^h(1|2|3|4|5|6)$/
+          /data-v-.*/
         ]
       }
     : false
