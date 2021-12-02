@@ -19,7 +19,8 @@ module.exports =
           /^(?!(|.*?:)cursor-move).+-move$/,
           /^nuxt-link(|-exact)-active$/,
           /^nuxt-progress(|-failed)$/,
-          /data-v-.*/
+          /data-v-.*/,
+          /^post\[data-v-.*\] */
         ]
       }
     : false

@@ -3,7 +3,7 @@
     <CreatedDate>{{ createdAt(post.sys.createdAt) }}</CreatedDate>
     <TagLinks :items="post.fields.tags" />
     <!-- eslint-disable-next-line -->
-    <section v-html="$md.render(content())" />
+    <section class="post" v-html="$md.render(content())" />
   </article>
 </template>
 
@@ -42,8 +42,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/* ignore purgecss */
-article ::v-deep {
+.post::v-deep {
   h1 {
     margin: 1rem 0;
     padding: 0.6rem 0;
