@@ -3,13 +3,13 @@
     <nav class="container">
       <ul class="list-inline m-0 p-0">
         <li class="list-inline-item">
-          <NLink :to="{ name: 'about' }" class="text-body">About</NLink>
+          <NLink :to="{ name: 'about' }" class="p-3 text-body">About</NLink>
         </li>
         <li class="list-inline-item">
-          <NLink :to="{ name: 'contact' }" class="text-body">Contact</NLink>
+          <NLink :to="{ name: 'contact' }" class="p-3 text-body">Contact</NLink>
         </li>
         <li class="list-inline-item">
-          <LinkExternal :href="appRepositoryUrl" class="text-body">GitHub</LinkExternal>
+          <LinkExternal :href="appRepositoryUrl" class="p-3 text-body">GitHub</LinkExternal>
         </li>
       </ul>
     </nav>

@@ -2,7 +2,7 @@
   <header>
     <nav class="fixed-top py-3 text-center bg-light">
       <div class="container">
-        <NLink class="text-body" :to="{ name: 'index' }">{{ appName }}</NLink>
+        <NLink class="p-3 text-body" :to="{ name: 'index' }">{{ appName }}</NLink>
       </div>
     </nav>
   </header>
