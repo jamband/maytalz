@@ -42,7 +42,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.post::v-deep {
+:deep(.post) {
   h1 {
     margin: 1rem 0;
     padding: 0.6rem 0;
