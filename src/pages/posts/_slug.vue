@@ -42,25 +42,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-:deep(.post) {
-  h1 {
+.post {
+  :deep(h1) {
     margin: 1rem 0;
     padding: 0.6rem 0;
   }
 
-  h2 {
+  :deep(h2) {
     border-bottom: 1px solid lightgray;
     margin: 1.5rem 0;
     padding: 0.6rem 0;
   }
 
-  img {
+  :deep(img) {
     height: auto;
     max-width: 100%;
   }
 
-  iframe,
-  .ratio {
+  :deep(iframe),
+  :deep(.ratio) {
     margin-bottom: 3rem;
   }
 }
