@@ -1,8 +1,6 @@
 # Maytalz
 
-Maytalz built on Nuxt.js + Contentful + Netlify.
-
-[https://maytalz.netlify.app](https://maytalz.netlify.app)
+[Maytalz](https://maytalz.netlify.app) is built with Nuxt.js, Contentful and Netlify.
 
 ## License
 
