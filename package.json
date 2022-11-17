@@ -1,8 +1,10 @@
 {
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "postinstall": "nuxt prepare",
+    "dev": "nuxt dev",
     "generate": "nuxt generate",
+    "typecheck": "nuxi typecheck",
     "lint": "eslint --ext .js,.ts,.vue .",
     "format": "prettier --check .",
     "clear": "node scripts/clear.mjs",
