@@ -7,8 +7,8 @@
     "typecheck": "nuxi typecheck",
     "lint": "eslint --ext .js,.ts,.vue .",
     "format": "prettier --check .",
-    "clear": "node scripts/clear.mjs",
-    "clean": "node scripts/clean.mjs"
+    "clear": "nuxi cleanup",
+    "clean": "nuxi cleanup && node scripts/clean.mjs"
   },
   "dependencies": {
     "contentful": "^9.2.11",
