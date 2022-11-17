@@ -1,6 +1,11 @@
 {
+  "[css][javascript][json][jsonc][typescript][vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
-  "stylelint.validate": ["css", "scss", "vue"]
+  "editor.formatOnSave": true,
+  "css.validate": false,
+  "volar.codeLens.references": false
 }
