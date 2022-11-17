@@ -4,6 +4,7 @@
     "postinstall": "nuxt prepare",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
+    "preview": "nuxi preview",
     "typecheck": "nuxi typecheck",
     "lint": "eslint --ext .js,.ts,.vue .",
     "format": "prettier --check .",
