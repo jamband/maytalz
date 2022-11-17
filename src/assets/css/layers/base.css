@@ -1,0 +1,18 @@
+@layer base {
+  html,
+  body {
+    @apply bg-gray-100 text-base text-gray-500;
+  }
+
+  h1 {
+    @apply mb-2 text-5xl font-semibold text-gray-600;
+  }
+
+  h2 {
+    @apply text-4xl font-semibold text-gray-600;
+  }
+
+  a {
+    @apply text-orange-500 underline decoration-[0.05em] underline-offset-[0.25em];
+  }
+}
