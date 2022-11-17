@@ -4,6 +4,7 @@
     "dev": "nuxt",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue .",
+    "format": "prettier --check .",
     "clear": "rm -rf .nuxt dist",
     "clean": "rm -rf .nuxt dist node_modules"
   },
