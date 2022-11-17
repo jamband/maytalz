@@ -5,8 +5,8 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.ts,.vue .",
     "format": "prettier --check .",
-    "clear": "rm -rf .nuxt dist",
-    "clean": "rm -rf .nuxt dist node_modules"
+    "clear": "node scripts/clear.mjs",
+    "clean": "node scripts/clean.mjs"
   },
   "dependencies": {
     "contentful": "^9.2.11",
