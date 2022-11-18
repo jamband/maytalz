@@ -12,7 +12,7 @@
     "clean": "nuxi cleanup && node scripts/clean.mjs"
   },
   "dependencies": {
-    "contentful": "^9.2.11",
+    "contentful": "^9.2.12",
     "nuxt": "^3.0.0"
   },
   "devDependencies": {

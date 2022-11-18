@@ -799,34 +799,34 @@
     "@typescript-eslint/types" "5.43.0"
     eslint-visitor-keys "^3.3.0"
 
-"@unhead/dom@1.0.1", "@unhead/dom@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@unhead/dom/-/dom-1.0.1.tgz#44669c7b7d5e24521bb058312a07848ee27d3a4b"
-  integrity sha512-P4jkzDhQR9tJ+IATV/hfpdxngHglP5KcaaKM+fuRTLy1ilCYNNdp9QhnkHIp5k8C+c8xl7VsfIiGGUe0xBA1UA==
+"@unhead/dom@1.0.2", "@unhead/dom@^1.0.1":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@unhead/dom/-/dom-1.0.2.tgz#d10e8fc662481342043123e6b88309e0ea7c97b2"
+  integrity sha512-AAiYzDmwTTePJu5ZBypPIJidQMDS2WrCXQfe6KJIJtgLss0oXNllve4XVjPEDVh31lfAna89KfVPb/2z0g71pg==
   dependencies:
-    "@unhead/schema" "1.0.1"
+    "@unhead/schema" "1.0.2"
 
-"@unhead/schema@1.0.1", "@unhead/schema@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@unhead/schema/-/schema-1.0.1.tgz#70cbec6f4710dc822212ed4661f2ccac203d8fc1"
-  integrity sha512-aUEC8NwAPRb33J/19tna0u9YDMWW0O6KVi48XKf+OJVTr3UKrk34E8xzuv4G5WZl/oZ6gIjpbPymV34VirV/bQ==
+"@unhead/schema@1.0.2", "@unhead/schema@^1.0.1":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@unhead/schema/-/schema-1.0.2.tgz#f98a9866840c90551eece876f02fb26e8865b9f6"
+  integrity sha512-/LyNATQ6zHxZBgnTvTQwYJTZLJjx69/2DvaCcikyEj+y6rjhd77osqUb4Qmt2GxYPbVjuL6J5i5wIyES51RZhw==
   dependencies:
-    "@zhead/schema" "1.0.1"
+    "@zhead/schema" "^1.0.3"
     hookable "^5.4.1"
 
 "@unhead/ssr@^1.0.0", "@unhead/ssr@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@unhead/ssr/-/ssr-1.0.1.tgz#5c8bd7599501c8580c5b6fbd33a16f2bca4beb99"
-  integrity sha512-IBP48cDMfKp6bIMXmSv55chRlQ73jGw79EJ5WBQHl+e4jt5sTjeo2ditPiBjoIgQdpdSlybuiYyvk8+cJHCsVw==
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@unhead/ssr/-/ssr-1.0.2.tgz#5da5e9b672cf42e5cd343b6bf281aef22388c0fb"
+  integrity sha512-OZSuYm/BkiZXgU1bAK7Oc/KfJrtrGLSHE7u95UYLhd3vobWvznfTOZM1ZHkORaCzm1twe4nIMHm1ion73M/9Gg==
   dependencies:
-    "@unhead/schema" "1.0.1"
+    "@unhead/schema" "1.0.2"
 
 "@unhead/vue@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@unhead/vue/-/vue-1.0.1.tgz#b4ff7786c8ee3297a4e5e7b6fd77cb4b09dac543"
-  integrity sha512-MiiKk5R02r+iQeY+Jz2uOxy+QuJFCraDi+U4QSnDFnMkBo9Pix7IuHDQQGJjZoZoZnR/xvJBk/esV3lhKjTk8w==
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@unhead/vue/-/vue-1.0.2.tgz#0d54921942de8125f6694c014830b19791c1bdf2"
+  integrity sha512-AWBJoiN+kNXn+lFmlELkRqiY54x6ymhA7lWfpgpgH+nJ7AGhqkavv7UHZHL+/G54Wjl3DFcZIm262iZqv0yqyQ==
   dependencies:
-    "@unhead/schema" "1.0.1"
+    "@unhead/schema" "1.0.2"
     hookable "^5.4.1"
 
 "@vercel/nft@^0.22.1":
@@ -1030,10 +1030,10 @@
     "@unhead/ssr" "^1.0.1"
     "@unhead/vue" "^1.0.1"
 
-"@zhead/schema@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@zhead/schema/-/schema-1.0.1.tgz#42de48667ca8c4ef7f75b64e71407d522d1be466"
-  integrity sha512-n6BDs+MjSOesuv6krG2QGyCPfdndxWX0M/G2wEGu1SPHc5jLHHi3EY1+vQvudFVXRVXquZHKsDPE7pSyeyGgHg==
+"@zhead/schema@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@zhead/schema/-/schema-1.0.3.tgz#6ce87124687e1512798e0e8d0a00e646d60627ba"
+  integrity sha512-hpG+fENrSV82trtmtO7sAdPTQLnfhZIGtqvgN4fIUfEuyILF1GwAYjgFT/FdUaZ8yBSsYt5U47O35tOE2Ts1HA==
 
 abbrev@1:
   version "1.1.1"
@@ -1710,10 +1710,10 @@ contentful-sdk-core@^7.0.4:
     p-throttle "^4.1.1"
     qs "^6.9.4"
 
-contentful@^9.2.11:
-  version "9.2.11"
-  resolved "https://registry.yarnpkg.com/contentful/-/contentful-9.2.11.tgz#ed9fb5b98a3428b37e63a4866a8be37acd219265"
-  integrity sha512-IKdxgwO930yGsTad22/E8szD2KHKaLQIDx+l18oH6PtzS9w0eV+EFBUbAkATGutUmnXR+kcj8IK9N7axyv/yCA==
+contentful@^9.2.12:
+  version "9.2.12"
+  resolved "https://registry.yarnpkg.com/contentful/-/contentful-9.2.12.tgz#ac8c1344b5904daa0dd577d07b80a5b0d19b5615"
+  integrity sha512-xYZHcRfBsAF2haTUNekSF0ZXSlitVvOcO/lPBvWCVnN2mr5KQSDUrzD3qRYv52vqDVMq3kFs5Z934Ma+9hV8Qg==
   dependencies:
     axios "^0.27.0"
     contentful-resolve-response "^1.3.12"
@@ -5850,12 +5850,12 @@ unenv@^1.0.0:
     pathe "^1.0.0"
 
 unhead@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/unhead/-/unhead-1.0.1.tgz#ebea52131c0b495c9e0875dc5c20bfa4eb86d159"
-  integrity sha512-iOy2fA6cPMLoksrID7Jg/PCH2aaLTUINx+Lje6h9xIlwjOc2eGOtH7CfRNxG+xO4JJP41BKgDbuH98a7Y59kVQ==
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/unhead/-/unhead-1.0.2.tgz#7e88c79d2a4daa10de14841d9bc453e75944010b"
+  integrity sha512-tran349dUu3ERvK3HxzHstwbUc7hSJa4EvYDJ0+sZ0bRIQPVP+2sjzRIHkHVo80WLVc75ul+KylJBwkhsDvcPQ==
   dependencies:
-    "@unhead/dom" "1.0.1"
-    "@unhead/schema" "1.0.1"
+    "@unhead/dom" "1.0.2"
+    "@unhead/schema" "1.0.2"
     hookable "^5.4.1"
 
 unified@^10.0.0:
