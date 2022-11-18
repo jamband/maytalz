@@ -1,4 +1,3 @@
-import contentful, { createClient } from "contentful";
 import type { Post } from "~/types/post";
 
 export const usePost = async () => {
@@ -6,21 +5,13 @@ export const usePost = async () => {
   const runtimeConfig = useRuntimeConfig();
 
   return await useAsyncData(route.fullPath, async () => {
-    const createClientFn =
-      process.env.NODE_ENV === "development"
-        ? createClient
-        : contentful.createClient;
+    const client = contentfulClient();
 
-    return await createClientFn({
-      space: runtimeConfig.contentfulSpaceId,
-      accessToken: runtimeConfig.contentfulAccessToken,
-    })
-      .getEntries<Post>({
-        content_type: runtimeConfig.contentfulMainTypeId,
-        "fields.slug": route.params.slug,
-      })
-      .then((entries) => {
-        return entries.items[0];
-      });
+    const post = await client.getEntries<Post>({
+      content_type: runtimeConfig.contentfulMainTypeId,
+      "fields.slug": route.params.slug,
+    });
+
+    return post.items[0];
   });
 };
