@@ -17,12 +17,11 @@ export default defineNuxtConfig({
       contentfulTagTypeId: isDev ? "" : undefined,
     },
   },
-  modules: ["@nuxtjs/tailwindcss"],
-
-  // modules
-  tailwindcss: {
-    cssPath: "~/assets/css/app.css",
-    exposeConfig: true,
-    viewer: false,
+  css: ["~/assets/css/app.css"],
+  postcss: {
+    plugins: {
+      autoprefixer: {},
+      tailwindcss: {},
+    },
   },
 });
