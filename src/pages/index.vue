@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-const postCollection = await usePostCollection();
+const { data } = await usePostCollection();
 </script>
 
 <template>
   <div>
     <TheHead title="" description="" />
     <div
-      v-for="post in postCollection.posts"
+      v-for="post in data?.posts"
       :key="post.sys.id"
       class="mb-12 flex flex-col gap-y-4"
     >
