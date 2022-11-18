@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { data: posts } = await useTags();
+const { data: posts } = await usePostsByTag();
 const route = useRoute();
 </script>
 

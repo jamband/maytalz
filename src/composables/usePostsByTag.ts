@@ -1,6 +1,6 @@
 import type { Post } from "~/types/post";
 
-export const useTags = async () => {
+export const usePostsByTag = async () => {
   const route = useRoute();
   const runtimeConfig = useRuntimeConfig();
 
