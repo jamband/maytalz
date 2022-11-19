@@ -10,13 +10,13 @@ const route = useRoute();
     <section
       v-for="post in posts"
       :key="post.sys.id"
-      class="mb-12 flex flex-col gap-y-4"
+      class="mb-16 flex flex-col gap-y-4"
     >
       <PostLink :post="post" class="-mb-2" />
       <PostCreatedDate :date="post.sys.createdAt" />
       <PostTags :links="post.fields.tags" />
     </section>
-    <SectionDivider class="mb-10" />
+    <SectionDivider class="mb-16" />
     <BackToHomeLink />
   </article>
 </template>

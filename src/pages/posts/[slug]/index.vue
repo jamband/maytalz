@@ -11,7 +11,7 @@ const htmlContent = await markdownToHtml(post.value?.fields.body || "");
     <PostTags :links="post?.fields.tags" class="mb-8 flex justify-end" />
     <!-- eslint-disable-next-line vue/no-v-html -->
     <section class="post mb-16" v-html="htmlContent" />
-    <SectionDivider class="mb-10" />
+    <SectionDivider class="mb-16" />
     <BackToHomeLink />
   </article>
 </template>

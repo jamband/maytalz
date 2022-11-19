@@ -3,7 +3,7 @@
     <TheHead title="Contact" description="" />
     <section>
       <h1>Contact</h1>
-      <p class="mb-10">
+      <p class="mb-16">
         Please to the message via
         <NuxtLink href="https://twitter.com/livejam_db" target="_blank"
           >Twitter<IconArrowTopRightOnSquare
@@ -19,7 +19,7 @@
         issues. Thank you.
       </p>
     </section>
-    <SectionDivider class="mb-10" />
+    <SectionDivider class="mb-16" />
     <BackToHomeLink />
   </article>
 </template>
