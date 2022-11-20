@@ -12,8 +12,7 @@ const { data: posts } = await useFetch(`/api/posts/${route.params.slug}`);
       :links="posts?.item.fields.tags"
       class="mb-8 flex justify-end"
     />
-    <!-- eslint-disable-next-line vue/no-v-html -->
-    <section class="post mb-16" v-html="posts?.htmlContent" />
+    <PostContent :html-content="posts?.htmlContent || ''" />
     <SectionDivider class="mb-16" />
     <BackToHomeLink />
   </article>
