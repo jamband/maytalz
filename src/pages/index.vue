@@ -12,7 +12,7 @@ const { data: posts } = await useFetch("/api/posts");
     >
       <PostLink :post="post" class="-mb-3" />
       <PostCreatedDate :date="post.sys.createdAt" />
-      <PostTags :links="post.fields.tags" />
+      <PostTagLinks :links="post.fields.tags" />
     </div>
   </div>
 </template>
