@@ -4,12 +4,12 @@
     "postinstall": "nuxt prepare",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxi preview",
-    "typecheck": "nuxi typecheck",
+    "preview": "nuxt preview",
+    "typecheck": "nuxt typecheck",
     "lint": "eslint --ext .js,.ts,.vue .",
     "format": "prettier --check .",
-    "clear": "nuxi cleanup",
-    "clean": "nuxi cleanup && node scripts/clean.mjs"
+    "clear": "nuxt cleanup",
+    "clean": "nuxt cleanup && node scripts/clean.mjs"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.43.0",
