@@ -4,6 +4,7 @@ const appConfig = useAppConfig();
 
 <template>
   <div>
+    <Html lang="en" />
     <NuxtLoadingIndicator :color="appConfig.colors.primary" />
     <TheHeader />
     <main class="container mx-auto pb-32 pt-28">
