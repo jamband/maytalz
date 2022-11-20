@@ -1,16 +1,16 @@
 <script lang="ts" setup>
-const { data: post } = await usePost();
-const htmlContent = await markdownToHtml(post.value?.fields.body || "");
+const route = useRoute();
+const { data: posts } = await useFetch(`/api/posts/${route.params.slug}`);
 </script>
 
 <template>
   <article class="flex flex-col gap-y-4">
-    <TheHead :title="post?.fields.title || ''" description="" />
-    <PostTitle :title="post?.fields.title || ''" class="mb-8" />
-    <PostCreatedDate :date="post?.sys.createdAt || ''" class="text-end" />
-    <PostTags :links="post?.fields.tags" class="mb-8 flex justify-end" />
+    <TheHead :title="posts?.item.fields.title || ''" description="" />
+    <PostTitle :title="posts?.item.fields.title || ''" class="mb-8" />
+    <PostCreatedDate :date="posts?.item.sys.createdAt || ''" class="text-end" />
+    <PostTags :links="posts?.item.fields.tags" class="mb-8 flex justify-end" />
     <!-- eslint-disable-next-line vue/no-v-html -->
-    <section class="post mb-16" v-html="htmlContent" />
+    <section class="post mb-16" v-html="posts?.htmlContent" />
     <SectionDivider class="mb-16" />
     <BackToHomeLink />
   </article>

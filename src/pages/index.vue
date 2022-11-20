@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-const { data } = await usePostCollection();
+const { data: posts } = await useFetch("/api/posts");
 </script>
 
 <template>
   <div>
     <TheHead title="" description="" />
     <div
-      v-for="post in data?.posts"
+      v-for="post in posts?.items"
       :key="post.sys.id"
       class="mb-12 flex flex-col gap-y-4"
     >

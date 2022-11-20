@@ -1,5 +1,3 @@
-const isDev = process.env.NODE_ENV === "development";
-
 export default defineNuxtConfig({
   srcDir: "src/",
   typescript: {
@@ -10,12 +8,6 @@ export default defineNuxtConfig({
     contentfulAccessToken: "",
     contentfulMainTypeId: "",
     contentfulTagTypeId: "",
-    public: {
-      contentfulSpaceId: isDev ? "" : undefined,
-      contentfulAccessToken: isDev ? "" : undefined,
-      contentfulMainTypeId: isDev ? "" : undefined,
-      contentfulTagTypeId: isDev ? "" : undefined,
-    },
   },
   css: ["~/assets/css/app.css"],
   postcss: {
