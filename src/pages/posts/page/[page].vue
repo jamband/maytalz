@@ -1,14 +1,15 @@
 <script lang="ts" setup>
+const route = useRoute();
 const appConfig = useAppConfig();
 
-const { data: posts } = await useFetch("/api/posts", {
+const { data: posts } = await useFetch(`/api/posts/page/${route.params.page}`, {
   query: { perPage: appConfig.posts.perPage },
 });
 </script>
 
 <template>
   <div>
-    <TheHead title="Posts" description="" />
+    <TheHead title="" description="" />
     <h1 class="mb-12 flex items-baseline justify-center gap-1">
       <span class="text-[1.5rem] text-gray-400">All</span>
       <span>Posts</span>

@@ -5,4 +5,7 @@ export default defineAppConfig({
   colors: {
     primary: "#ea580c",
   },
+  posts: {
+    perPage: 3,
+  },
 });
