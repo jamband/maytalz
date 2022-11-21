@@ -7,11 +7,11 @@
 }
 
 .post a {
-  @apply text-gray-500 hover:text-orange-500 active:text-orange-500;
+  @apply text-gray-500 hover:text-orange-600 active:text-orange-600;
 }
 
 .post img {
-  @apply mb-10 aspect-auto rounded;
+  @apply mb-10 aspect-auto w-full rounded;
 }
 
 .post ul {

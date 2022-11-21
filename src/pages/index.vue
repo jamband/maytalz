@@ -8,9 +8,9 @@ const { data: posts } = await useFetch("/api/posts");
     <div
       v-for="post in posts?.items"
       :key="post.sys.id"
-      class="mb-12 flex flex-col gap-y-4"
+      class="mb-14 flex flex-col gap-y-3"
     >
-      <PostLink :post="post" class="-mb-3" />
+      <PostLink :post="post" class="-mb-2" />
       <PostCreatedDate :date="post.sys.createdAt" />
       <PostTagLinks :links="post.fields.tags" />
     </div>

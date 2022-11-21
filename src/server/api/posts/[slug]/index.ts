@@ -7,7 +7,7 @@ export default defineEventHandler(async (event) => {
   const runtimeConfig = useRuntimeConfig();
 
   const post = await client.getEntries<Post>({
-    content_type: runtimeConfig.contentfulMainTypeId,
+    content_type: runtimeConfig.contentfulPostsTypeId,
     "fields.slug": event.context.params.slug,
   });
 

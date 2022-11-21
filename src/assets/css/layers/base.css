@@ -13,6 +13,6 @@
   }
 
   a {
-    @apply text-orange-500 underline decoration-[0.05em] underline-offset-[0.25em];
+    @apply text-orange-600 underline decoration-[0.05em] underline-offset-[0.25em];
   }
 }

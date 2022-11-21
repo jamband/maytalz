@@ -6,5 +6,5 @@ const props = defineProps<{
 
 <template>
   <!-- eslint-disable-next-line vue/no-v-html -->
-  <section class="post mb-16" v-html="props.htmlContent" />
+  <section class="post" v-html="props.htmlContent" />
 </template>

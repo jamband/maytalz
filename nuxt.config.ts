@@ -6,8 +6,8 @@ export default defineNuxtConfig({
   runtimeConfig: {
     contentfulSpaceId: "",
     contentfulAccessToken: "",
-    contentfulMainTypeId: "",
-    contentfulTagTypeId: "",
+    contentfulPostsTypeId: "",
+    contentfulTagsTypeId: "",
   },
   css: ["~/assets/css/app.css"],
   postcss: {

@@ -6,7 +6,7 @@ export default defineEventHandler(async () => {
   const runtimeConfig = useRuntimeConfig();
 
   const { items, total } = await client.getEntries<Post>({
-    content_type: runtimeConfig.contentfulMainTypeId,
+    content_type: runtimeConfig.contentfulPostsTypeId,
     order: "-sys.createdAt",
     limit: 10,
   });
