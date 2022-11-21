@@ -22,6 +22,7 @@ const description =
     <Meta name="og:url" :content="`${appConfig.site}${route.path}`" />
     <Meta name="og:title" :content="title" />
     <Meta name="og:description" :content="description" />
+    <slot />
     <Link href=/favicon.ico rel="icon" />
     <Title>{{ title }}</Title>
   </Head>

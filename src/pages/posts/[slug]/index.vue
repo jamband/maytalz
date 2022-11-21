@@ -8,7 +8,13 @@ const { data: posts } = await useFetch(`/api/posts/${route.params.slug}`);
     <TheHead
       :title="posts?.item.fields.title || ''"
       :description="posts?.item.fields.description || ''"
-    />
+    >
+      <Meta
+        v-if="posts?.openGraphImage"
+        name="og:image"
+        :content="`https:${posts?.openGraphImage}`"
+      />
+    </TheHead>
     <PostTitle :title="posts?.item.fields.title || ''" class="mb-8" />
     <PostCreatedDate
       :date="posts?.item.sys.createdAt || ''"
