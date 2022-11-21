@@ -17,6 +17,8 @@ const props = defineProps<{
     :stroke-width="props.strokeWidth"
     :stroke="props.stroke"
     class="inline-block"
+    role="img"
+    :aria-hidden="true"
   >
     <slot />
   </svg>
