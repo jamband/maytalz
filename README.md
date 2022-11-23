@@ -1,6 +1,6 @@
 # Maytalz
 
-[Maytalz](https://maytalz.netlify.app) is built with Nuxt.js, Contentful and Netlify.
+[Maytalz](https://maytalz.netlify.app) is a private playground with [Nuxt](https://nuxt.com/) and [Contentful](https://www.contentful.com/).
 
 ## License
 

@@ -1,7 +1,7 @@
 export default defineAppConfig({
   name: "Maytalz",
   site: "https://maytalz.netlify.app",
-  description: "Maytalz is built with Nuxt.js, Contentful and Netlify",
+  description: "Maytalz is a private playground with Nuxt and Contentful.",
   colors: {
     primary: "#ea580c",
   },
