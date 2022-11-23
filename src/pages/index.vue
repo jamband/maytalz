@@ -9,10 +9,11 @@ const { data: posts } = await useFetch("/api/posts", {
 <template>
   <div>
     <TheHead title="Posts" description="" />
-    <h1 class="mb-12 flex items-baseline justify-center gap-1">
-      <span class="text-[1.5rem] text-gray-400">All</span>
-      <span>Posts</span>
-    </h1>
+    <h1 class="text-center">Posts</h1>
+    <AppPaginationInformation
+      :total="posts?.total || 0"
+      class="mb-12 text-center font-mono"
+    />
     <section class="mb-20">
       <div
         v-for="post in posts?.items"
