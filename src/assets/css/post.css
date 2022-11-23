@@ -11,7 +11,7 @@
 }
 
 .post img {
-  @apply mb-10 aspect-auto w-full rounded;
+  @apply mb-10 h-auto w-full rounded bg-gray-200;
 }
 
 .post ul {

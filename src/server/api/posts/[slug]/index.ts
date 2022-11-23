@@ -1,6 +1,6 @@
 import { createClient } from "~/server/utils/contentful";
 import { extractOpenGraphImage } from "~/server/utils/helpers";
-import { markdownToHtml } from "~/server/utils/markdown";
+import markdownToHtml from "~/server/utils/markdown-to-html";
 import type { Post } from "~/types/post";
 
 export default defineEventHandler(async (event) => {
