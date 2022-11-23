@@ -6,6 +6,10 @@
   @apply mt-16 mb-5 pb-1 text-4xl;
 }
 
+.post p {
+  @apply mb-5;
+}
+
 .post a {
   @apply text-gray-500 hover:text-orange-600 active:text-orange-600;
 }
@@ -28,8 +32,4 @@
 
 .post ol a {
   @apply pl-3;
-}
-
-.post iframe {
-  @apply aspect-video w-full rounded;
 }
