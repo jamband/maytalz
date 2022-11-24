@@ -15,6 +15,12 @@ export default function rehypeOptimizeImage() {
   return (tree: Root) => {
     visit(tree, "element", (node) => {
       if (node.tagName === "img" && node.properties) {
+        const src = node.properties.src;
+
+        if (typeof src === "string" && src.slice(0, 2) === "//") {
+          node.properties.src = `https:${src}`;
+        }
+
         const alt = node.properties.alt;
 
         if (typeof alt === "string" && alt.includes("|")) {
