@@ -1,6 +1,6 @@
-import { createClient } from "~/server/utils/contentful";
-import type { Post } from "~/types/post";
-import type { Tag } from "~/types/tag";
+import { createClient } from "@/server/utils/contentful";
+import type { Post } from "@/types/post";
+import type { Tag } from "@/types/tag";
 
 export default defineEventHandler(async (event) => {
   const client = createClient();

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Pagination } from "~/types/pagination";
+import type { Pagination } from "@/types/pagination";
 
 const props = defineProps<{
   total: number;

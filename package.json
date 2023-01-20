@@ -11,6 +11,7 @@
     "clean": "nuxt cleanup && node scripts/clean.mjs"
   },
   "devDependencies": {
+    "@types/hast": "^2.3.4",
     "@typescript-eslint/eslint-plugin": "^5.48.1",
     "@typescript-eslint/parser": "^5.48.1",
     "autoprefixer": "^10.4.13",

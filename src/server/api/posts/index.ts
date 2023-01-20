@@ -1,5 +1,5 @@
-import { createClient } from "~/server/utils/contentful";
-import type { Post } from "~/types/post";
+import { createClient } from "@/server/utils/contentful";
+import type { Post } from "@/types/post";
 
 export default defineEventHandler(async (event) => {
   const client = createClient();

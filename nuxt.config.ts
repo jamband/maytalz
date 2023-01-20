@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     contentfulPostsTypeId: "",
     contentfulTagsTypeId: "",
   },
-  css: ["~/assets/css/app.css"],
+  css: ["@/assets/css/app.css"],
   postcss: {
     plugins: {
       autoprefixer: {},
