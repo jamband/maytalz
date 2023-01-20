@@ -17,6 +17,7 @@
     "plugin:vue/vue3-recommended",
     "prettier"
   ],
+  "ignorePatterns": ["dist"],
   "rules": {
     "no-console": ["error", { "allow": ["warn", "error"] }],
     "no-undef": "off",
