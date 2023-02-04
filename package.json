@@ -10,7 +10,7 @@
     "clear": "nuxt cleanup",
     "clean": "nuxt cleanup && node scripts/clean.mjs"
   },
-  "devDependencies": {
+  "dependencies": {
     "@types/hast": "^2.3.4",
     "@types/node": "^16.18.11",
     "@typescript-eslint/eslint-plugin": "^5.50.0",
