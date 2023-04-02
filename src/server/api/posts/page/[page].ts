@@ -6,7 +6,7 @@ export default defineEventHandler(async (event) => {
   const runtimeConfig = useRuntimeConfig();
   const query = getQuery(event);
 
-  const page = Number(event.context.params.page) || 1;
+  const page = Number(event.context.params?.page) || 1;
   const perPage = Number(query.perPage) || 7;
 
   const { items, total } = await client.getEntries<Post>({

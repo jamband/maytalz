@@ -1,8 +1,9 @@
 <script lang="ts" setup>
 import type { Post } from "@/types/post";
+import type { Serialize, Simplify } from "nitropack";
 
 const props = defineProps<{
-  links: Post["tags"];
+  links: Simplify<Serialize<Post["tags"]>> | undefined;
 }>();
 </script>
 
@@ -11,7 +12,7 @@ const props = defineProps<{
     <li v-for="link in props.links" :key="link.sys.id">
       <NuxtLink
         :to="`/tags/${link.fields.slug}`"
-        class="rounded bg-gray-500 py-1 px-3 text-gray-100 no-underline hover:bg-gray-400 hover:text-gray-100"
+        class="rounded bg-gray-500 px-3 py-1 text-gray-100 no-underline hover:bg-gray-400 hover:text-gray-100"
         >{{ link.fields.name }}</NuxtLink
       >
     </li>

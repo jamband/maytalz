@@ -9,7 +9,7 @@ export default defineEventHandler(async (event) => {
 
   const post = await client.getEntries<Post>({
     content_type: runtimeConfig.contentfulPostsTypeId,
-    "fields.slug": event.context.params.slug,
+    "fields.slug": event.context.params?.slug,
   });
 
   const htmlContent = await markdownToHtml(post.items[0].fields.body);
