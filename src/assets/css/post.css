@@ -3,7 +3,7 @@
 }
 
 .post h2 {
-  @apply mt-16 mb-5 pb-1 text-4xl;
+  @apply mb-5 mt-16 pb-1 text-4xl;
 }
 
 .post p {
@@ -27,7 +27,7 @@
 }
 
 .post ol {
-  @apply ml-3 mb-5 list-inside list-decimal;
+  @apply mb-5 ml-3 list-inside list-decimal;
 }
 
 .post ol a {
