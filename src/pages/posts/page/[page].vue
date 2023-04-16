@@ -23,7 +23,7 @@ const { data: posts } = await useFetch(`/api/posts/page/${route.params.page}`, {
       >
         <PostLink :post="post" class="-mb-2" />
         <PostCreatedDate :date="post.sys.createdAt" />
-        <PostTagLinks :links="post.fields.tags" />
+        <PostTagLinks :links="post.metadata.tags" />
       </div>
     </section>
     <AppPagination :total="posts?.total || 0" />

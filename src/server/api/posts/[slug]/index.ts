@@ -5,10 +5,9 @@ import type { Post } from "@/types/post";
 
 export default defineEventHandler(async (event) => {
   const client = createClient();
-  const runtimeConfig = useRuntimeConfig();
 
   const post = await client.getEntries<Post>({
-    content_type: runtimeConfig.contentfulPostsTypeId,
+    content_type: "posts",
     "fields.slug": event.context.params?.slug,
   });
 

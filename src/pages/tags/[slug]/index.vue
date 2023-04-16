@@ -17,7 +17,7 @@ const { data: posts } = await useFetch(`/api/tags/${route.params.slug}`);
     >
       <PostLink :post="post" class="-mb-2" />
       <PostCreatedDate :date="post.sys.createdAt" />
-      <PostTagLinks :links="post.fields.tags" />
+      <PostTagLinks :links="post.metadata.tags" />
     </section>
     <SectionDivider class="mb-16" />
     <BackToHomeLink />

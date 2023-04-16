@@ -1,10 +1,11 @@
-import type { Entry, EntryFields } from "contentful";
-import type { Tag } from "./tag";
+import type { EntryFieldTypes } from "contentful";
 
 export type Post = {
-  title: EntryFields.Text;
-  description: EntryFields.Text;
-  slug: EntryFields.Text;
-  body: EntryFields.Text;
-  tags: Array<Entry<Tag>> | undefined;
+  contentTypeId: "posts";
+  fields: {
+    title: EntryFieldTypes.Text;
+    description: EntryFieldTypes.Text;
+    slug: EntryFieldTypes.Text;
+    body: EntryFieldTypes.Text;
+  };
 };

@@ -21,7 +21,7 @@ const { data: posts } = await useFetch(`/api/posts/${route.params.slug}`);
       class="-mb-2 text-end"
     />
     <PostTagLinks
-      :links="posts?.item.fields.tags"
+      :links="posts?.item.metadata.tags"
       class="mb-8 flex justify-end"
     />
     <PostContent :html-content="posts?.htmlContent || ''" class="mb-16" />
