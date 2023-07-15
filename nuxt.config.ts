@@ -3,6 +3,9 @@ export default defineNuxtConfig({
   typescript: {
     shim: false,
   },
+  experimental: {
+    payloadExtraction: true,
+  },
   runtimeConfig: {
     contentfulSpaceId: "",
     contentfulAccessToken: "",
