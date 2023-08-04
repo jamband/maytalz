@@ -7,7 +7,9 @@ const route = useRoute();
 const appConfig = useAppConfig();
 
 const currentPage = Number(route.params.page) || 1;
-const lastPage = Math.ceil(props.total / appConfig.posts.perPage);
+const lastPage = computed(() =>
+  Math.ceil(props.total / appConfig.posts.perPage),
+);
 </script>
 
 <template>

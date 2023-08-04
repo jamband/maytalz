@@ -9,8 +9,10 @@ const route = useRoute();
 const appConfig = useAppConfig();
 
 const currentPage = computed(() => Number(`${route.params.page || 1}`));
-const lastPage = Math.ceil(props.total / appConfig.posts.perPage);
-const hasPage = lastPage > 1;
+const lastPage = computed(() =>
+  Math.ceil(props.total / appConfig.posts.perPage),
+);
+const hasPage = computed(() => lastPage.value > 1);
 const parts: Array<Pagination["part"]> = ["Previous", "Next"];
 
 const linkTo = (part: Pagination["part"]) => {
@@ -18,9 +20,9 @@ const linkTo = (part: Pagination["part"]) => {
 
   if (part === "Previous" && currentPage.value > 1) {
     page = currentPage.value - 1;
-  } else if (part === "Next" && currentPage.value === lastPage) {
-    page = lastPage;
-  } else if (part === "Next" && currentPage.value !== lastPage) {
+  } else if (part === "Next" && currentPage.value === lastPage.value) {
+    page = lastPage.value;
+  } else if (part === "Next" && currentPage.value !== lastPage.value) {
     page = currentPage.value + 1;
   }
 
@@ -33,7 +35,7 @@ const linkTo = (part: Pagination["part"]) => {
 const disabled = (part: Pagination["part"]) => {
   return ["Previous"].includes(part)
     ? currentPage.value < 2
-    : currentPage.value >= lastPage;
+    : currentPage.value >= lastPage.value;
 };
 </script>
 
