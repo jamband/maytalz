@@ -22,7 +22,6 @@ const description =
     <Meta name="og:title" :content="title" />
     <Meta name="og:description" :content="description" />
     <slot />
-    <Link href=/favicon.ico rel="icon" />
     <Title>{{ title }}</Title>
   </Head>
 </template>
