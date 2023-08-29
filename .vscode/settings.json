@@ -6,6 +6,5 @@
     "source.fixAll": true
   },
   "editor.formatOnSave": true,
-  "css.validate": false,
-  "volar.codeLens.references": false
+  "css.validate": false
 }
