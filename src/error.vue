@@ -5,7 +5,6 @@ type Error = Ref<{
 }>;
 
 const error = useError() as Error;
-
 const isNotFound = Number(error.value.statusCode || 500) === 404;
 const title = isNotFound ? "Not Found" : "An Error Occurred";
 const message = isNotFound ? "Page not found." : error.value?.message;
