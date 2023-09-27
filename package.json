@@ -11,18 +11,18 @@
     "clean": "nuxt cleanup && node scripts/clean.mjs"
   },
   "dependencies": {
-    "@types/hast": "3.0.0",
-    "@types/node": "18.17.15",
-    "@typescript-eslint/eslint-plugin": "6.6.0",
-    "@typescript-eslint/parser": "6.6.0",
-    "autoprefixer": "10.4.15",
-    "contentful": "10.5.1",
-    "eslint": "8.49.0",
+    "@types/hast": "3.0.1",
+    "@types/node": "18.18.0",
+    "@typescript-eslint/eslint-plugin": "6.7.3",
+    "@typescript-eslint/parser": "6.7.3",
+    "autoprefixer": "10.4.16",
+    "contentful": "10.5.3",
+    "eslint": "8.50.0",
     "eslint-config-prettier": "9.0.0",
     "eslint-plugin-vue": "9.17.0",
-    "node-html-parser": "6.1.8",
-    "nuxt": "3.7.1",
-    "postcss": "8.4.29",
+    "node-html-parser": "6.1.10",
+    "nuxt": "3.7.4",
+    "postcss": "8.4.30",
     "prettier": "3.0.3",
     "prettier-plugin-tailwindcss": "0.5.4",
     "rehype-stringify": "9.0.4",
@@ -32,6 +32,6 @@
     "typescript": "5.2.2",
     "unified": "10.1.2",
     "unist-util-visit": "5.0.0",
-    "vue-tsc": "1.8.10"
+    "vue-tsc": "1.8.15"
   }
 }
