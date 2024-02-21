@@ -6,8 +6,7 @@
       <p class="mb-16">
         Please to the message via
         <NuxtLink href="https://twitter.com/livejam_db" target="_blank"
-          >Twitter<IconArrowTopRightOnSquare
-            class="ml-0.5 h-4 w-4 align-[-0.125em]"
+          >X<IconArrowTopRightOnSquare class="ml-0.5 h-4 w-4 align-[-0.125em]"
         /></NuxtLink>
         or
         <NuxtLink
