@@ -13,18 +13,18 @@
   "dependencies": {
     "@types/hast": "3.0.4",
     "@types/node": "18.19.31",
-    "@typescript-eslint/eslint-plugin": "7.6.0",
-    "@typescript-eslint/parser": "7.6.0",
+    "@typescript-eslint/eslint-plugin": "7.7.0",
+    "@typescript-eslint/parser": "7.7.0",
     "autoprefixer": "10.4.19",
-    "contentful": "10.8.7",
+    "contentful": "10.8.8",
     "eslint": "8.57.0",
     "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-vue": "9.24.1",
+    "eslint-plugin-vue": "9.25.0",
     "node-html-parser": "6.1.13",
     "nuxt": "3.11.2",
     "postcss": "8.4.38",
     "prettier": "3.2.5",
-    "prettier-plugin-tailwindcss": "0.5.13",
+    "prettier-plugin-tailwindcss": "0.5.14",
     "rehype-stringify": "10.0.0",
     "remark-parse": "11.0.0",
     "remark-rehype": "11.1.0",
@@ -32,6 +32,6 @@
     "typescript": "5.4.5",
     "unified": "11.0.4",
     "unist-util-visit": "5.0.0",
-    "vue-tsc": "2.0.12"
+    "vue-tsc": "2.0.13"
   }
 }
