@@ -18,4 +18,5 @@ export default defineNuxtConfig({
     contentfulTagsTypeId: "",
   },
   css: ["@/assets/css/app.css"],
+  compatibilityDate: "2024-08-04",
 });
