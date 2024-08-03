@@ -1,7 +1,8 @@
 <script lang="ts" setup>
-import type { Props } from "./types";
-
-const props = defineProps<Props>();
+const props = defineProps<{
+  title: string;
+  description: string;
+}>();
 
 const appConfig = useAppConfig();
 const route = useRoute();
