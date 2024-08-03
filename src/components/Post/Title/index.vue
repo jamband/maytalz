@@ -5,5 +5,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <h1 class="text-center">{{ props.title }}</h1>
+  <h1 :class="$style.container">{{ props.title }}</h1>
 </template>
+
+<style src="./styles.module.css" module />

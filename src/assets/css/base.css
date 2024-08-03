@@ -1,0 +1,35 @@
+html {
+  line-height: 1.6;
+  scrollbar-gutter: stable;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: rgb(var(--gray-100));
+  color: rgb(var(--gray-500));
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: inherit;
+}
+
+h1 {
+  color: rgb(var(--gray-600));
+  font-size: var(--text-5xl);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  color: rgb(var(--gray-600));
+  font-size: var(--text-4xl);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+a {
+  color: rgb(var(--orange-600));
+  text-decoration: underline;
+  text-decoration-thickness: 0.05rem;
+  text-underline-offset: 0.25rem;
+}

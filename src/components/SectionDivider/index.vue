@@ -1,11 +1,13 @@
 <template>
-  <div class="flex items-center justify-center gap-1" role="separator">
-    <div class="h-1 w-1 rounded-[1px] bg-gray-500" />
-    <div class="h-3 w-1 rounded-[1px] bg-gray-500" />
-    <div class="h-6 w-1 rounded-[1px] bg-gray-700" />
-    <div class="h-4 w-1 rounded-[1px] bg-gray-600" />
-    <div class="h-7 w-1 rounded-[1px] bg-gray-500" />
-    <div class="h-3 w-1 rounded-[1px] bg-gray-600" />
-    <div class="h-1 w-1 rounded-[1px] bg-gray-500" />
+  <div :class="$style.container" role="separator">
+    <div :class="$style.bar1"></div>
+    <div :class="$style.bar2"></div>
+    <div :class="$style.bar3"></div>
+    <div :class="$style.bar4"></div>
+    <div :class="$style.bar5"></div>
+    <div :class="$style.bar6"></div>
+    <div :class="$style.bar7"></div>
   </div>
 </template>
+
+<style src="./styles.module.css" module />

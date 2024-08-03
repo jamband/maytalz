@@ -18,10 +18,4 @@ export default defineNuxtConfig({
     contentfulTagsTypeId: "",
   },
   css: ["@/assets/css/app.css"],
-  postcss: {
-    plugins: {
-      autoprefixer: {},
-      tailwindcss: {},
-    },
-  },
 });

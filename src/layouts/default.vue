@@ -3,9 +3,11 @@
     <Html lang="en" />
     <TheLoading />
     <TheHeader />
-    <main class="container mx-auto pb-32 pt-28">
+    <main :class="$style.main">
       <slot />
     </main>
     <TheFooter />
   </div>
 </template>
+
+<style src="./default.module.css" module />

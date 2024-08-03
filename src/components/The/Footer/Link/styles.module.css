@@ -1,0 +1,26 @@
+.container {
+  border-radius: var(--rounded);
+  color: rgb(var(--gray-500));
+  font-size: var(--text-sm);
+  padding: 0.25rem 1rem;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .container {
+    font-size: var(--text-base);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .container:hover {
+    background: rgb(var(--gray-200));
+    color: rgb(var(--gray-600));
+  }
+}
+
+.container:active,
+.container:focus-visible {
+  background: rgb(var(--gray-200));
+  color: rgb(var(--gray-600));
+}

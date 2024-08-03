@@ -3,22 +3,27 @@
     <TheHead title="Contact" description="" />
     <section>
       <h1>Contact</h1>
-      <p class="mb-16">
+      <p>
         Please to the message via
-        <NuxtLink href="https://twitter.com/livejam_db" target="_blank"
-          >X<IconArrowTopRightOnSquare class="ml-0.5 h-4 w-4 align-[-0.125em]"
+        <NuxtLink
+          href="https://twitter.com/livejam_db"
+          :class="$style.link"
+          target="_blank"
+          >X<IconArrowTopRightOnSquare :class="$style.linkIcon"
         /></NuxtLink>
         or
         <NuxtLink
           href="https://github.com/jamband/maytalz/issues"
+          :class="$style.link"
           target="_blank"
-          >Github<IconArrowTopRightOnSquare
-            class="ml-0.5 h-4 w-4 align-[-0.125em]"
+          >Github<IconArrowTopRightOnSquare :class="$style.linkIcon"
         /></NuxtLink>
         issues. Thank you.
       </p>
     </section>
-    <SectionDivider class="mb-16" />
-    <BackToHomeLink />
+    <SectionDivider :class="$style.sectionDivider" />
+    <BackToHomeLink :class="$style.backToHomeLink" />
   </article>
 </template>
+
+<style src="./styles.module.css" module />

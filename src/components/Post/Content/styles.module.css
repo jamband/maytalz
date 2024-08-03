@@ -1,0 +1,54 @@
+.post {
+  color: rgb(var(--gray-500));
+}
+
+.post h2 {
+  font-size: var(--text-4xl);
+  margin: 4rem 0 1.25rem;
+  padding: 0 0 0.25rem;
+}
+
+.post p {
+  margin: 0 0 1.25rem;
+}
+
+.post a {
+  color: rgb(var(--gray-500));
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .post a:hover {
+    color: rgb(var(--orange-600));
+  }
+}
+
+.post a:active,
+.post a:focus-visible {
+  color: rgb(var(--orange-600));
+}
+
+.post img {
+  background: rgb(var(--gray-200));
+  border-radius: var(--rounded);
+  height: auto;
+  margin: 0 0 1.5rem;
+  width: 100%;
+}
+
+.post ul {
+  list-style: disc outside;
+  margin: 1rem 0 0 1rem;
+}
+
+.post ul + p {
+  margin: 1.25rem 0 0;
+}
+
+.post ol {
+  list-style: decimal outside;
+  margin: 1rem 0 0 1rem;
+}
+
+.post li {
+  margin: 0.4rem 0 0 1rem;
+}

@@ -1,0 +1,24 @@
+.title {
+  align-items: baseline;
+  display: flex;
+  gap: 0.25rem;
+  justify-content: center;
+}
+
+.titleSymbol {
+  color: rgb(var(--gray-400));
+  font-size: 1.75rem;
+}
+
+.main {
+  display: flex;
+  flex-flow: column;
+  gap: 4rem;
+  margin: 3rem 0 0;
+}
+
+.posts {
+  display: flex;
+  flex-flow: column;
+  gap: 0.25rem;
+}

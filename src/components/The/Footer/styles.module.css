@@ -1,0 +1,30 @@
+.container {
+  background: rgb(var(--gray-100));
+  box-shadow: 0 -1px 2px rgb(var(--gray-300));
+  inset: auto auto 0;
+  position: fixed;
+  width: 100%;
+}
+
+.navigation {
+  margin: 0.75rem 0;
+}
+
+@media (min-width: 768px) {
+  .navigation {
+    margin: 0.75rem auto;
+    max-width: 768px;
+  }
+}
+
+.links {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .links {
+    gap: 2.25rem;
+  }
+}

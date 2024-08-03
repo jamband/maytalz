@@ -20,12 +20,12 @@ afterEach(() => {
 <template>
   <div
     :class="[
-      'fixed z-50 h-1 w-0 bg-orange-600',
-      state === 'start' &&
-        'w-[99%] bg-orange-600/60 transition-[width] duration-[10000ms] ease-[cubic-bezier(0.1,0.05,0,1)]',
-      state === 'complete' &&
-        'w-[100%] bg-orange-600/70 transition-[width_0.1s_ease-out]',
+      $style.container,
+      state === 'start' && $style.start,
+      state === 'complete' && $style.complete,
     ]"
     role="status"
-  />
+  ></div>
 </template>
+
+<style src="./styles.module.css" module />

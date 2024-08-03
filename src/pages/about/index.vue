@@ -7,14 +7,19 @@ const appConfig = useAppConfig();
     <TheHead title="About" description="" />
     <h1>About</h1>
     <p>{{ appConfig.description }}</p>
-    <p class="mb-16">
+    <p>
       For more information:
-      <NuxtLink href="https://github.com/jamband/maytalz" target="_blank"
+      <NuxtLink
+        href="https://github.com/jamband/maytalz"
+        :class="$style.link"
+        target="_blank"
         >GitHub: jamband/maytalz<IconArrowTopRightOnSquare
-          class="ml-0.5 h-4 w-4 align-[-0.125em]"
+          :class="$style.linkIcon"
       /></NuxtLink>
     </p>
-    <SectionDivider class="mb-16" />
-    <BackToHomeLink />
+    <SectionDivider :class="$style.sectionDivider" />
+    <BackToHomeLink :class="$style.backToHomeLink" />
   </div>
 </template>
+
+<style src="./styles.module.css" module />

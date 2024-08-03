@@ -16,7 +16,6 @@ const props = defineProps<{
     :viewBox="props.viewBox"
     :stroke-width="props.strokeWidth"
     :stroke="props.stroke"
-    class="inline-block"
     role="img"
     :aria-hidden="true"
   >

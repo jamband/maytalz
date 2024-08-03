@@ -1,0 +1,33 @@
+.container {
+  color: rgb(var(--gray-600));
+  text-decoration: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .container:hover .title {
+    color: rgb(var(--orange-600));
+  }
+}
+
+.container:active .title,
+.container:focus-visible .title {
+  color: rgb(var(--orange-600));
+}
+
+.titleSymbol {
+  color: rgb(var(--gray-600) / 75%);
+  font-size: 1.25rem;
+  margin: 0 0 0 0.5rem;
+  vertical-align: 0.25rem;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .container:hover .titleSymbol {
+    color: rgb(var(--orange-600) / 75%);
+  }
+}
+
+.container:active .titleSymbol,
+.container:focus-visible .titleSymbol {
+  color: rgb(var(--orange-600) / 75%);
+}

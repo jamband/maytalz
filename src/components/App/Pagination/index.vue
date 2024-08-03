@@ -40,24 +40,20 @@ const disabled = (part: Pagination["part"]) => {
 </script>
 
 <template>
-  <div>
-    <nav
-      v-if="hasPage"
-      class="text-center md:text-base"
-      aria-label="page navigation"
-    >
-      <div class="flex justify-around gap-x-4 leading-normal">
-        <NuxtLink
-          v-for="part in parts"
-          :key="part"
-          :to="linkTo(part)"
-          class="w-full rounded py-2 text-gray-600 no-underline hover:bg-gray-200 hover:text-gray-600 active:bg-gray-200 aria-disabled:pointer-events-none aria-disabled:text-gray-400"
-          :aria-disabled="disabled(part)"
-          :tabindex="disabled(part) ? -1 : 0"
-          >{{ part === "Previous" ? "←" : "→" }}
-          <div>{{ part }}</div>
-        </NuxtLink>
-      </div>
-    </nav>
-  </div>
+  <nav v-if="hasPage" :class="$style.container" aria-label="page navigation">
+    <div :class="$style.links">
+      <NuxtLink
+        v-for="part in parts"
+        :key="part"
+        :to="linkTo(part)"
+        :class="$style.link"
+        :aria-disabled="disabled(part)"
+        :tabindex="disabled(part) ? -1 : 0"
+        >{{ part === "Previous" ? "←" : "→" }}
+        <div>{{ part }}</div>
+      </NuxtLink>
+    </div>
+  </nav>
 </template>
+
+<style src="./styles.module.css" module />

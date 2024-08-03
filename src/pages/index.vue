@@ -9,22 +9,27 @@ const { data: posts } = await useFetch("/api/posts", {
 <template>
   <div>
     <TheHead title="Posts" description="" />
-    <h1 class="text-center">Posts</h1>
+    <h1 :class="$style.title">Posts</h1>
     <AppPaginationInformation
       :total="posts?.total || 0"
-      class="mb-12 text-center font-mono"
+      :class="$style.paginationInformation"
     />
-    <section class="mb-20">
+    <section :class="$style.main">
       <div
         v-for="post in posts?.items"
         :key="post.sys.id"
-        class="mb-14 flex flex-col gap-y-3"
+        :class="$style.posts"
       >
-        <PostLink :post="post" class="-mb-2" />
+        <PostLink :post="post" />
         <PostCreatedDate :date="post.sys.createdAt" />
-        <PostTagLinks :links="post.metadata.tags" />
+        <PostTagLinks
+          :links="post.metadata.tags"
+          :class="$style.postTagLinks"
+        />
       </div>
     </section>
-    <AppPagination :total="posts?.total || 0" />
+    <AppPagination :total="posts?.total || 0" :class="$style.pagination" />
   </div>
 </template>
+
+<style src="./index.module.css" module />

@@ -8,7 +8,7 @@ if (!posts.value) {
 </script>
 
 <template>
-  <article class="flex flex-col gap-y-4">
+  <article :class="$style.container">
     <TheHead
       :title="posts?.item.fields.title || ''"
       :description="posts?.item.fields.description || ''"
@@ -19,17 +19,21 @@ if (!posts.value) {
         :content="`https:${posts?.openGraphImage}`"
       />
     </TheHead>
-    <PostTitle :title="posts?.item.fields.title || ''" class="mb-8" />
-    <PostCreatedDate
-      :date="posts?.item.sys.createdAt || ''"
-      class="-mb-2 text-end"
-    />
-    <PostTagLinks
-      :links="posts?.item.metadata.tags"
-      class="mb-8 flex justify-end"
-    />
-    <PostContent :html-content="posts?.htmlContent || ''" class="mb-16" />
-    <SectionDivider class="mb-16" />
+    <PostTitle :title="posts?.item.fields.title || ''" />
+    <div :class="$style.postInformation">
+      <PostCreatedDate
+        :date="posts?.item.sys.createdAt || ''"
+        :class="$style.postCreatedDate"
+      />
+      <PostTagLinks
+        :links="posts?.item.metadata.tags"
+        :class="$style.postTagLinks"
+      />
+    </div>
+    <PostContent :html-content="posts?.htmlContent || ''" />
+    <SectionDivider />
     <BackToHomeLink />
   </article>
 </template>
+
+<style src="./styles.module.css" module />

@@ -1,0 +1,35 @@
+.container {
+  background: rgb(var(--gray-100));
+  box-shadow: 0 1px 2px 0 rgb(var(--gray-300));
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.navigation {
+  margin: 0.5rem 0;
+}
+
+.link {
+  border-radius: var(--rounded);
+  color: rgb(var(--gray-600));
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 900;
+  margin: 0.125rem 0;
+  padding: 0.25rem 1rem;
+  text-decoration: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .link:hover {
+    background: rgb(var(--gray-200));
+  }
+}
+
+.link:active,
+.link:focus-visible {
+  background: rgb(var(--gray-200));
+}

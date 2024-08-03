@@ -1,7 +1,5 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@charset "utf-8";
 
-@import "./layers/base.css";
-
-@import "./post.css";
+@import url("./reset.css");
+@import url("./root.css");
+@import url("./base.css");

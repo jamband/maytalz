@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.link {
+  background: rgb(var(--gray-200));
+  border-radius: var(--rounded);
+  color: rgb(var(--gray-500));
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .link:hover {
+    background: rgb(var(--gray-300));
+    color: rgb(var(--gray-600));
+  }
+}
+
+.link:active,
+.link:focus-visible {
+  background: rgb(var(--gray-300));
+  color: rgb(var(--gray-600));
+}

@@ -15,9 +15,11 @@ const message = isNotFound ? "Page not found." : error.value?.message;
     <NuxtLayout>
       <TheHead :title="title" description="" />
       <h1>{{ title }}</h1>
-      <p class="mb-16">{{ message }}</p>
-      <SectionDivider class="mb-16" />
-      <BackToHomeLink />
+      <p>{{ message }}</p>
+      <SectionDivider :class="$style.sectionDivider" />
+      <BackToHomeLink :class="$style.backToHomeLink" />
     </NuxtLayout>
   </div>
 </template>
+
+<style src="./error.module.css" module />

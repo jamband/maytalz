@@ -1,0 +1,29 @@
+.title {
+  text-align: center;
+}
+
+.paginationInformation {
+  font-family: var(--font-mono);
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  flex-flow: column;
+  gap: 4rem;
+  margin: 3rem 0 0;
+}
+
+.posts {
+  display: flex;
+  flex-flow: column;
+  gap: 0.25rem;
+}
+
+.postTagLinks {
+  margin: 0.5rem 0 0;
+}
+
+.pagination {
+  margin: 4rem 0 0;
+}

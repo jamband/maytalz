@@ -1,0 +1,5 @@
+.container {
+  color: rgb(var(--gray-500));
+  font-size: var(--text-sm);
+  font-weight: 300;
+}

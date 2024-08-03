@@ -13,5 +13,7 @@ const createdAt = computed(() =>
 </script>
 
 <template>
-  <div class="text-sm font-light text-gray-500">{{ createdAt }}</div>
+  <div :class="$style.container">{{ createdAt }}</div>
 </template>
+
+<style src="./styles.module.css" module />
