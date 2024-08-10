@@ -6,7 +6,7 @@
 
 - Framework: Nuxt
 - Headless CMS: Contentful
-- Styling: Tailwind CSS
+- Styling: CSS Modules
 - Hosting: Netlify
 
 ## License
