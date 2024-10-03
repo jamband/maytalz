@@ -14,7 +14,7 @@
   "dependencies": {
     "@eslint/js": "9.11.1",
     "@types/hast": "3.0.4",
-    "@types/node": "18.19.53",
+    "@types/node": "20.16.10",
     "contentful": "10.15.1",
     "eslint": "9.11.1",
     "eslint-config-prettier": "9.1.0",
@@ -23,7 +23,7 @@
     "nuxt": "3.13.2",
     "postcss": "8.4.47",
     "prettier": "3.3.3",
-    "rehype-stringify": "10.0.0",
+    "rehype-stringify": "10.0.1",
     "remark-parse": "11.0.0",
     "remark-rehype": "11.1.1",
     "stylelint": "16.9.0",
@@ -31,7 +31,7 @@
     "stylelint-order": "6.0.4",
     "the-new-css-reset": "1.11.3",
     "typescript": "5.5.4",
-    "typescript-eslint": "8.7.0",
+    "typescript-eslint": "8.8.0",
     "unified": "11.0.5",
     "unist-util-visit": "5.0.0",
     "vue-tsc": "2.1.6"
