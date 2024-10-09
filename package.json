@@ -15,7 +15,7 @@
     "@eslint/js": "9.11.1",
     "@types/hast": "3.0.4",
     "@types/node": "20.16.10",
-    "contentful": "10.15.1",
+    "contentful": "11.1.2",
     "eslint": "9.11.1",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-vue": "9.28.0",

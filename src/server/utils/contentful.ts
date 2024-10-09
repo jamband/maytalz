@@ -1,4 +1,4 @@
-import contentful from "contentful";
+import * as contentful from "contentful";
 
 export const createClient = () => {
   const runtimeConfig = useRuntimeConfig();
