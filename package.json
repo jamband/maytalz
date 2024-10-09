@@ -12,11 +12,11 @@
     "clean": "nuxt cleanup && node scripts/clean.mjs"
   },
   "dependencies": {
-    "@eslint/js": "9.11.1",
+    "@eslint/js": "9.12.0",
     "@types/hast": "3.0.4",
-    "@types/node": "20.16.10",
+    "@types/node": "20.16.11",
     "contentful": "11.1.2",
-    "eslint": "9.11.1",
+    "eslint": "9.12.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-vue": "9.28.0",
     "node-html-parser": "6.1.13",
@@ -31,7 +31,7 @@
     "stylelint-order": "6.0.4",
     "the-new-css-reset": "1.11.3",
     "typescript": "5.5.4",
-    "typescript-eslint": "8.8.0",
+    "typescript-eslint": "8.8.1",
     "unified": "11.0.5",
     "unist-util-visit": "5.0.0",
     "vue-tsc": "2.1.6"
