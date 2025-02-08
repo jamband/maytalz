@@ -3,7 +3,7 @@
   text-decoration: none;
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (any-hover: hover) {
   .container:hover .title {
     color: rgb(var(--orange-600));
   }
@@ -21,7 +21,7 @@
   vertical-align: 0.25rem;
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (any-hover: hover) {
   .container:hover .titleSymbol {
     color: rgb(var(--orange-600) / 75%);
   }

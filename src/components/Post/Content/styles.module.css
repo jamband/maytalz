@@ -16,7 +16,7 @@
   color: rgb(var(--gray-500));
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (any-hover: hover) {
   .post a:hover {
     color: rgb(var(--orange-600));
   }

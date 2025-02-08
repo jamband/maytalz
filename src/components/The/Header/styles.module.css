@@ -23,7 +23,7 @@
   text-decoration: none;
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (any-hover: hover) {
   .link:hover {
     background: rgb(var(--gray-200));
   }
