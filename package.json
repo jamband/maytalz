@@ -12,11 +12,11 @@
     "clean": "nuxt cleanup && node scripts/clean.mjs"
   },
   "dependencies": {
-    "@eslint/js": "9.22.0",
+    "@eslint/js": "9.23.0",
     "@types/hast": "3.0.4",
-    "@types/node": "22.13.10",
-    "contentful": "11.5.9",
-    "eslint": "9.22.0",
+    "@types/node": "22.13.11",
+    "contentful": "11.5.10",
+    "eslint": "9.23.0",
     "eslint-config-prettier": "10.1.1",
     "eslint-plugin-vue": "10.0.0",
     "node-html-parser": "7.0.1",
