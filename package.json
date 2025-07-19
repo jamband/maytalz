@@ -22,7 +22,6 @@
     "eslint-plugin-vue": "10.3.0",
     "node-html-parser": "7.0.1",
     "nuxt": "4.0.0",
-    "postcss": "8.5.6",
     "prettier": "3.6.2",
     "rehype-stringify": "10.0.1",
     "remark-parse": "11.0.0",
