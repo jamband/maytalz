@@ -1,6 +1,3 @@
-import { createClient } from "@/server/utils/contentful";
-import { extractOpenGraphImage } from "@/server/utils/helpers";
-import markdownToHtml from "@/server/utils/markdown-to-html";
 import type { Post } from "@/types/post";
 
 export default defineEventHandler(async (event) => {
@@ -11,7 +8,7 @@ export default defineEventHandler(async (event) => {
     "fields.slug": event.context.params?.slug,
   });
 
-  const htmlContent = await markdownToHtml(post.items[0].fields.body);
+  const htmlContent = await markdownToHtml(post.items[0]?.fields.body || "");
 
   return {
     item: post.items[0],

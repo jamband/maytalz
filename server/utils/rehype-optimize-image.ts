@@ -25,11 +25,12 @@ export default function rehypeOptimizeImage() {
 
         if (typeof alt === "string" && alt.includes("|")) {
           const [title, size] = alt.split("|");
-          const [width, height] = size.split("x");
-
-          node.properties.alt = title === "image" ? "" : title;
-          node.properties.width = width;
-          node.properties.height = height;
+          if (typeof size === "string") {
+            const [width, height] = size.split("x");
+            node.properties.alt = title === "image" ? "" : title;
+            node.properties.width = width;
+            node.properties.height = height;
+          }
         } else {
           node.properties.alt = "";
           node.properties.width = "1920";

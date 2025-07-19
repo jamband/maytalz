@@ -10,8 +10,8 @@ if (!posts.value) {
 <template>
   <article :class="$style.container">
     <TheHead
-      :title="posts?.item.fields.title || ''"
-      :description="posts?.item.fields.description || ''"
+      :title="posts?.item?.fields.title || ''"
+      :description="posts?.item?.fields.description || ''"
     >
       <Meta
         v-if="posts?.openGraphImage"
@@ -19,14 +19,14 @@ if (!posts.value) {
         :content="`https:${posts?.openGraphImage}`"
       />
     </TheHead>
-    <PostTitle :title="posts?.item.fields.title || ''" />
+    <PostTitle :title="posts?.item?.fields.title || ''" />
     <div :class="$style.postInformation">
       <PostCreatedDate
-        :date="posts?.item.sys.createdAt || ''"
+        :date="posts?.item?.sys.createdAt || ''"
         :class="$style.postCreatedDate"
       />
       <PostTagLinks
-        :links="posts?.item.metadata.tags"
+        :links="posts?.item?.metadata.tags"
         :class="$style.postTagLinks"
       />
     </div>

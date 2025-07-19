@@ -1,5 +1,4 @@
 export default defineNuxtConfig({
-  srcDir: "src/",
   typescript: {
     shim: false,
   },
@@ -18,5 +17,5 @@ export default defineNuxtConfig({
     contentfulTagsTypeId: "",
   },
   css: ["@/assets/css/app.css"],
-  compatibilityDate: "2024-08-04",
+  compatibilityDate: "2025-07-15",
 });

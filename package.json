@@ -1,12 +1,13 @@
 {
   "private": true,
+  "type": "module",
   "scripts": {
     "postinstall": "nuxt prepare",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "typecheck": "nuxt typecheck",
     "lint": "eslint .",
-    "stylelint": "stylelint \"src/**/*.css\"",
+    "stylelint": "stylelint \"app/**/*.css\"",
     "format": "prettier --check .",
     "clear": "nuxt cleanup",
     "clean": "nuxt cleanup && node scripts/clean.mjs"
@@ -20,7 +21,7 @@
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-vue": "10.3.0",
     "node-html-parser": "7.0.1",
-    "nuxt": "3.17.6",
+    "nuxt": "4.0.0",
     "postcss": "8.5.6",
     "prettier": "3.6.2",
     "rehype-stringify": "10.0.1",
@@ -35,6 +36,6 @@
     "unified": "11.0.5",
     "unist-util-visit": "5.0.0",
     "vue-eslint-parser": "10.2.0",
-    "vue-tsc": "2.2.10"
+    "vue-tsc": "3.0.3"
   }
 }
