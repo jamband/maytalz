@@ -1,5 +1,3 @@
-import type { Post } from "@/types/post";
-
 export default defineEventHandler(async (event) => {
   const client = createClient();
   const query = getQuery(event);

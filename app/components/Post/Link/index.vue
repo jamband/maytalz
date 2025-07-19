@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import type { Post } from "@/types/post";
 import type { Entry } from "contentful";
 import type { Serialize, Simplify } from "nitropack";
 
