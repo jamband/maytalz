@@ -1,11 +1,13 @@
 import js from "@eslint/js";
 import prettier from "eslint-config-prettier";
 import vue from "eslint-plugin-vue";
+import { defineConfig, globalIgnores } from "eslint/config";
 import ts from "typescript-eslint";
 
-export default ts.config(
+export default defineConfig(
+  [globalIgnores([".nuxt/", ".output/"])],
   js.configs.recommended,
-  ...ts.configs.recommended,
+  ts.configs.recommended,
   ...vue.configs["flat/recommended"],
   prettier,
   {
@@ -15,9 +17,6 @@ export default ts.config(
         parser: ts.parser,
       },
     },
-  },
-  {
-    ignores: [".nuxt/", ".output/"],
   },
   {
     rules: {
