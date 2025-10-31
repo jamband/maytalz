@@ -1,6 +1,9 @@
 .link {
   align-items: center;
+  box-shadow: 0 1px currentcolor;
   display: inline-flex;
+  gap: 0.125rem;
+  line-height: 1.2;
 }
 
 .linkIcon {

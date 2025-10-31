@@ -9,14 +9,14 @@
           href="https://twitter.com/livejam_db"
           :class="$style.link"
           target="_blank"
-          >X<IconArrowTopRightOnSquare :class="$style.linkIcon"
+          >X<IconUpRightFromSquare :class="$style.linkIcon"
         /></NuxtLink>
         or
         <NuxtLink
           href="https://github.com/jamband/maytalz/issues"
           :class="$style.link"
           target="_blank"
-          >Github<IconArrowTopRightOnSquare :class="$style.linkIcon"
+          >Github<IconUpRightFromSquare :class="$style.linkIcon"
         /></NuxtLink>
         issues. Thank you.
       </p>

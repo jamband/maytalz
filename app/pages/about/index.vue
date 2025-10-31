@@ -13,8 +13,7 @@ const appConfig = useAppConfig();
         href="https://github.com/jamband/maytalz"
         :class="$style.link"
         target="_blank"
-        >GitHub: jamband/maytalz<IconArrowTopRightOnSquare
-          :class="$style.linkIcon"
+        >GitHub: jamband/maytalz<IconUpRightFromSquare :class="$style.linkIcon"
       /></NuxtLink>
     </p>
     <SectionDivider :class="$style.sectionDivider" />

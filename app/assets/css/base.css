@@ -29,7 +29,4 @@ h2 {
 
 a {
   color: rgb(var(--orange-600));
-  text-decoration: underline;
-  text-decoration-thickness: 0.05rem;
-  text-underline-offset: 0.25rem;
 }
