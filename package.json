@@ -10,7 +10,7 @@
     "stylelint": "stylelint \"app/**/*.css\"",
     "format": "prettier --check .",
     "clear": "nuxt cleanup",
-    "clean": "nuxt cleanup && node scripts/clean.mjs"
+    "clean": "nuxt cleanup && node scripts/clean.js"
   },
   "dependencies": {
     "@eslint/js": "9.38.0",
