@@ -3,7 +3,7 @@
   width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .main {
     margin: 0 auto;
     max-width: 768px;

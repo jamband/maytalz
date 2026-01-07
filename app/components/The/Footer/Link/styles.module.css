@@ -6,7 +6,7 @@
   text-decoration: none;
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .container {
     font-size: var(--text-base);
   }
