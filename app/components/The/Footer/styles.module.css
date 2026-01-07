@@ -10,10 +10,10 @@
   margin: 0.75rem 0;
 }
 
-@media (width >= 768px) {
+@media (width >= 48rem) {
   .navigation {
     margin: 0.75rem auto;
-    max-width: 768px;
+    max-width: 48rem;
   }
 }
 
@@ -23,7 +23,7 @@
   justify-content: center;
 }
 
-@media (width >= 768px) {
+@media (width >= 48rem) {
   .links {
     gap: 2.25rem;
   }

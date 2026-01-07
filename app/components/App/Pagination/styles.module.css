@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-@media (width >= 768px) {
+@media (width >= 48rem) {
   .container {
     font-size: var(--text-base);
   }
