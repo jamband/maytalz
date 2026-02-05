@@ -2,7 +2,10 @@
   "[css][javascript][json][jsonc][typescript][vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.codeActionsOnSave": { "source.fixAll": "explicit" },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
+  },
   "editor.formatOnSave": true,
   "vue.editor.reactivityVisualization": false,
   "vue.editor.templateInterpolationDecorators": false
