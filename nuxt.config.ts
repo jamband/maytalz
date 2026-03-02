@@ -1,4 +1,5 @@
 export default defineNuxtConfig({
+  telemetry: false,
   app: {
     head: {
       link: [{ rel: "icon", href: "/favicon.ico" }],
