@@ -4,23 +4,21 @@
   font-size: var(--text-sm);
   padding: 0.25rem 1rem;
   text-decoration: none;
-}
 
-@media (width >= 48rem) {
-  .container {
+  @media (width >= 48rem) {
     font-size: var(--text-base);
   }
-}
 
-@media (any-hover: hover) {
-  .container:hover {
+  @media (any-hover: hover) {
+    &:hover {
+      background: rgb(var(--gray-200));
+      color: rgb(var(--gray-600));
+    }
+  }
+
+  &:active,
+  &:focus-visible {
     background: rgb(var(--gray-200));
     color: rgb(var(--gray-600));
   }
-}
-
-.container:active,
-.container:focus-visible {
-  background: rgb(var(--gray-200));
-  color: rgb(var(--gray-600));
 }

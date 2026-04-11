@@ -15,17 +15,17 @@
 .post a {
   box-shadow: 0 1px currentcolor;
   color: rgb(var(--gray-500));
-}
 
-@media (any-hover: hover) {
-  .post a:hover {
+  @media (any-hover: hover) {
+    &:hover {
+      color: rgb(var(--orange-600));
+    }
+  }
+
+  &:active,
+  &:focus-visible {
     color: rgb(var(--orange-600));
   }
-}
-
-.post a:active,
-.post a:focus-visible {
-  color: rgb(var(--orange-600));
 }
 
 .post img {

@@ -21,15 +21,15 @@
   margin: 0.125rem 0;
   padding: 0.25rem 1rem;
   text-decoration: none;
-}
 
-@media (any-hover: hover) {
-  .link:hover {
+  @media (any-hover: hover) {
+    &:hover {
+      background: rgb(var(--gray-200));
+    }
+  }
+
+  &:active,
+  &:focus-visible {
     background: rgb(var(--gray-200));
   }
-}
-
-.link:active,
-.link:focus-visible {
-  background: rgb(var(--gray-200));
 }

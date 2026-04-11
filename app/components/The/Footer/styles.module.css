@@ -8,10 +8,8 @@
 
 .navigation {
   margin: 0.75rem 0;
-}
 
-@media (width >= 48rem) {
-  .navigation {
+  @media (width >= 48rem) {
     margin: 0.75rem auto;
     max-width: 48rem;
   }
@@ -21,10 +19,8 @@
   display: flex;
   gap: 0.5rem;
   justify-content: center;
-}
 
-@media (width >= 48rem) {
-  .links {
+  @media (width >= 48rem) {
     gap: 2.25rem;
   }
 }

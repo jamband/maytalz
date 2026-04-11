@@ -1,33 +1,33 @@
 .container {
   color: rgb(var(--gray-600));
   text-decoration: none;
-}
 
-@media (any-hover: hover) {
-  .container:hover .title {
+  @media (any-hover: hover) {
+    &:hover {
+      color: rgb(var(--orange-600));
+    }
+  }
+
+  &:active,
+  &:focus-visible {
     color: rgb(var(--orange-600));
   }
 }
 
-.container:active .title,
-.container:focus-visible .title {
-  color: rgb(var(--orange-600));
-}
-
-.titleSymbol {
+.symbol {
   color: rgb(var(--gray-600) / 75%);
   font-size: 1.25rem;
   margin: 0 0 0 0.5rem;
   vertical-align: 0.25rem;
-}
 
-@media (any-hover: hover) {
-  .container:hover .titleSymbol {
+  @media (any-hover: hover) {
+    .container:hover & {
+      color: rgb(var(--orange-600) / 75%);
+    }
+  }
+
+  .container:active &,
+  .container:focus-visible & {
     color: rgb(var(--orange-600) / 75%);
   }
-}
-
-.container:active .titleSymbol,
-.container:focus-visible .titleSymbol {
-  color: rgb(var(--orange-600) / 75%);
 }

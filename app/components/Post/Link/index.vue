@@ -10,8 +10,7 @@ const props = defineProps<{
 <template>
   <h2>
     <NuxtLink :to="`/posts/${props.post.fields.slug}`" :class="$style.container"
-      ><span :class="$style.title">{{ post.fields.title }}</span
-      ><span :class="$style.titleSymbol">→</span>
+      >{{ post.fields.title }}<span :class="$style.symbol">→</span>
     </NuxtLink>
   </h2>
 </template>

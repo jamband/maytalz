@@ -9,17 +9,17 @@
   color: rgb(var(--gray-500));
   padding: 0.5rem 1rem;
   text-decoration: none;
-}
 
-@media (any-hover: hover) {
-  .link:hover {
+  @media (any-hover: hover) {
+    &:hover {
+      background: rgb(var(--gray-300));
+      color: rgb(var(--gray-600));
+    }
+  }
+
+  &:active,
+  &:focus-visible {
     background: rgb(var(--gray-300));
     color: rgb(var(--gray-600));
   }
-}
-
-.link:active,
-.link:focus-visible {
-  background: rgb(var(--gray-300));
-  color: rgb(var(--gray-600));
 }
