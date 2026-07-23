@@ -10,7 +10,7 @@ export default function rehypeExternalLink() {
         typeof node.properties.href === "string"
       ) {
         node.properties.target = "_blank";
-        node.properties.rel = "noreferrer";
+        node.properties.rel = ["noreferrer"];
       }
     });
   };
