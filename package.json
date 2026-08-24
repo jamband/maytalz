@@ -21,7 +21,7 @@
     "eslint": "10.8.1",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-vue": "10.10.0",
-    "globals": "17.9.0",
+    "globals": "17.11.0",
     "node-html-parser": "9.0.1",
     "nuxt": "4.5.2",
     "prettier": "3.9.6",
@@ -33,10 +33,10 @@
     "stylelint-order": "8.1.1",
     "the-new-css-reset": "1.11.3",
     "typescript": "6.0.3",
-    "typescript-eslint": "8.66.0",
+    "typescript-eslint": "8.67.0",
     "unified": "11.0.5",
     "unist-util-visit": "5.1.0",
     "vue-eslint-parser": "10.4.1",
-    "vue-tsc": "3.3.9"
+    "vue-tsc": "3.3.10"
   }
 }
